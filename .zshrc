@@ -17,6 +17,9 @@ alias nconfig="cd ~/.config/nvim/"
 alias tconfig="cd ~/.config/tmux/"
 alias update="sudo apt update && sudo apt upgrade -y"
 
+#Keybinds
+bindkey -s ^f "tmux-sessionizer.sh\n"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
