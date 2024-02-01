@@ -9,7 +9,7 @@ ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # Neovim
-ln -s ~/.dotfiles/nvim ~/.config/nvim
+ln -s ~/.dotfiles/nvchad-config/custom ~/.config/nvim/lua/custom
 
 # Tmux
 ln -s ~/.dotfiles/tmux ~/.config/tmux
