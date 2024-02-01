@@ -13,8 +13,6 @@ DISABLE_MAGIC_FUNCTIONS=true
 ZSH_THEME="robbyrussell"
 
 # Aliases
-alias nconfig="cd ~/.config/nvim/"
-alias tconfig="cd ~/.config/tmux/"
 alias update="sudo apt update && sudo apt upgrade -y"
 
 #Keybinds
