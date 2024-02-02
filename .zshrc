@@ -13,7 +13,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 ZSH_THEME="robbyrussell"
 
 # Aliases
-alias update="sudo apt update && sudo apt upgrade -y"
+alias update="sudo dnf update && sudo dnf upgrade -y"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
