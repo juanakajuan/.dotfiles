@@ -18,5 +18,9 @@ ln -s ~/.dotfiles/nvchad-config/custom ~/.config/nvim/lua/custom
 sudo rm -rf ~/.config/tmux > /dev/null 2>&1
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 
+# i3
+ln -s ~/.dotfiles/i3 ~/.config/i3
+
 # Scripts
 sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessionizer.sh
+
