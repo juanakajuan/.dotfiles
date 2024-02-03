@@ -20,6 +20,7 @@ ln -s ~/.dotfiles/tmux ~/.config/tmux
 
 # i3
 ln -s ~/.dotfiles/i3 ~/.config/i3
+ln -s ~/.dotfiles/i3status ~/.config/i3status
 
 # Scripts
 sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessionizer.sh
