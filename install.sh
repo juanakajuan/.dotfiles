@@ -5,6 +5,7 @@ echo "Setting up your computer..."
 # Zsh
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+# ln -s ~/.dotfiles/.zprofile ~/.zprofile
 
 # Git
 sudo rm -rf ~/.gitconfig > /dev/null 2>&1
