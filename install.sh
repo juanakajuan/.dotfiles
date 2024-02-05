@@ -27,6 +27,5 @@ sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessioniz
 # ln -s ~/.dotfiles/i3status ~/.config/i3status
 
 # X
-# ln -s ~/.dotfiles/.Xmodmap ~/.Xmodmap
 # ln -s ~/.dotfiles/.Xresources ~/.Xresources
 
