@@ -20,6 +20,7 @@ sudo rm -rf ~/.config/tmux > /dev/null 2>&1
 ln -s ~/.dotfiles/tmux ~/.config/tmux
 
 # Scripts
+sudo rm -rf /usr/local/bin/tmux-sessionizer.sh > /dev/null 2>&1
 sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessionizer.sh
 
 # i3
