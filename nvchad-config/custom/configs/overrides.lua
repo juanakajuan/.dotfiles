@@ -10,6 +10,8 @@ M.treesitter = {
         "typescript",
         "tsx",
         "c",
+        "cpp",
+        "bash",
         "markdown",
         "markdown_inline",
         "python",
@@ -58,7 +60,7 @@ M.nvimtree = {
         highlight_git = true,
         icons = {
             show = {
-                git = true,
+                git = false,
             },
         },
     },
