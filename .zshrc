@@ -113,3 +113,4 @@ source $ZSH/oh-my-zsh.sh
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=/home/juanix/.cargo/bin:$PATH
+export PATH=/home/juanix/flutter/bin:$PATH
