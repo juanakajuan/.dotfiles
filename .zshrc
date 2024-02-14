@@ -114,3 +114,4 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/home/juanix/.cargo/bin:$PATH
 export PATH=/home/juanix/flutter/bin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
