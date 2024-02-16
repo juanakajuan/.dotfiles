@@ -22,11 +22,3 @@ ln -s ~/.dotfiles/tmux ~/.config/tmux
 # Scripts
 sudo rm -rf /usr/local/bin/tmux-sessionizer.sh > /dev/null 2>&1
 sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessionizer.sh
-
-# i3
-# ln -s ~/.dotfiles/i3 ~/.config/i3
-# ln -s ~/.dotfiles/i3status ~/.config/i3status
-
-# X
-# ln -s ~/.dotfiles/.Xresources ~/.Xresources
-
