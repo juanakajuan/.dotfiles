@@ -13,7 +13,7 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # Tmux
 sudo rm -rf ~/.config/tmux > /dev/null 2>&1
-ln -s ~/.dotfiles/tmux ~/.config/tmux
+ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 
 # Scripts
 sudo rm -rf /usr/local/bin/tmux-sessionizer.sh > /dev/null 2>&1
