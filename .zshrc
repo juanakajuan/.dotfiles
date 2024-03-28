@@ -81,7 +81,12 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 plugins=(
 	git
 	zsh-autosuggestions
+	tmux
 )
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 
 source $ZSH/oh-my-zsh.sh
 
