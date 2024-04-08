@@ -2,7 +2,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Dev ~/Dev/ODU ~/Dev/ODU/CS-417/Assignments ~/Dev/ODU/CS-417/Examples ~/Dev/ODU/CS-330/Assignments ~/Dev/ODU/CS-355/Assignments ~/.config ~/.dotfiles ~/.dotfiles/.config -mindepth 0 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Dev ~/.config ~/.dotfiles ~/Dev/Personal ~/Dev/Uni/CS* ~/Dev/Scratch -mindepth 0 -maxdepth 1 -type d | fzf)
 fi
 if [[ -z $selected ]]; then
     exit 0
