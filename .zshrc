@@ -30,3 +30,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
