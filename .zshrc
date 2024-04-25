@@ -4,6 +4,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
 alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
+alias rebuild="sudo nixos-rebuild switch"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
