@@ -13,7 +13,7 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # Tmux
 sudo rm -rf ~/.config/tmux > /dev/null 2>&1
-ln -s ~/.dotfiles/tmux ~/.config/tmux
+ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 
 # Starship
 sudo rm ~/.config/starship.toml > /dev/null 2>&1
