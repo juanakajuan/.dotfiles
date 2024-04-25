@@ -3,7 +3,7 @@ eval "$(starship init zsh)"
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
-alias update="sudo apt update && sudo apt upgrade -y"
+alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
