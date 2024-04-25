@@ -15,6 +15,17 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 sudo rm -rf ~/.config/tmux > /dev/null 2>&1
 ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 
+# Starship
+sudo rm ~/.config/starship.toml > /dev/null 2>&1
+ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
+
+# i3
+sudo rm -rf ~/.config/i3
+sudo rm -rf ~/.config/i3status
+ln -s ~/.dotfiles/.config/i3 ~/.config/i3
+ln -s ~/.dotfiles/.config/i3status ~/.config/i3status
+
+
 # Scripts
-sudo rm -rf /usr/local/bin/tmux-sessionizer.sh > /dev/null 2>&1
-sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh /usr/local/bin/tmux-sessionizer.sh
+sudo rm -rf ~/bin/tmux-sessionizer.sh > /dev/null 2>&1
+sudo ln -s ~/.dotfiles/scripts/tmux-sessionizer.sh ~/bin/tmux-sessionizer.sh
