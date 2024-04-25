@@ -29,6 +29,10 @@ ln -s ~/.dotfiles/.config/i3status ~/.config/i3status
 sudo rm ~/.wezterm.lua > /dev/null 2>&1
 ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
 
+# Picom
+sudo rm ~/.config/picom > /dev/null 2>&1
+ln -s ~/.dotfiles/.config/picom ~/.config/picom
+
 
 # Scripts
 sudo rm -rf ~/bin/tmux-sessionizer.sh > /dev/null 2>&1

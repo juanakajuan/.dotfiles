@@ -18,6 +18,6 @@ config.check_for_updates = true
 
 config.pane_focus_follows_mouse = true
 
-config.window_background_opacity = 0.5
+-- config.window_background_opacity = 0.1
 
 return config

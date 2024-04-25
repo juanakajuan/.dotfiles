@@ -27,8 +27,6 @@ for_window [class="^.*"] client.focused
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec --no-startup-id picom -b
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -203,7 +201,7 @@ bar {
         tray_output primary
 }
 
-
+exec --no-startup-id picom --experimental-backends -b
 exec_always feh --bg-fill ~/Pictures/mob-psycho-100-4k-yq.jpg
 exec_always setxkbmap -option ctrl:swapcaps
 exec_always xinput set-prop 12 "libinput Scrolling Pixel Distance" 50
