@@ -1,10 +1,12 @@
-eval "$(starship init zsh)"
-
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
 alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
 alias rebuild="sudo nixos-rebuild switch"
+alias nixcon="sudoedit /etc/nixos/configuration.nix"
+alias cd="z"
+alias cdi="zi"
+alias ls="eza"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
@@ -33,3 +35,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 export SUDO_EDITOR="nvim"
 source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
