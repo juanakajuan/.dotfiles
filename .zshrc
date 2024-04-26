@@ -12,8 +12,8 @@ alias ls="eza"
 bindkey -s ^f "tmux-sessionizer.sh\n"
 
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 export PATH=$PATH:~/bin
 export PATH=$PATH:/home/juanix/.local/bin
@@ -35,9 +35,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export SUDO_EDITOR="nvim"
-source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
