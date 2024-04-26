@@ -11,13 +11,12 @@ config.font =
 
 config.color_scheme = "GruvboxDarkHard"
 config.hide_tab_bar_if_only_one_tab = true
-config.font_size = 17
+config.font_size = 19
 
 config.automatically_reload_config = true
 config.check_for_updates = true
 
 config.pane_focus_follows_mouse = true
-
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
 
 return config

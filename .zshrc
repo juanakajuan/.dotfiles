@@ -1,10 +1,10 @@
-eval "$(starship init zsh)"
-
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
 alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
 alias rebuild="sudo nixos-rebuild switch"
+alias ls="exa"
+alias cd="z"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
@@ -14,6 +14,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:~/bin
+export PATH=$PATH:/home/juanix/.local/bin
 export PATH=/home/juanix/.cargo/bin:$PATH
 export PATH=/home/juanix/flutter/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -33,3 +34,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 export SUDO_EDITOR="nvim"
 source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
