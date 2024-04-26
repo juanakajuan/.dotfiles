@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.audible_bell = "Disabled"
 
 config.font =
-	wezterm.font('Jetbrains MonoNL Nerd Font')
+	wezterm.font('JetbrainsMonoNL Nerd Font')
 
 config.color_scheme = "GruvboxDarkHard"
 config.hide_tab_bar_if_only_one_tab = true
