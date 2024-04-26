@@ -3,8 +3,10 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Aliases
 alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
 alias rebuild="sudo nixos-rebuild switch"
-alias ls="exa"
+alias nixcon="sudoedit /etc/nixos/configuration.nix"
 alias cd="z"
+alias cdi="zi"
+alias ls="eza"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
