@@ -6,7 +6,7 @@ alias rebuild="sudo nixos-rebuild switch"
 alias nixcon="sudoedit /etc/nixos/configuration.nix"
 alias cd="z"
 alias cdi="zi"
-alias ls="eza"
+alias ls="exa"
 
 #Keybinds
 bindkey -s ^f "tmux-sessionizer.sh\n"
