@@ -1,3 +1,5 @@
+# command_timeout = 1000
+
 [username]
 format = "[$user](bold #fc5044) "
 disabled = false
@@ -7,3 +9,4 @@ show_always = true
 ssh_only = false
 format = '[$ssh_symbol](bold blue)on [$hostname](bold fg:#fc5044) '
 disabled = false
+

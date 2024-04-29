@@ -12,7 +12,7 @@ config.font =
 config.color_scheme = "GruvboxDarkHard"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "NONE"
-config.font_size = 19
+config.font_size = 21
 
 config.automatically_reload_config = true
 config.check_for_updates = true
