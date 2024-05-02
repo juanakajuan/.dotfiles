@@ -9,7 +9,7 @@ alias cdi="zi"
 alias ls="eza"
 
 #Keybinds
-bindkey -s ^f "tmux-sessionizer.sh\n"
+bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
@@ -37,8 +37,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 export SUDO_EDITOR="nvim"
 source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
