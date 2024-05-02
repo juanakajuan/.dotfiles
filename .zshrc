@@ -18,7 +18,7 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 export PATH=$PATH:~/bin
 export PATH=$PATH:/home/juanix/.local/bin
 export PATH=/home/juanix/.cargo/bin:$PATH
-export PATH=/home/juanix/flutter/bin:$PATH
+export PATH=/usr/bin/flutter/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export ANDROID_HOME=/home/juanix/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
