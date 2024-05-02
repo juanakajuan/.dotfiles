@@ -19,20 +19,9 @@ ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 sudo rm ~/.config/starship.toml > /dev/null 2>&1
 ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
 
-# i3
-sudo rm -rf ~/.config/i3 > /dev/null 2>&1
-sudo rm -rf ~/.config/i3status > /dev/null 2>&1
-ln -s ~/.dotfiles/.config/i3 ~/.config/i3
-ln -s ~/.dotfiles/.config/i3status ~/.config/i3status
-
 # Wezterm
-sudo rm ~/.wezterm.lua > /dev/null 2>&1
-ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
-
-# Picom
-sudo rm ~/.config/picom > /dev/null 2>&1
-ln -s ~/.dotfiles/.config/picom ~/.config/picom
-
+# sudo rm ~/.wezterm.lua > /dev/null 2>&1
+# ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
 
 # Scripts
 sudo rm -rf ~/bin/tmux-sessionizer.sh > /dev/null 2>&1
