@@ -7,6 +7,7 @@ alias nixcon="sudoedit /etc/nixos/configuration.nix"
 alias cd="z"
 alias cdi="zi"
 alias ls="eza"
+alias steam="STEAM_FORCE_DESKTOPUI_SCALING=2 steam"
 
 #Keybinds
 bindkey -s "^f" "tmux-sessionizer.sh\n"
@@ -27,7 +28,7 @@ export PATH="$PATH:/usr/lib/dart/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:/opt/gradle/gradle-8.7/bin
+export PATH=$PATH:/opt/gradle/gradle-8.4/bin
 
 [ -f "/home/juanix/.ghcup/env" ] && . "/home/juanix/.ghcup/env" # ghcup-env
 
