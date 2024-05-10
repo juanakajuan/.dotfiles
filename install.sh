@@ -19,9 +19,9 @@ ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
 sudo rm ~/.config/starship.toml > /dev/null 2>&1
 ln -s ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
 
-# Wezterm
-# sudo rm ~/.wezterm.lua > /dev/null 2>&1
-# ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
+# Alacritty
+sudo rm ~/.config/alacritty > /dev/null 2>&1
+ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty
 
 # Scripts
 sudo rm -rf ~/bin/tmux-sessionizer.sh > /dev/null 2>&1
