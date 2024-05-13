@@ -10,7 +10,7 @@ family = "JetBrainsMonoNL Nerd Font"
 [window]
 decorations = "none"
 padding = { x = 30, y = 30 }
-opacity = 0.98
+opacity = 1
 blur = false
 
 startup_mode = "Maximized"
