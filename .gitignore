@@ -1,1 +1,2 @@
-~/.dotfiles/.config/tmux/tmux.conf
+.config/tmux/tmux.conf
+bin/tmux-sessionizer
