@@ -1,17 +1,13 @@
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
-alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
-alias rebuild="sudo nixos-rebuild switch"
-alias nixcon="sudoedit /etc/nixos/configuration.nix"
+alias update="sudo zypper refresh && sudo zypper update -y && flatpak upgrade"
 alias cd="z"
 alias cdi="zi"
 alias ls="eza"
-alias steam="STEAM_FORCE_DESKTOPUI_SCALING=2 steam"
 
 #Keybinds
 bindkey -s "^f" "tmux-sessionizer.sh\n"
-
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -29,17 +25,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH=$PATH:/opt/gradle/gradle-8.4/bin
-
 [ -f "/home/juanix/.ghcup/env" ] && . "/home/juanix/.ghcup/env" # ghcup-env
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 export SUDO_EDITOR="nvim"
+
 source /home/juanix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
