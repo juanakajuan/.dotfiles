@@ -5,6 +5,7 @@ alias update="sudo zypper refresh && sudo zypper update -y && flatpak upgrade"
 alias cd="z"
 alias cdi="zi"
 alias ls="eza"
+alias azlogin="az acr login -n tdsacr2"
 
 #Keybinds
 bindkey -s "^f" "tmux-sessionizer.sh\n"
