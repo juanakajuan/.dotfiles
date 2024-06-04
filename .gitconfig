@@ -3,3 +3,5 @@
 	email = juancnmireles@gmail.com
 [credential]
 	helper = store
+[push]
+	autoSetupRemote = true
