@@ -2,7 +2,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
 alias update="sudo zypper refresh && sudo zypper update -y && flatpak upgrade"
-alias ls="eza"
+alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 
 #Keybinds
