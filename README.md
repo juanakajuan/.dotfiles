@@ -1,3 +1,3 @@
-1. Clone repository to Home directory.
+# Juan's Dotfiles
 
-2. Run the "install.sh" script to symlink the directories.
+### Using stow to manage them now
