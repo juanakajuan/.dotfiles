@@ -144,9 +144,8 @@ return {
                 hint = { enable = true },
             },
             -- rust_analyzer = {},
-            -- tsserver = {},
+            tsserver = {},
             -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
