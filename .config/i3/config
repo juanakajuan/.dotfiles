@@ -35,7 +35,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/anime-boy-chill-digital-art-4k-wallpaper-uhdpaper.com-284@0@j.jpg
 exec_always --no-startup-id sleep 5 && picom --experimental-backends -b
 exec_always --no-startup-id ~/.screenlayout/screens.sh
-exec --no-startup-id "setxkbmap -option ctrl:nocaps"
+exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
 exec --no-startup-id xset s off -dpms
 
 # Use pactl to adjust volume in PulseAudio.
