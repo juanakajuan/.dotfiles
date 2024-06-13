@@ -1,5 +1,4 @@
-font pango:DejaVu Sans Mono 10
-
+font pango:JetBrainsMono Nerd Font 11
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -19,7 +18,7 @@ exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/anime-boy-chill-
 exec_always --no-startup-id sleep 5 && picom --experimental-backends -b
 exec_always --no-startup-id ~/.screenlayout/screens.sh
 exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id xset s off -dpms
 
 # Use pactl to adjust volume in PulseAudio.
@@ -207,9 +206,9 @@ bindsym Mod4+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#         status_command i3status
-# }
+bar {
+        status_command i3status
+}
 
 for_window [class="^.*"] border pixel 2
 
