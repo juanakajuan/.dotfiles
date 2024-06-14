@@ -4,6 +4,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
+alias dh365="ssh tds -NL1365:localhost:1365"
 
 #Keybinds
 bindkey -s "^f" "tmux-sessionizer.sh\n"
