@@ -55,8 +55,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
-vim.keymap.set({ "n", "v" }, "q:", "<Nop>", { silent = true })
-
 -- Remap for dealing with word wrap
 vim.keymap.set(
     "n",
