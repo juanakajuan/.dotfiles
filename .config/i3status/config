@@ -16,9 +16,9 @@ general {
 # order += "battery all"
 order += "volume master"
 order += "cpu_usage"
+order += "memory"
 order += "disk /"
 # order += "load"
-order += "memory"
 order += "tztime local"
 
 wireless _first_ {
@@ -36,15 +36,15 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+        format = " %avail"
 }
 
 volume master {
-        format = "Volume: %volume"
+        format = "  %volume"
 }
 
 cpu_usage {
-        format = "CPU: %usage"
+        format = "  %usage"
 }
 
 load {
@@ -52,7 +52,7 @@ load {
 }
 
 memory {
-        format = "%used"
+        format = "  %percentage_used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
