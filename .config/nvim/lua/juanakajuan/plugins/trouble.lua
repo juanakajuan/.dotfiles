@@ -15,7 +15,7 @@ return {
         },
         {
             "<leader>to",
-            "<CMD>Trouble todo focus=true filter.buf=0<CR>",
+            "<CMD>Trouble todo toggle focus=true filter.buf=0<CR>",
             desc = "TODO Comments (Trouble)",
         },
     },
