@@ -52,6 +52,7 @@ end
 -- }}}
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/nosleep.sh")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -238,8 +239,8 @@ awful.screen.connect_for_each_screen(function(s)
             spacing = 10,
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            cpu_widget(),
-            ram_widget(),
+            -- cpu_widget(),
+            -- ram_widget(),
             volume_widget {
                 -- widget_type = 'horizontal_bar'
             },
