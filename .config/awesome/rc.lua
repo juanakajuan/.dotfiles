@@ -51,9 +51,6 @@ do
 end
 -- }}}
 
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-awful.spawn.with_shell("~/.config/awesome/nosleep.sh")
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
@@ -611,4 +608,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awesome.set_preferred_icon_size(50)
 
-
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/nosleep.sh")
