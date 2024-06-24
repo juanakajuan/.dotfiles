@@ -29,6 +29,14 @@ return {
                         ["<C-d>"] = false,
                     },
                 },
+                layout_config = {
+                    horizontal = {
+                        width = 0.99,
+                        width_padding = 0.04,
+                        height_padding = 0.1,
+                        preview_width = 0.6,
+                    },
+                },
             },
         }
 
@@ -96,7 +104,6 @@ return {
             -- You can pass additional configuration to telescope to change theme, layout, etc.
             require("telescope.builtin").current_buffer_fuzzy_find(
                 require("telescope.themes").get_dropdown {
-                    winblend = 10,
                     previewer = false,
                 }
             )
