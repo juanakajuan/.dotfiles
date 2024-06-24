@@ -19,7 +19,8 @@ return {
                 -- Conform will run multiple formatters sequentially
                 python = { "isort", "black" },
                 -- Use a sub-list to run only the first available formatter
-                java = { "google-java-format" },
+                java = { "clang-format" },
+                cpp = {"clang-format"},
                 typescriptreact = { { "prettierd", "prettier" } },
                 javascriptreact = { { "prettierd", "prettier" } },
                 javascript = { { "prettierd", "prettier" } },
