@@ -7,6 +7,7 @@ alias azlogin="az acr login -n tdsacr2"
 
 #Keybinds
 bindkey -s "^f" "tmux-sessionizer.sh\n"
+bindkey '^R' history-incremental-search-backward
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
@@ -26,6 +27,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/opt/gradle/gradle-8.4/bin
 [ -f "/home/juanix/.ghcup/env" ] && . "/home/juanix/.ghcup/env" # ghcup-env
 export SUDO_EDITOR="nvim"
+export HISTSIZE=1000
+export HISTFILESIZE=2000
 
 source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
