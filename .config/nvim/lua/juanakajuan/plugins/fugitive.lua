@@ -7,5 +7,6 @@ return {
         vim.keymap.set("n", "<leader>gd", "<CMD>Git diff<CR>")
         vim.keymap.set("n", "<leader>gl", "<CMD>Git log<CR>")
         vim.keymap.set("n", "<leader>gs", "<CMD>Git<CR>")
+        vim.keymap.set("n", "<leader>gu", "<CMD>Git pull<CR>")
     end
 }
