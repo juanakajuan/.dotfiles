@@ -1,7 +1,7 @@
 DISABLE_MAGIC_FUNCTIONS=true
 
 # Aliases
-alias update="sudo apt update && sudo apt upgrade -y && flatpak upgrade"
+alias update="sudo nala update && sudo nala upgrade -y && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 
