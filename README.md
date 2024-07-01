@@ -38,3 +38,5 @@ chsh -s $(which zsh)
 - dunst
 - rofi
 - nwg-look
+- bat
+- maim
