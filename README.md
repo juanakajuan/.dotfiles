@@ -14,7 +14,6 @@ chsh -s $(which zsh)
 https://github.com/tsoding/boomer
 
 ### Applications to install
-- pasystray
 - stow
 - zsh
 - xclip
@@ -36,11 +35,21 @@ https://github.com/tsoding/boomer
 - wezterm
 - discord
 - todoist
+- bat
+
+#### i3 Applications
 - i3
 - i3blocks
 - picom
 - dunst
 - rofi
 - nwg-look
-- bat
 - maim
+- pasystray
+- thunar
+- nwg-look
+- qt5ct
+- qt6ct
+- gnome-themes-extra
+- adwaita-qt5
+- adwaita-qt6
