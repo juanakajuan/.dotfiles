@@ -10,6 +10,9 @@ stow .
 chsh -s $(which zsh)
 ```
 
+### Magnifier for i3
+https://github.com/tsoding/boomer
+
 ### Applications to install
 - pasystray
 - stow
@@ -34,7 +37,10 @@ chsh -s $(which zsh)
 - discord
 - todoist
 - i3
-- i3status
+- i3blocks
+- picom
 - dunst
 - rofi
 - nwg-look
+- bat
+- maim
