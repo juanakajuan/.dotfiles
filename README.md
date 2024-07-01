@@ -5,10 +5,17 @@
 stow .
 ```
 
+### Change default shell to zsh
+```bash
+chsh -s $(which zsh)
+```
+
 ### Applications to install
 - pasystray
+- stow
 - zsh
 - xclip
+- neofetch
 - bibata-cursor-theme
 - ttf-jetbrains-mono-nerd
 - nodejs
