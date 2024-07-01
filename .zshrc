@@ -6,7 +6,7 @@ alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 
 #Keybinds
-bindkey -s "^f" "tmux-sessionizer.sh\n"
+bindkey -s "^f" "zellij-sessionizer.sh\n"
 bindkey '^R' history-incremental-search-backward
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
