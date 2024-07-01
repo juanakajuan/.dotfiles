@@ -1,4 +1,6 @@
 font pango:JetBrainsMono Nerd Font 10
+set $mod Mod4
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -9,27 +11,50 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/view-from-my-home-12k-8z.jpg
+exec --no-startup-id /usr/bin/dunst
+
+exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/one-punch-man-ok-rs.jpg
 exec_always --no-startup-id sleep 5 && picom -b
 # exec_always --no-startup-id ~/.screenlayout/screens.sh
 exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
 exec --no-startup-id xset s off -dpms
-exec_always autotiling
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# # Use pactl to adjust volume in PulseAudio.
+# set $refresh_i3status killall -SIGUSR1 i3status
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# gradular volume control
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+
+# mute
+bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && killall -USR1 i3blocks
+
+# mic mute toggle
+bindsym XF86AudioMicMute exec amixer sset Capture toggle
+
+# audio control
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause 
+# Above line will also work for pausing
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Redirect sound to headphones
+bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 # Change the audio device in PulseAudio
-bindsym Mod4+F9 exec pactl set-default-sink alsa_output.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.analog-stereo
-bindsym Mod4+F10 exec pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
+bindsym $mod+F9 exec pactl set-default-sink alsa_output.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.analog-stereo
+bindsym $mod+F10 exec pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).png"
-bindsym Mod4+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+bindsym $mod+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+
+# Power Profiles menu switcher (rofi)
+bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 
 ## Boomer
 # 0 --> Reset the application state (position, scale, velocity, etc).
@@ -40,11 +65,11 @@ bindsym Mod4+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(da
 # Drag with left mouse button --> Move the image around.
 # Scroll wheel or =/- --> Zoom in/out.
 # Ctrl + Scroll wheel --> Change the radius of the flaslight.
-bindsym Mod4+z exec --no-startup-id ~/Applications/boomer/boomer
+bindsym $mod+z exec --no-startup-id ~/Applications/boomer/boomer
 
 ## Clipboard Screenshots
 bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Control+Mod4+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym Control+$mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -56,77 +81,88 @@ set $terminal "/usr/bin/wezterm"
 set $browser firefox
 
 
-# use Mouse+Mod4 to drag floating windows to their wanted position
-floating_modifier Mod4
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
 # start a terminal
-bindsym Mod4+Return exec $terminal
+bindsym $mod+Return exec $terminal
 
-bindsym Mod4+n exec $browser
+bindsym $mod+n exec $browser
 
 # kill focused window
-bindsym Mod4+q kill
+bindsym $mod+q kill
 
-bindsym Mod4+d exec --no-startup-id j4-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # change focus
-bindsym Mod4+$left focus left
-bindsym Mod4+$down focus down
-bindsym Mod4+$up focus up
-bindsym Mod4+$right focus right
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym Mod4+Left focus left
-bindsym Mod4+Down focus down
-bindsym Mod4+Up focus up
-bindsym Mod4+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
-bindsym Mod4+Shift+$left move left
-bindsym Mod4+Shift+$down move down
-bindsym Mod4+Shift+$up move up
-bindsym Mod4+Shift+$right move right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
-bindsym Mod4+Shift+Left move left
-bindsym Mod4+Shift+Down move down
-bindsym Mod4+Shift+Up move up
-bindsym Mod4+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod4+b split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym Mod4+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym Mod4+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym Mod4+Shift+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
-bindsym Mod4+a focus parent
+bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym Mod4+d focus child
+#bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
-bindsym Mod4+Shift+minus move scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym Mod4+minus scratchpad show
+bindsym $mod+minus scratchpad show
 
-for_window [class="Pavucontrol"] floating enable
+for_window [class="Yad" instance="yad"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+
+# set floating (nontiling) for special apps
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="qt5ct" instance="qt5ct"] floating enable
+for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [window_role="About"] floating enable
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -141,47 +177,42 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace 1 output DisplayPort-0
-workspace 2 output DisplayPort-0
-workspace 3 output DisplayPort-0
-workspace 4 output DisplayPort-0
-workspace 5 output DisplayPort-0
-workspace 6 output HDMI-A-0
-workspace 7 output HDMI-A-0
-workspace 8 output HDMI-A-0
-workspace 9 output HDMI-A-0
-workspace 10 output HDMI-A-0
-
 # switch to workspace
-bindsym Mod4+1 workspace number $ws1
-bindsym Mod4+2 workspace number $ws2
-bindsym Mod4+3 workspace number $ws3
-bindsym Mod4+4 workspace number $ws4
-bindsym Mod4+5 workspace number $ws5
-bindsym Mod4+6 workspace number $ws6
-bindsym Mod4+7 workspace number $ws7
-bindsym Mod4+8 workspace number $ws8
-bindsym Mod4+9 workspace number $ws9
-bindsym Mod4+0 workspace number $ws10
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym Mod4+Control+1 move container to workspace number $ws1
-bindsym Mod4+Control+2 move container to workspace number $ws2
-bindsym Mod4+Control+3 move container to workspace number $ws3
-bindsym Mod4+Control+4 move container to workspace number $ws4
-bindsym Mod4+Control+5 move container to workspace number $ws5
-bindsym Mod4+Control+6 move container to workspace number $ws6
-bindsym Mod4+Control+7 move container to workspace number $ws7
-bindsym Mod4+Control+8 move container to workspace number $ws8
-bindsym Mod4+Control+9 move container to workspace number $ws9
-bindsym Mod4+Control+0 move container to workspace number $ws10
+bindsym $mod+Control+1 move container to workspace number $ws1
+bindsym $mod+Control+2 move container to workspace number $ws2
+bindsym $mod+Control+3 move container to workspace number $ws3
+bindsym $mod+Control+4 move container to workspace number $ws4
+bindsym $mod+Control+5 move container to workspace number $ws5
+bindsym $mod+Control+6 move container to workspace number $ws6
+bindsym $mod+Control+7 move container to workspace number $ws7
+bindsym $mod+Control+8 move container to workspace number $ws8
+bindsym $mod+Control+9 move container to workspace number $ws9
+bindsym $mod+Control+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym Mod4+Shift+c reload
+bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym Mod4+Shift+r restart
+bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# keybinding in fancy rofi (automated):
+bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -202,30 +233,96 @@ mode "resize" {
         bindsym Up          resize shrink height 10 px or 10 ppt
         bindsym Right       resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or Mod4+r
+        # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym Mod4+r mode "default"
+        bindsym $mod+r mode "default"
 }
 
-bindsym Mod4+r mode "resize"
+bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+######################################
+# Color settings for bar and windows #
+######################################
+
+# Define colors variables:
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#fffbed
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#141414
+set $grey		#a8a8a8
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+
+# define colors for windows:
+#class		        	border		bground		text		indicator	child_border
+# client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
+# client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
+# client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
+# client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
+
+############################################
+# Bar settings (input comes from i3blocks) #
+############################################
+
+# Start i3bar to display a workspace bar
+# (plus the system information i3status finds out, if available)
 bar {
-        status_command i3status
+                font pango:JetBrainsMono Nerd Font 11
+		status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	    	position bottom
+#	    	i3bar_command i3bar --transparency
+# it could be that you have no primary display set: set one (xrandr --output <output> --primary)
+# reference: https://i3wm.org/docs/userguide.html#_tray_output
+		    #tray_output primary
+		    tray_padding 0
+
+# When strip_workspace_numbers is set to yes,
+# any workspace that has a name of the form
+# “[n][:][NAME]” will display only the name.
+strip_workspace_numbers yes
+#strip_workspace_name no
+
+                    colors {
+                    separator          $lightblue
+                    background         $darkgrey
+                    statusline         $white
+#                          		border 		        bg		txt		indicator
+		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$lightblue
+		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$lightblue
+		inactive_workspace	$darkgrey   		$darkgrey	$white		$lightblue
+		urgent_workspace	$urgentred	    	$urgentred	$white		$lightblue
+	}
 }
 
 for_window [class="^.*"] border pixel 2
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.config/i3/config (or $XDG_CONFIG_HOME/i3/config if set) or
-# ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
+#####################################
+# Application menu handled by rofi: #
+#####################################
+
+## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
+
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun \
+		-config ~/.config/rofi/rofidmenu.rasi
+
+#bindsym F9 exec --no-startup-id rofi -modi drun -show drun \
+#		-config ~/.config/rofi/rofidmenu.rasi
+
+## rofi bindings for window menu ($mod+t /F10 optional disabled)
+
+# bindsym $mod+t exec --no-startup-id rofi -show window \
+# 		-config ~/.config/rofi/rofidmenu.rasi
+
+#bindsym F10 exec --no-startup-id rofi -show window \
+#		-config ~/.config/rofi/rofidmenu.rasi
+
+## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
+
+#exec --no-startup-id greenclip daemon>/dev/null
+#bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
+#		-config ~/.config/rofi/rofidmenu.rasi
