@@ -12,7 +12,7 @@ return {
         -- stylua: ignore
         local colors = {
             bg       = '#363836',
-            fg       = '#caccca',
+            fg       = '#ebdbb2',
             yellow   = '#ECBE7B',
             cyan     = '#008080',
             darkblue = '#081633',
@@ -177,7 +177,7 @@ return {
                 return msg
             end,
             icon = ' LSP:',
-            color = { fg = '#caccca', gui = 'bold' },
+            color = { fg = '#ebdbb2', gui = 'bold' },
         }
 
         -- Add components to right sections
