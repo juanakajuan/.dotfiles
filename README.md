@@ -26,6 +26,7 @@ chsh -s $(which zsh)
 - btop
 - vtop
 - zoxide
+- eza
 - starship
 - neovim
 - tmux
