@@ -8,6 +8,7 @@ stow .
 ### Applications to install
 - pasystray
 - zsh
+- xclip
 - bibata-cursor-theme
 - ttf-jetbrains-mono-nerd
 - nodejs
