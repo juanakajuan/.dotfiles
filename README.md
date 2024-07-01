@@ -40,6 +40,7 @@ https://github.com/tsoding/boomer
 - i3status
 - dunst
 - rofi
+- autotiling
 - nwg-look
 - bat
 - maim
