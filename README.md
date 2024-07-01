@@ -37,7 +37,8 @@ https://github.com/tsoding/boomer
 - discord
 - todoist
 - i3
-- i3status
+- i3blocks
+- picom
 - dunst
 - rofi
 - autotiling
