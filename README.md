@@ -41,7 +41,6 @@ https://github.com/tsoding/boomer
 - picom
 - dunst
 - rofi
-- autotiling
 - nwg-look
 - bat
 - maim
