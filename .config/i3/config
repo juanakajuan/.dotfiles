@@ -204,7 +204,7 @@ bindsym $mod+Control+0 move container to workspace number $ws10
 # Autostart applications
 exec todoist
 exec discord
-assign [class="todoist"] 3
+assign [class="Todoist"] 3
 assign [class="discord"] 4
 
 # reload the configuration file
