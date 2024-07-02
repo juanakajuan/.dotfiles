@@ -5,7 +5,7 @@ if [[ $# -eq 1 ]]; then
     selected_path=$1
 else
     # If no argument was provided, interactively choose a directory
-    selected_path=$(fd . ~/.dotfiles ~/.dotfiles/.config ~/Dev ~/Dev/Uni ~/Dev/Uni/CS* --min-depth 1 --max-depth 1 --type d | fzf)
+    selected_path=$(fd . ~/.dotfiles ~/.dotfiles/.config ~/Dev ~/Dev/Work ~/Dev/Uni ~/Dev/Uni/CS* --min-depth 1 --max-depth 1 --type d | fzf)
 fi
 
 # If no directory was selected, exit the script
