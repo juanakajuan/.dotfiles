@@ -15,7 +15,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- Replace the word that I am currently on
 vim.keymap.set(
     "n",
-    "<leader>s",
+    "<leader>rw",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Find and replace on current word" }
 )
