@@ -1,24 +1,11 @@
 #!/usr/bin/env bash
 
-# Inspired by https://github.com/ThePrimeagen/.dotfiles/blob/602019e902634188ab06ea31251c01c1a43d1621/bin/.local/scripts/tmux-sessionizer
-# Just for zellij
-# alows you to use `fzf` to navigate into a desire folder and either start or attach into a zellij session
-# If you run it from inside zellij, it will open the newly selected folder in a new pane
-
-# Demo of the original: https://youtu.be/bdumjiHabhQ?t=269
-
-# 1. Place the script in your path
-# 2. Create an alias to call this script in your shells .rc config: 
-#    bindkey -s ^f "zellij_sessionizer\n"
-# 3. Update where you want to search:
-#    I'm using `fd` to perform the search inside a specific dir, you can use that or `find`
-
 # Use an argument if passed
 if [[ $# -eq 1 ]]; then
     selected_path=$1
 else
     # If no argument was provided, interactively choose a directory
-    selected_path=$(fd . ~/.dotfiles ~/.dotfiles/.config ~/Dev --min-depth 1 --max-depth 2 --type d | fzf)
+    selected_path=$(fd . ~/.dotfiles ~/.dotfiles/.config ~/Dev ~/Dev/Uni ~/Dev/Uni/CS* --min-depth 1 --max-depth 1 --type d | fzf)
 fi
 
 # If no directory was selected, exit the script
