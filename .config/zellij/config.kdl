@@ -21,6 +21,7 @@ keybinds {
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
+        bind "Alt f" { ToggleFocusFullscreen; }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
