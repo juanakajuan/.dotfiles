@@ -207,6 +207,9 @@ exec discord
 assign [class="Todoist"] 3
 assign [class="discord"] 4
 
+# Alternate Workspaces
+bindsym $mod+Tab workspace back_and_forth
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
