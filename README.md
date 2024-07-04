@@ -24,6 +24,7 @@ https://github.com/tsoding/boomer
 - stow
 - zsh
 - xclip
+- wl-clipboard
 - neofetch
 - bibata-cursor-theme
 - ttf-jetbrains-mono-nerd
