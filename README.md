@@ -10,6 +10,13 @@ stow .
 chsh -s $(which zsh)
 ```
 
+### Commands to Generate Github SSH Key
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
 ### Magnifier for i3
 https://github.com/tsoding/boomer
 
