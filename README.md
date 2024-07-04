@@ -29,7 +29,6 @@ https://github.com/tsoding/boomer
 - bibata-cursor-theme
 - ttf-jetbrains-mono-nerd
 - nodejs
-- java
 - npm
 - fd
 - ripgrep
@@ -39,7 +38,7 @@ https://github.com/tsoding/boomer
 - eza
 - starship
 - neovim
-- tmux
+- zellij
 - wezterm
 - discord
 - todoist
