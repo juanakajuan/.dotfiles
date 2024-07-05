@@ -20,30 +20,17 @@ exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
 exec --no-startup-id xset s off -dpms
 
 # # Use pactl to adjust volume in PulseAudio.
-# set $refresh_i3status killall -SIGUSR1 i3status
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# gradular volume control
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-
-# mute
-bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && killall -USR1 i3blocks
-
-# mic mute toggle
-bindsym XF86AudioMicMute exec amixer sset Capture toggle
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # audio control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause 
 # Above line will also work for pausing
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
-# Redirect sound to headphones
-bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 # Change the audio device in PulseAudio
 bindsym $mod+F9 exec pactl set-default-sink alsa_output.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.analog-stereo
@@ -218,6 +205,7 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
+
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # keybinding in fancy rofi (automated):
@@ -249,63 +237,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-######################################
-# Color settings for bar and windows #
-######################################
-
-# Define colors variables:
-set $darkbluetrans	#08052be6
-set $darkblue		#08052b
-set $lightblue		#5294e2
-set $urgentred		#e53935
-set $white		#fffbed
-set $black		#000000
-set $purple		#e345ff
-set $darkgrey		#141414
-set $grey		#a8a8a8
-set $mediumgrey		#8b8b8b
-set $yellowbrown	#e1b700
-
-# define colors for windows:
-#class		        	border		bground		text		indicator	child_border
-# client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
-# client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
-# client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
-# client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
-
-############################################
-# Bar settings (input comes from i3blocks) #
-############################################
-
-# Start i3bar to display a workspace bar
-# (plus the system information i3status finds out, if available)
 bar {
-                font pango:JetBrainsMono Nerd Font 11
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position bottom
-#	    	i3bar_command i3bar --transparency
-# it could be that you have no primary display set: set one (xrandr --output <output> --primary)
-# reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    #tray_output primary
-		    tray_padding 0
-
-# When strip_workspace_numbers is set to yes,
-# any workspace that has a name of the form
-# “[n][:][NAME]” will display only the name.
-strip_workspace_numbers yes
-#strip_workspace_name no
-
-                    colors {
-                    separator          $lightblue
-                    background         $darkgrey
-                    statusline         $white
-#                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$lightblue
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$lightblue
-		inactive_workspace	$darkgrey   		$darkgrey	$white		$lightblue
-		urgent_workspace	$urgentred	    	$urgentred	$white		$lightblue
-	}
+                status_command i3status
 }
 
 for_window [class="^.*"] border pixel 2
