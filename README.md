@@ -10,6 +10,13 @@ stow .
 chsh -s $(which zsh)
 ```
 
+### Commands to Generate Github SSH Key
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
 ### Magnifier for i3
 https://github.com/tsoding/boomer
 
@@ -17,11 +24,11 @@ https://github.com/tsoding/boomer
 - stow
 - zsh
 - xclip
+- wl-clipboard
 - neofetch
 - bibata-cursor-theme
 - ttf-jetbrains-mono-nerd
 - nodejs
-- java
 - npm
 - fd
 - ripgrep
@@ -31,7 +38,7 @@ https://github.com/tsoding/boomer
 - eza
 - starship
 - neovim
-- tmux
+- zellij
 - wezterm
 - discord
 - todoist
