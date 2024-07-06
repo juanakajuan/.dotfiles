@@ -4,6 +4,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 alias update="sudo nala update && sudo nala upgrade -y && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
+alias sus="systemctl suspend"
 
 #Keybinds
 bindkey -s "^f" "zellij-sessionizer.sh\n"
