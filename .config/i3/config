@@ -13,7 +13,7 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id /usr/bin/dunst
 
-exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/one-punch-man-ok-rs.jpg
+exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/anime_guy_with_animal.jpg
 exec_always --no-startup-id sleep 5 && picom -b
 # exec_always --no-startup-id ~/.screenlayout/screens.sh
 exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
@@ -239,6 +239,8 @@ bar {
 }
 
 for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
 
 #####################################
 # Application menu handled by rofi: #

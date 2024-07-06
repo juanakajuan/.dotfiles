@@ -7,7 +7,7 @@ alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
 
 #Keybinds
-bindkey -s "^f" "zellij-sessionizer.sh\n"
+bindkey -s "^f" "tmux-sessionizer.sh\n"
 bindkey '^R' history-incremental-search-backward
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
