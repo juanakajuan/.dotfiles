@@ -48,8 +48,9 @@ bindsym $mod+F10 exec pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog
 bindsym Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).png"
 bindsym $mod+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
 
-# Power Profiles menu switcher (rofi)
-bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
+## Clipboard Screenshots
+bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Control+$mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 ## Boomer
 # 0 --> Reset the application state (position, scale, velocity, etc).
@@ -62,9 +63,7 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 # Ctrl + Scroll wheel --> Change the radius of the flaslight.
 bindsym $mod+z exec --no-startup-id ~/Applications/boomer/boomer
 
-## Clipboard Screenshots
-bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Control+$mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym $mod+Control+s exec systemctl suspend
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -74,7 +73,6 @@ set $left h
 set $right l
 set $terminal "/usr/bin/wezterm"
 set $browser firefox
-
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -123,7 +121,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -212,9 +210,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# keybinding in fancy rofi (automated):
-bindsym F1 exec --no-startup-id ~/.config/i3/scripts/keyhint-2
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
