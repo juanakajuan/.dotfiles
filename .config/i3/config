@@ -1,6 +1,10 @@
 font pango:JetBrainsMono Nerd Font 10
 set $mod Mod4
 
+exec --no-startup-id xinput -set-prop 'ASUE140D:00 04F3:31B9 Touchpad' 'libinput Accel Speed' 1.0
+exec --no-startup-id xinput -set-prop 'ASUE140D:00 04F3:31B9 Touchpad' 'libinput Accel Profile Enabled' 0, 1
+
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -31,6 +35,10 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 # Above line will also work for pausing
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Control screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Change the audio device in PulseAudio
 bindsym $mod+F9 exec pactl set-default-sink alsa_output.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.analog-stereo
