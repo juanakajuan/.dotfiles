@@ -46,6 +46,7 @@ https://github.com/tsoding/boomer
 
 #### i3 Applications
 - i3
+- i3status
 - picom
 - dunst
 - rofi
