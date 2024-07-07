@@ -17,13 +17,6 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
-### Have a consistent cursor across applications in Wayland
-Change the environment variables ```XCURSOR_THEME``` and ```XCURSOR_SIZE``` to
-the cursor and cursor size that you want.
-```bash
-sudo nvim /etc/environment
-```
-
 ### Magnifier for i3
 https://github.com/tsoding/boomer
 
@@ -53,7 +46,6 @@ https://github.com/tsoding/boomer
 
 #### i3 Applications
 - i3
-- i3blocks
 - picom
 - dunst
 - rofi

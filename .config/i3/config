@@ -65,7 +65,7 @@ set $down j
 set $left h
 set $right l
 set $terminal "/usr/bin/wezterm"
-set $browser /usr/bin/brave
+set $browser firefox
 
 
 # use Mouse+$mod to drag floating windows to their wanted position
