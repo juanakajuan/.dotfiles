@@ -11,29 +11,14 @@ general {
         interval = 5
 }
 
-# order += "wireless _first_"
-# order += "ethernet _first_"
-# order += "battery all"
 order += "volume master"
 order += "cpu_usage"
 order += "memory"
 order += "disk /"
-# order += "load"
+order += "battery 0"
+order += "ethernet enp6s0"
+order += "wireless wlan0"
 order += "tztime local"
-
-wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
-}
-
-ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
-}
-
-battery all {
-        format = "%status %percentage %remaining"
-}
 
 disk "/" {
         format = " %avail"
@@ -47,10 +32,6 @@ cpu_usage {
         format = "  %usage"
 }
 
-load {
-        format = "%1min"
-}
-
 memory {
         format = "  %percentage_used"
         threshold_degraded = "1G"
@@ -59,4 +40,25 @@ memory {
 
 tztime local {
         format = "%m-%d-%y %I:%M %p"
+}
+
+wireless wlan0 {
+        format_up = "W: (%quality at %essid, %bitrate)"
+        format_down = "W: down"
+}
+
+ethernet enp6s0 {
+        format_up = "E: (%speed)"
+        format_down = "E: down"
+}
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
 }
