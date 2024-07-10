@@ -1,4 +1,6 @@
 DISABLE_MAGIC_FUNCTIONS=true
+setopt inc_append_history
+setopt share_history
 
 # Aliases
 alias update="sudo nala update && sudo nala upgrade -y && flatpak upgrade"
