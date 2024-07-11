@@ -151,6 +151,14 @@ exec --no-startup-id obsidian
 bindsym $mod+o [class="obsidian"] scratchpad show; move position center
 for_window [class="obsidian"] move scratchpad
 
+exec --no-startup-id obs
+bindsym $mod+i [class="obs"] scratchpad show; move position center
+for_window [class="obs"] move scratchpad
+
+exec --no-startup-id Todoist
+bindsym $mod+u [class="Todoist"] scratchpad show; move position center
+for_window [class="Todoist"] move scratchpad
+
 
 # -------------------------------------------------------------------------------
 
