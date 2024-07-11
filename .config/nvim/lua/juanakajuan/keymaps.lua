@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- vim.keymap.set("n", "<C-a>", "<C-^>")
-
 -- Quick fix list navigation
 vim.keymap.set("n", "<leader>qn", "<CMD>cnext<CR>zz")
 vim.keymap.set("n", "<leader>qp", "<CMD>cprev<CR>zz")
@@ -88,3 +86,5 @@ vim.keymap.set(
     "<CMD>syntax sync fromstart<CR>",
     { desc = "Fix syntax highlighting" }
 )
+
+vim.keymap.set( "n", "-", "<CMD>Ex<CR>")
