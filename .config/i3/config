@@ -213,10 +213,8 @@ bindsym $mod+Control+9 move container to workspace number $ws9
 bindsym $mod+Control+0 move container to workspace number $ws10
 
 # Autostart applications
-exec todoist
 exec discord
-assign [class="Todoist"] 3
-assign [class="discord"] 4
+assign [class="discord"] 3
 
 # Alternate Workspaces
 bindsym $mod+Tab workspace back_and_forth
