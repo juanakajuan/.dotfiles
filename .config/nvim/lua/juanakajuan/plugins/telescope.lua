@@ -34,7 +34,7 @@ return {
                         width = 0.99,
                         width_padding = 0.04,
                         height_padding = 0.1,
-                        preview_width = 0.6,
+                        preview_width = 0.5,
                     },
                 },
             },
