@@ -9,7 +9,6 @@ alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
 
 #Keybinds
-bindkey -s "^f" "tmux-sessionizer.sh\n"
 bindkey '^R' history-incremental-search-backward
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
@@ -43,6 +42,7 @@ eval "$(starship init zsh)"
 neofetch
 
 bindkey -e
+bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
