@@ -19,7 +19,7 @@ exec --no-startup-id /usr/bin/dunst
 
 exec_always --no-startup-id sleep 5 && feh --bg-fill ~/Pictures/anime_guy_with_animal.jpg
 exec_always --no-startup-id sleep 5 && picom -b
-# exec_always --no-startup-id ~/.screenlayout/screens.sh
+exec_always --no-startup-id ~/.screenlayout/screens.sh
 exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
 exec --no-startup-id xset s off -dpms
 
@@ -151,13 +151,13 @@ exec --no-startup-id obsidian
 bindsym $mod+o [class="obsidian"] scratchpad show; move position center
 for_window [class="obsidian"] move scratchpad
 
-exec --no-startup-id obs
-bindsym $mod+i [class="obs"] scratchpad show; move position center
-for_window [class="obs"] move scratchpad
-
-exec --no-startup-id Todoist
-bindsym $mod+u [class="Todoist"] scratchpad show; move position center
-for_window [class="Todoist"] move scratchpad
+# exec --no-startup-id obs
+# bindsym $mod+i [class="obs"] scratchpad show; move position center
+# for_window [class="obs"] move scratchpad
+#
+# exec --no-startup-id Todoist
+# bindsym $mod+u [class="Todoist"] scratchpad show; move position center
+# for_window [class="Todoist"] move scratchpad
 
 
 # -------------------------------------------------------------------------------
@@ -212,9 +212,26 @@ bindsym $mod+Control+8 move container to workspace number $ws8
 bindsym $mod+Control+9 move container to workspace number $ws9
 bindsym $mod+Control+0 move container to workspace number $ws10
 
+# Multi-monitor Workspaces
+set $first_monitor DisplayPort-0
+set $second_monitor DisplayPort-1
+
+workspace 1 output $first_monitor
+workspace 2 output $first_monitor
+workspace 3 output $first_monitor
+workspace 4 output $first_monitor
+workspace 5 output $first_monitor
+workspace 6 output $second_monitor
+workspace 7 output $second_monitor
+workspace 8 output $second_monitor
+workspace 9 output $second_monitor
+workspace 10 output $second_monitor
+
 # Autostart applications
 exec discord
-assign [class="discord"] 3
+assign [class="discord"] 6
+exec todoist
+assign [class="Todoist"] 7
 
 # Alternate Workspaces
 bindsym $mod+Tab workspace back_and_forth
@@ -224,9 +241,7 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

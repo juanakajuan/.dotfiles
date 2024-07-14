@@ -11,9 +11,9 @@ return {
         vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
 
         require("nvim-tree").setup {
-            -- view = {
-            --     width = 50,
-            -- },
+            view = {
+                width = 50,
+            },
             git = {
                 ignore = false,
             },
