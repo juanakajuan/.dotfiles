@@ -14,6 +14,8 @@ bindkey '^R' history-incremental-search-backward
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 export EDITOR=nvim
+export BROWSER='/usr/bin/brave' 
+
 export PATH=$PATH:~/bin
 export PATH=$PATH:/home/juanix/.local/bin
 export PATH=/home/juanix/.cargo/bin:$PATH

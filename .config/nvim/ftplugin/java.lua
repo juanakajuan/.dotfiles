@@ -10,4 +10,4 @@ local config = {
         end,
     },
 }
-require("jdtls").start_or_attach(config)
+-- require("jdtls").start_or_attach(config)

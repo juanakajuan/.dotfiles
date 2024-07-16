@@ -182,19 +182,19 @@ return {
 
         mason_lspconfig.setup_handlers {
             function(server_name)
-                if server_name ~= "jdtls" then
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities,
-                        on_attach = on_attach,
-                        settings = servers[server_name],
-                        filetypes = (servers[server_name] or {}).filetypes,
-                        handlers = {
-                            ["$/progress"] = function(_, result, ctx)
-                                -- disable progress updates.
-                            end,
-                        },
-                    }
-                end
+                -- if server_name ~= "jdtls" then
+                require("lspconfig")[server_name].setup {
+                    capabilities = capabilities,
+                    on_attach = on_attach,
+                    settings = servers[server_name],
+                    filetypes = (servers[server_name] or {}).filetypes,
+                    handlers = {
+                        ["$/progress"] = function(_, result, ctx)
+                            -- disable progress updates.
+                        end,
+                    },
+                }
+                -- end
             end,
         }
     end,
