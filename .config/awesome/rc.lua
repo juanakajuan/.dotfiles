@@ -99,6 +99,7 @@ myawesomemenu = {
     { "hotkeys",     function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
     { "manual",      terminal .. " -e man awesome" },
     { "edit config", editor_cmd .. " " .. awesome.conffile },
+    { "suspend", function() awful.spawn("systemctl suspend") end },
     { "restart",     awesome.restart },
     { "quit",        function() awesome.quit() end },
 }
@@ -111,14 +112,14 @@ if has_fdo then
         before = { menu_awesome },
         after = { menu_terminal }
     })
--- else
---     mymainmenu = awful.menu({
---         items = {
---             menu_awesome,
---             { "Debian", debian.menu.Debian_menu.Debian },
---             menu_terminal,
---         }
---     })
+else
+    mymainmenu = awful.menu({
+        items = {
+            menu_awesome,
+            -- { "Debian", debian.menu.Debian_menu.Debian },
+            menu_terminal,
+        }
+    })
 end
 
 
@@ -602,8 +603,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
-awesome.set_preferred_icon_size(50)
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 awful.spawn.with_shell("~/.config/awesome/nosleep.sh")
