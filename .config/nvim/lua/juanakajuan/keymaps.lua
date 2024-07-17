@@ -86,5 +86,3 @@ vim.keymap.set(
     "<CMD>syntax sync fromstart<CR>",
     { desc = "Fix syntax highlighting" }
 )
-
-vim.keymap.set( "n", "-", "<CMD>Ex<CR>")
