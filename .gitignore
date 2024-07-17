@@ -1,3 +1,4 @@
 .config/tmux/tmux.conf
 bin/tmux-sessionizer
 bin/zellij
+.gitconfig

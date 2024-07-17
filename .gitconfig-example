@@ -1,0 +1,13 @@
+[user]
+	name = 
+	email = 
+[credential]
+	helper = store
+[push]
+	autoSetupRemote = true
+[alias]
+	co = commit
+	ch = checkout
+	br = branch
+	st = status
+	a = add
