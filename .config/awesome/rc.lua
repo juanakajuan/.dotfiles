@@ -5,21 +5,26 @@ pcall(require, "luarocks.loader")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
+
 require("awful.autofocus")
+
 -- Widget and layout library
 local wibox = require("wibox")
+
 -- Theme handling library
 local beautiful = require("beautiful")
+
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
 -- Load Debian menu entries
-local debian = require("debian.menu")
+-- local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- {{{ Error handling
@@ -69,8 +74,8 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.tile,
     awful.layout.suit.max,
+    awful.layout.suit.tile,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.magnifier,
     -- awful.layout.suit.max.fullscreen,
@@ -106,14 +111,14 @@ if has_fdo then
         before = { menu_awesome },
         after = { menu_terminal }
     })
-else
-    mymainmenu = awful.menu({
-        items = {
-            menu_awesome,
-            { "Debian", debian.menu.Debian_menu.Debian },
-            menu_terminal,
-        }
-    })
+-- else
+--     mymainmenu = awful.menu({
+--         items = {
+--             menu_awesome,
+--             { "Debian", debian.menu.Debian_menu.Debian },
+--             menu_terminal,
+--         }
+--     })
 end
 
 
@@ -129,9 +134,6 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 mytextclock = wibox.widget.textclock("%a %b %d, %I:%M %p")
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -236,11 +238,6 @@ awful.screen.connect_for_each_screen(function(s)
             spacing = 10,
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            -- cpu_widget(),
-            -- ram_widget(),
-            volume_widget {
-                -- widget_type = 'horizontal_bar'
-            },
             mytextclock,
             s.mylayoutbox,
         },
@@ -266,9 +263,9 @@ globalkeys = gears.table.join(
         { description = "view next", group = "tag" }),
     awful.key({ modkey, }, "Escape", awful.tag.history.restore,
         { description = "go back", group = "tag" }),
-    awful.key({}, "XF86AudioRaiseVolume", function() volume_widget.inc(5) end),
-    awful.key({}, "XF86AudioLowerVolume", function() volume_widget.dec(5) end),
-    awful.key({}, "XF86AudioMute", function() volume_widget.toggle() end),
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
+    awful.key({}, "XF86AudioMute", function()  end),
 
     awful.key({ modkey, }, "j",
         function()
