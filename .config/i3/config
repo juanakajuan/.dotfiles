@@ -22,6 +22,7 @@ exec_always --no-startup-id sleep 5 && picom -b
 exec_always --no-startup-id ~/.screenlayout/screens.sh
 exec_always --no-startup-id "setxkbmap -option ctrl:nocaps"
 exec --no-startup-id xset s off -dpms
+exec --no-startup-id flameshot
 
 # # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,13 +45,13 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+F9 exec pactl set-default-sink alsa_output.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.analog-stereo
 bindsym $mod+F10 exec pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
 
-## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).jpg"
-bindsym $mod+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).jpg"
-
-## Clipboard Screenshots
-bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Control+$mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+# ## Screenshots
+# bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).jpg"
+# bindsym $mod+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).jpg"
+#
+# ## Clipboard Screenshots
+# bindsym Control+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+# bindsym Control+$mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 ## Boomer
 # 0 --> Reset the application state (position, scale, velocity, etc).
@@ -146,10 +147,6 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
-
-exec --no-startup-id obsidian
-bindsym $mod+o [class="obsidian"] scratchpad show; move position center
-for_window [class="obsidian"] move scratchpad
 
 # exec --no-startup-id obs
 # bindsym $mod+i [class="obs"] scratchpad show; move position center
@@ -272,6 +269,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bar {
                 status_command i3status
+                tray_output primary
 }
 
 for_window [class="^.*"] border pixel 2
