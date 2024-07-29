@@ -264,9 +264,9 @@ globalkeys = gears.table.join(
         { description = "view next", group = "tag" }),
     awful.key({ modkey, }, "Escape", awful.tag.history.restore,
         { description = "go back", group = "tag" }),
-    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end),
-    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end),
-    awful.key({}, "XF86AudioMute", function()  end),
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%+") end),
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%-") end),
+    awful.key({}, "XF86AudioMute", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh toggle") end),
 
     awful.key({ modkey, }, "j",
         function()
