@@ -23,8 +23,9 @@ return {
                 cpp = { "clang-format" },
                 typescriptreact = { { "prettierd", "prettier" } },
                 javascriptreact = { { "prettierd", "prettier" } },
-                javascript = { { "prettierd", "prettier" } },
-                typescript = { { "prettierd", "prettier" } },
+                javascript = { { "prettierd" } },
+                typescript = { { "prettierd" } },
+                volar = { { "prettierd" } },
             },
         }
     end,
