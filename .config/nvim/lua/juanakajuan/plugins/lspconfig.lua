@@ -10,7 +10,7 @@ return {
 
         -- Useful status updates for LSP
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-        { "j-hui/fidget.nvim", opts = {} },
+        { "j-hui/fidget.nvim",       opts = {} },
 
         -- Additional lua configuration, makes nvim stuff amazing!
         "folke/neodev.nvim",
@@ -105,29 +105,29 @@ return {
 
         -- document existing key chains
         require("which-key").add {
-            { "<leader>c", group = "[C]ode" },
+            { "<leader>c",  group = "[C]ode" },
             { "<leader>c_", hidden = true },
-            { "<leader>d", group = "[D]ocument" },
+            { "<leader>d",  group = "[D]ocument" },
             { "<leader>d_", hidden = true },
-            { "<leader>g", group = "[G]it" },
+            { "<leader>g",  group = "[G]it" },
             { "<leader>g_", hidden = true },
-            { "<leader>h", group = "Git [H]unk" },
+            { "<leader>h",  group = "Git [H]unk" },
             { "<leader>h_", hidden = true },
-            { "<leader>r", group = "[R]ename" },
+            { "<leader>r",  group = "[R]ename" },
             { "<leader>r_", hidden = true },
-            { "<leader>s", group = "[S]earch" },
+            { "<leader>s",  group = "[S]earch" },
             { "<leader>s_", hidden = true },
-            { "<leader>t", group = "[T]oggle" },
+            { "<leader>t",  group = "[T]oggle" },
             { "<leader>t_", hidden = true },
-            { "<leader>w", group = "[W]orkspace" },
+            { "<leader>w",  group = "[W]orkspace" },
             { "<leader>w_", hidden = true },
         }
 
         -- register which-key VISUAL mode
         -- required for visual <leader>hs (hunk stage) to work
         require("which-key").add {
-            { "<leader>", group = "VISUAL <leader>", mode = "v" },
-            { "<leader>h", desc = "Git [H]unk", mode = "v" },
+            { "<leader>",  group = "VISUAL <leader>", mode = "v" },
+            { "<leader>h", desc = "Git [H]unk",       mode = "v" },
         }
 
         -- mason-lspconfig requires that these setup functions are called in this order
@@ -136,14 +136,12 @@ return {
 
         require("mason-lspconfig").setup()
 
-        -- Enable the following language servers
-        --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-        --
+        local mason_registry = require('mason-registry')
+        local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() ..
+        '/node_modules/@vue/language-server'
+
         --  Add any additional override configuration in the following tables. They will be passed to
         --  the `settings` field of the server config. You must look up that documentation yourself.
-        --
-        --  If you want to override the default filetypes that your language server will attach to you can
-        --  define the property 'filetypes' to the map in question.
         local servers = {
             jdtls = {},
             clangd = {
@@ -154,8 +152,18 @@ return {
                 hint = { enable = true },
             },
             -- rust_analyzer = {},
-            tsserver = {},
-            -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+            tsserver = {
+                init_options = {
+                    plugins = {
+                        {
+                            name = '@vue/typescript-plugin',
+                            location = vue_language_server_path,
+                            languages = { 'vue' },
+                        },
+                    },
+                },
+                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+            },
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
