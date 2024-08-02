@@ -136,10 +136,6 @@ return {
 
         require("mason-lspconfig").setup()
 
-        local mason_registry = require('mason-registry')
-        local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() ..
-        '/node_modules/@vue/language-server'
-
         --  Add any additional override configuration in the following tables. They will be passed to
         --  the `settings` field of the server config. You must look up that documentation yourself.
         local servers = {
@@ -152,18 +148,7 @@ return {
                 hint = { enable = true },
             },
             -- rust_analyzer = {},
-            tsserver = {
-                init_options = {
-                    plugins = {
-                        {
-                            name = '@vue/typescript-plugin',
-                            location = vue_language_server_path,
-                            languages = { 'vue' },
-                        },
-                    },
-                },
-                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-            },
+            tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
