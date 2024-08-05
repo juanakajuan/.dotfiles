@@ -7,6 +7,7 @@ alias update="sudo nala update && sudo nala upgrade -y && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
+alias qnote="nvim '$(date +%F)'.md"
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
