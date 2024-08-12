@@ -268,6 +268,17 @@ globalkeys = gears.table.join(
     awful.key({}, "XF86AudioLowerVolume", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%-") end),
     awful.key({}, "XF86AudioMute", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh toggle") end),
 
+    -- Boomer
+    -- 0 --> Reset the application state (position, scale, velocity, etc).
+    -- q or ESC --> Quit the application.
+    -- r --> Reload configuration.
+    -- Ctrl + r --> Reload the shaders (only for Developer mode)
+    -- f --> Toggle flashlight effect.
+    -- Drag with left mouse button --> Move the image around.
+    -- Scroll wheel or =/- --> Zoom in/out.
+    -- Ctrl + Scroll wheel --> Change the radius of the flaslight.
+    awful.key({ modkey, }, "z", function() awful.spawn.with_shell("~/Applications/boomer/boomer") end),
+
     awful.key({ modkey, }, "j",
         function()
             awful.client.focus.byidx(1)
