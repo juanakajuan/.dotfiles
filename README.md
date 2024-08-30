@@ -44,9 +44,10 @@ https://github.com/tsoding/boomer
 - todoist
 - bat
 
-#### i3 Applications
+#### i3 / awesome Applications
 - i3
 - i3status
+- awesome
 - picom
 - dunst
 - rofi
@@ -60,3 +61,4 @@ https://github.com/tsoding/boomer
 - gnome-themes-extra
 - adwaita-qt5
 - adwaita-qt6
+- flameshot (for screenshotting)
