@@ -61,7 +61,7 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/usr/bin/wezterm"
+terminal = "/var/lib/flatpak/app/org.wezfurlong.wezterm"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -277,7 +277,7 @@ globalkeys = gears.table.join(
     -- Drag with left mouse button --> Move the image around.
     -- Scroll wheel or =/- --> Zoom in/out.
     -- Ctrl + Scroll wheel --> Change the radius of the flaslight.
-    awful.key({ modkey, }, "z", function() awful.spawn.with_shell("~/Applications/boomer/boomer") end),
+    awful.key({ modkey, }, "z", function() awful.spawn.with_shell("~/boomer/boomer") end),
 
     awful.key({ modkey, }, "j",
         function()

@@ -28,6 +28,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH=$PATH:/var/lib/flatpak/exports/share
 export PATH=$PATH:/home/juanix/.local/share/flatpak/exports/share
+export PATH=/home/juanix/.nimble/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
