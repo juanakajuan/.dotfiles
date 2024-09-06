@@ -14,3 +14,4 @@ run ~/.screenlayout/screens.sh &
 run nm-applet &
 run flameshot &
 run pasystray &
+xset s off -dpms
