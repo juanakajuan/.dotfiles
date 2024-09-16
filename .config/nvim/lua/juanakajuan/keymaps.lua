@@ -84,3 +84,9 @@ vim.keymap.set(
     "<CMD>syntax sync fromstart<CR>",
     { desc = "Fix syntax highlighting" }
 )
+vim.keymap.set(
+    "n",
+    "<leader>fp",
+    "<CMD>!npx prettier --write %<CR>",
+    { desc = "[F]ormat [P]rettier" }
+)
