@@ -23,6 +23,7 @@ https://github.com/tsoding/boomer
 ### Applications to install
 - stow
 - zsh
+- zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 - xclip
 - wl-clipboard
 - neofetch
