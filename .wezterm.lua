@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 
 config.audible_bell = "Disabled"
 
-config.font =
-	wezterm.font('JetbrainsMonoNL Nerd Font')
+-- config.font =
+-- 	wezterm.font('JetbrainsMonoNL Nerd Font')
 config.color_scheme = "GruvboxDarkHard"
 -- config.color_schemes = {
 -- 	["GruvboxDarkHard"] = {
@@ -18,7 +18,7 @@ config.color_scheme = "GruvboxDarkHard"
 
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_decorations = "NONE"
-config.font_size = 18
+config.font_size = 36
 
 config.automatically_reload_config = true
 config.check_for_updates = true
