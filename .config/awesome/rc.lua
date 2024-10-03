@@ -61,7 +61,7 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/var/lib/flatpak/app/org.wezfurlong.wezterm"
+terminal = "/usr/bin/gnome-terminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -532,6 +532,7 @@ awful.rules.rules = {
                 "veromix",
                 "xtightvncviewer",
                 "Thunar",
+                "Com.cisco.secureclient.gui",
             },
 
             -- Note that the name property shown in xprop might be set slightly after creation of the client
