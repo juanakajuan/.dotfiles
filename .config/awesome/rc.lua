@@ -267,6 +267,14 @@ globalkeys = gears.table.join(
     awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%+") end),
     awful.key({}, "XF86AudioLowerVolume", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%-") end),
     awful.key({}, "XF86AudioMute", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh toggle") end),
+    awful.key({}, "Print", function()
+        awful.spawn.with_shell("maim -s ~/Pictures/Screenshots/$(date +%F-%H_%M_%S).png")
+        naughty.notify({ text = "Screenshot of selected area taken" })
+    end, { description = "take a screenshot of selected area" }),
+    awful.key({ "Control" }, "Print", function()
+        awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png")
+        naughty.notify({ text = "Screenshot of selected area sent to clipboard" })
+    end, {description = "take a screenshot of selected area and only save it to the clipboard"}),
 
     -- Boomer
     -- 0 --> Reset the application state (position, scale, velocity, etc).
@@ -499,7 +507,7 @@ awful.rules.rules = {
             keys = clientkeys,
             buttons = clientbuttons,
             screen = awful.screen.preferred,
-            placement = awful.placement.no_overlap + awful.placement.no_offscreen,
+            placement = awful.placement.centered + awful.placement.no_overlap + awful.placement.no_offscreen,
             size_hints_honor = false,
         },
     },
@@ -522,7 +530,9 @@ awful.rules.rules = {
                 "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
                 "Wpa_gui",
                 "veromix",
-                "xtightvncviewer" },
+                "xtightvncviewer",
+                "Thunar",
+            },
 
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.

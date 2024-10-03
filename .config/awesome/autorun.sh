@@ -8,10 +8,9 @@ function run {
 }
 
 run picom -b &
-run /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+run /usr/libexec/polkit-gnome-authentication-agent-1 &
 run setxkbmap -option ctrl:nocaps &
 run ~/.screenlayout/screens.sh &
 run nm-applet &
-run flameshot &
 run pasystray &
 xset s off -dpms

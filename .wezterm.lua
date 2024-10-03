@@ -18,7 +18,7 @@ config.color_scheme = "GruvboxDarkHard"
 
 config.hide_tab_bar_if_only_one_tab = true
 -- config.window_decorations = "NONE"
-config.font_size = 37
+config.font_size = 19
 
 config.automatically_reload_config = true
 config.check_for_updates = true
@@ -27,7 +27,7 @@ config.pane_focus_follows_mouse = true
 -- config.window_background_opacity = 0.95
 config.default_prog = { '/usr/bin/zsh', '-l' }
 config.hide_mouse_cursor_when_typing = true
--- config.xcursor_theme = "Bibata-Modern-Ice"
--- config.xcursor_size = 20
+-- config.xcursor_theme = "Breeze-Light"
+-- config.xcursor_size = 18
 
 return config
