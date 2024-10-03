@@ -3,7 +3,7 @@ setopt inc_append_history
 setopt share_history
 
 # Aliases
-alias update="sudo nala update && sudo nala upgrade -y && flatpak upgrade"
+alias update="sudo dnf update && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
@@ -15,7 +15,6 @@ bindkey '^R' history-incremental-search-backward
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 export EDITOR=nvim
-export BROWSER='/usr/bin/google-chrome' 
 
 export PATH=$PATH:~/bin
 export PATH=$PATH:/home/juanix/.local/bin
