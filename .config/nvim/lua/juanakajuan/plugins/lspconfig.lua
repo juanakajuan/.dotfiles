@@ -148,7 +148,6 @@ return {
                 hint = { enable = true },
             },
             -- rust_analyzer = {},
-            tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },

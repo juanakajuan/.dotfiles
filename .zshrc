@@ -3,11 +3,12 @@ setopt inc_append_history
 setopt share_history
 
 # Aliases
-alias update="sudo dnf update && flatpak upgrade"
+alias update="sudo dnf -y upgrade --refresh && flatpak upgrade"
 alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
 alias qnote="nvim '$(date +%F)'.md"
+alias wezterm='flatpak run org.wezfurlong.wezterm'
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
