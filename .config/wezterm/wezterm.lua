@@ -1,8 +1,15 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local act = wezterm.action
+local func = require("funcs")
+local sessionizer = require("sessionizer")
 
 -- This will hold the configuration
 local config = wezterm.config_builder()
+
+wezterm.on('update-right-status', function(window, pane)
+  window:set_right_status(window:active_workspace())
+end)
 
 config.audible_bell = "Disabled"
 
@@ -16,31 +23,72 @@ config.color_scheme = "GruvboxDarkHard"
 -- }
 
 
-config.hide_tab_bar_if_only_one_tab = true
+-- config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
-config.keys = {}
-local act = wezterm.action
-for i = 1, 8 do
-    table.insert(config.keys, {
-        key = tostring(i),
-        mods = 'CTRL',
-        action = act.ActivateTab(i - 1),
-    })
+config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 2000, }
+
+config.keys = {
+  { key = "f", mods = "CTRL", action = wezterm.action_callback(sessionizer.toggle) },
+
+  -- Prompt for a name to use for a new workspace and switch to it.
+  {
+    key = 'w',
+    mods = 'LEADER',
+    action = act.PromptInputLine {
+      description = wezterm.format {
+        { Attribute = { Intensity = 'Bold' } },
+        { Foreground = { AnsiColor = 'Fuchsia' } },
+        { Text = 'Enter name for new workspace' },
+      },
+      action = wezterm.action_callback(function(window, pane, line)
+        -- line will be `nil` if they hit escape without entering anything
+        -- An empty string if they just hit enter
+        -- Or the actual line of text they wrote
+        if line then
+          window:perform_action(
+            act.SwitchToWorkspace {
+              name = line,
+            },
+            pane
+          )
+        end
+      end),
+    },
+  },
+  { key = 'l', mods = 'LEADER', action = wezterm.action.ShowLauncherArgs { flags = 'WORKSPACES' } },
+  { key = 'n', mods = 'ALT',    action = act.SwitchWorkspaceRelative(1) },
+  { key = 'p', mods = 'ALT',    action = act.SwitchWorkspaceRelative(-1) },
+  {
+    key = "x",
+    mods = "LEADER",
+    action = wezterm.action_callback(function(window, pane)
+      local workspace = window:active_workspace()
+      func.kill_workspace(window, pane, workspace)
+    end),
+  },
+}
+
+for i = 1, 5 do
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'CTRL',
+    action = act.ActivateTab(i - 1),
+  })
 end
 
 config.window_frame = {
-    border_left_width = '0.1cell',
-    border_right_width = '0.1cell',
-    border_bottom_height = '0.05cell',
-    border_top_height = '0.05cell',
-    border_left_color = '#5aa6c1',
-    border_right_color = '#5aa6c1',
-    border_bottom_color = '#5aa6c1',
-    border_top_color = '#5aa6c1',
+  border_left_width = '0.1cell',
+  border_right_width = '0.1cell',
+  border_bottom_height = '0.05cell',
+  border_top_height = '0.05cell',
+  border_left_color = '#5aa6c1',
+  border_right_color = '#5aa6c1',
+  border_bottom_color = '#5aa6c1',
+  border_top_color = '#5aa6c1',
 }
 
--- config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.font_size = 35
 
 config.automatically_reload_config = true
@@ -52,5 +100,9 @@ config.default_prog = { '/usr/bin/zsh', '-l' }
 config.hide_mouse_cursor_when_typing = true
 -- config.xcursor_theme = "Breeze-Light"
 -- config.xcursor_size = 18
+
+wezterm.on('update-right-status', function(window, pane)
+  window:set_right_status(window:active_workspace())
+end)
 
 return config

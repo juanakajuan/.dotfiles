@@ -61,7 +61,7 @@ end
 beautiful.init("~/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/usr/bin/gnome-terminal"
+terminal = "flatpak run org.wezfurlong.wezterm"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -273,7 +273,7 @@ globalkeys = gears.table.join(
     end, { description = "take a screenshot of selected area" }),
     awful.key({ "Control" }, "Print", function()
         awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png")
-        naughty.notify({ text = "Screenshot of selected area sent to clipboard" })
+        -- naughty.notify({ text = "Screenshot of selected area sent to clipboard" })
     end, {description = "take a screenshot of selected area and only save it to the clipboard"}),
 
     -- Boomer
@@ -299,8 +299,8 @@ globalkeys = gears.table.join(
         end,
         { description = "focus previous by index", group = "client" }
     ),
-    awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-        { description = "show main menu", group = "awesome" }),
+    -- awful.key({ modkey, }, "w", function() mymainmenu:show() end,
+    --     { description = "show main menu", group = "awesome" }),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -391,34 +391,34 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
         { description = "move to master", group = "client" }),
     awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,
-        { description = "move to screen", group = "client" }),
-    awful.key({ modkey, }, "t", function(c) c.ontop = not c.ontop end,
-        { description = "toggle keep on top", group = "client" }),
-    awful.key({ modkey, }, "n",
-        function(c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end,
-        { description = "minimize", group = "client" }),
-    awful.key({ modkey, }, "m",
-        function(c)
-            c.maximized = not c.maximized
-            c:raise()
-        end,
-        { description = "(un)maximize", group = "client" }),
-    awful.key({ modkey, "Control" }, "m",
-        function(c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end,
-        { description = "(un)maximize vertically", group = "client" }),
-    awful.key({ modkey, "Shift" }, "m",
-        function(c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end,
-        { description = "(un)maximize horizontally", group = "client" })
+        { description = "move to screen", group = "client" })
+    -- awful.key({ modkey, }, "t", function(c) c.ontop = not c.ontop end,
+    --     { description = "toggle keep on top", group = "client" }),
+    -- awful.key({ modkey, }, "n",
+    --     function(c)
+    --         -- The client currently has the input focus, so it cannot be
+    --         -- minimized, since minimized clients can't have the focus.
+    --         c.minimized = true
+    --     end,
+    --     { description = "minimize", group = "client" }),
+    -- awful.key({ modkey, }, "m",
+    --     function(c)
+    --         c.maximized = not c.maximized
+    --         c:raise()
+    --     end,
+    --     { description = "(un)maximize", group = "client" }),
+    -- awful.key({ modkey, "Control" }, "m",
+    --     function(c)
+    --         c.maximized_vertical = not c.maximized_vertical
+    --         c:raise()
+    --     end,
+    --     { description = "(un)maximize vertically", group = "client" }),
+    -- awful.key({ modkey, "Shift" }, "m",
+    --     function(c)
+    --         c.maximized_horizontal = not c.maximized_horizontal
+    --         c:raise()
+    --     end,
+    --     { description = "(un)maximize horizontally", group = "client" })
 )
 
 -- Bind all key numbers to tags.

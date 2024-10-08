@@ -5,15 +5,27 @@ local M = {}
 
 local fd = "/usr/bin/fd"
 
+local function formatString(str)
+    -- Replace dashes with spaces and capitalize the first letter of each word
+    local formatted = str:gsub("%w+", function(word)
+        return word:sub(1, 1):upper() .. word:sub(2):lower()
+    end)
+    return formatted:gsub("-", " ")
+end
+
 M.toggle = function(window, pane)
 	local projects = {}
 
 	local success, stdout, stderr = wezterm.run_child_process({
 		fd,
-		"-HI",
+		".",
+		"--type", "d",  -- Search for directories only
 		"--max-depth=4",
-		"--prune",
-		os.getenv("HOME") .. "/Dev"
+		"--prune",  -- Skip the contents of ignored directories
+		"/home/juanix/Dev/Uni",
+		"/home/juanix/Dev/Personal",
+		"/home/juanix/Dev/Scratch",
+		"/home/juanix/.dotfiles/.config",
 	})
 
 	if not success then
@@ -22,9 +34,8 @@ M.toggle = function(window, pane)
 	end
 
 	for line in stdout:gmatch("([^\n]*)\n?") do
-		local project = line:gsub("/.git.*$", "")
-		local label = project
-		local id = project:gsub(".*/", "")
+		local label = line
+		local id = formatString(label:match("([^/]+)/*$"))
 		table.insert(projects, { label = tostring(label), id = tostring(id) })
 	end
 
@@ -34,7 +45,7 @@ M.toggle = function(window, pane)
 				if not id and not label then
 					wezterm.log_info("Cancelled")
 				else
-					wezterm.log_info("Selected " .. label)
+					wezterm.log_info("Selected " .. label .. "Id: " .. id)
 					win:perform_action(
 						act.SwitchToWorkspace({ name = id, spawn = { cwd = label } }),
 						pane

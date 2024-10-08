@@ -8,7 +8,6 @@ alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
 alias qnote="nvim '$(date +%F)'.md"
-alias wezterm='flatpak run org.wezfurlong.wezterm'
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
@@ -46,7 +45,7 @@ eval "$(starship init zsh)"
 neofetch
 
 bindkey -e
-bindkey -s "^f" "tmux-sessionizer.sh\n"
+# bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
