@@ -21,11 +21,11 @@ return {
                 -- Use a sub-list to run only the first available formatter
                 java = { "clang-format" },
                 cpp = { "clang-format" },
-                typescriptreact = { { "prettierd", "prettier" } },
-                javascriptreact = { { "prettierd", "prettier" } },
-                javascript = { { "prettierd" } },
-                typescript = { { "prettierd" } },
-                volar = { { "prettierd" } },
+                typescriptreact = { "prettierd" },
+                javascriptreact = { "prettierd" },
+                javascript = { "prettierd" },
+                typescript = { "prettierd" },
+                volar = { "prettierd" },
             },
         }
     end,

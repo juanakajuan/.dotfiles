@@ -16,11 +16,9 @@ config.audible_bell = "Disabled"
 config.font =
     wezterm.font('JetbrainsMono Nerd Font')
 config.color_scheme = "GruvboxDarkHard"
--- config.color_schemes = {
--- 	["GruvboxDarkHard"] = {
--- 		background = "#1b1b1c",
--- 	},
--- }
+config.colors = {
+  background = "#0f0f0f",
+}
 
 
 -- config.hide_tab_bar_if_only_one_tab = true
@@ -29,7 +27,7 @@ config.use_fancy_tab_bar = false
 config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 2000, }
 
 config.keys = {
-  { key = "f", mods = "CTRL", action = wezterm.action_callback(sessionizer.toggle) },
+  { key = "f", mods = "CTRL",   action = wezterm.action_callback(sessionizer.toggle) },
 
   -- Prompt for a name to use for a new workspace and switch to it.
   {
@@ -77,19 +75,19 @@ for i = 1, 5 do
   })
 end
 
-config.window_frame = {
-  border_left_width = '0.1cell',
-  border_right_width = '0.1cell',
-  border_bottom_height = '0.05cell',
-  border_top_height = '0.05cell',
-  border_left_color = '#5aa6c1',
-  border_right_color = '#5aa6c1',
-  border_bottom_color = '#5aa6c1',
-  border_top_color = '#5aa6c1',
-}
+-- config.window_frame = {
+--   border_left_width = '0.1cell',
+--   border_right_width = '0.1cell',
+--   border_bottom_height = '0.05cell',
+--   border_top_height = '0.05cell',
+--   border_left_color = '#5aa6c1',
+--   border_right_color = '#5aa6c1',
+--   border_bottom_color = '#5aa6c1',
+--   border_top_color = '#5aa6c1',
+-- }
 
-config.window_decorations = "RESIZE"
-config.font_size = 35
+-- config.window_decorations = "RESIZE"
+config.font_size = 18
 
 config.automatically_reload_config = true
 config.check_for_updates = true
