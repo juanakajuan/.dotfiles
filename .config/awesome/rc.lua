@@ -16,6 +16,8 @@ local beautiful = require("beautiful")
 
 -- Notification library
 local naughty = require("naughty")
+naughty.config.defaults.icon_size = 500
+
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
@@ -258,20 +260,29 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ MODKEY, }, "s", hotkeys_popup.show_help,
         { description = "show help", group = "awesome" }),
+
     awful.key({ MODKEY, }, "Left", awful.tag.viewprev,
         { description = "view previous", group = "tag" }),
+
     awful.key({ MODKEY, }, "Right", awful.tag.viewnext,
         { description = "view next", group = "tag" }),
+
     awful.key({ MODKEY, }, "Escape", awful.tag.history.restore,
         { description = "go back", group = "tag" }),
+
     awful.key({}, "XF86AudioRaiseVolume",
         function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%+") end),
     awful.key({}, "XF86AudioLowerVolume",
         function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh 5%-") end),
     awful.key({}, "XF86AudioMute", function() awful.spawn.with_shell("~/.config/awesome/volume_control.sh toggle") end),
     awful.key({}, "Print", function()
+        local screenshot_name = os.date("%F-%H_%M") .. ".png"
+        local screenshot_path = "/home/juanix/Pictures/Screenshots/" .. screenshot_name
+
         awful.spawn.with_shell(
-        "maim -s /home/juanix/Pictures/Screenshots/$(date +%F-%H_%M).png && xclip -selection clipboard -t image/png /home/juanix/Pictures/Screenshots/$(date +%F-%H_%M).png && notify-send 'Screenshot of selected area taken'")
+            "maim -s " ..
+            screenshot_path ..
+            " && xclip -selection clipboard -t image/png " .. screenshot_path .. " && notify-send 'Screenshot of selected area taken' -i " .. screenshot_path)
     end, { description = "take a screenshot of selected area" }),
 
     -- Boomer
