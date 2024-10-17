@@ -12,6 +12,7 @@ wezterm.on('update-right-status', function(window, pane)
 end)
 
 config.audible_bell = "Disabled"
+config.enable_wayland = true
 
 config.font =
     wezterm.font('JetbrainsMono Nerd Font')
@@ -75,16 +76,16 @@ for i = 1, 5 do
   })
 end
 
--- config.window_frame = {
---   border_left_width = '0.1cell',
---   border_right_width = '0.1cell',
---   border_bottom_height = '0.05cell',
---   border_top_height = '0.05cell',
---   border_left_color = '#5aa6c1',
---   border_right_color = '#5aa6c1',
---   border_bottom_color = '#5aa6c1',
---   border_top_color = '#5aa6c1',
--- }
+config.window_frame = {
+  border_left_width = '0.1cell',
+  border_right_width = '0.1cell',
+  border_bottom_height = '0.05cell',
+  border_top_height = '0.05cell',
+  border_left_color = '#fc3838',
+  border_right_color = '#fc3838',
+  border_bottom_color = '#fc3838',
+  border_top_color = '#fc3838',
+}
 
 -- config.window_decorations = "RESIZE"
 config.font_size = 18
@@ -97,7 +98,7 @@ config.pane_focus_follows_mouse = true
 config.default_prog = { '/usr/bin/zsh', '-l' }
 config.hide_mouse_cursor_when_typing = true
 -- config.xcursor_theme = "Breeze-Light"
--- config.xcursor_size = 18
+config.xcursor_size = 24
 
 wezterm.on('update-right-status', function(window, pane)
   window:set_right_status(window:active_workspace())
