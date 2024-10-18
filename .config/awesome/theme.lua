@@ -10,9 +10,9 @@ local theme = {}
 theme.font          = "sans 10"
 
 theme.bg_normal     = "#0f0f0f"
-theme.bg_focus      = "#302f2f"
+theme.bg_focus      = "#404040"
 theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#545353"
+theme.bg_minimize   = "#242323"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"

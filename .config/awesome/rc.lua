@@ -542,6 +542,7 @@ awful.rules.rules = {
                 "xtightvncviewer",
                 "Thunar",
                 "Com.cisco.secureclient.gui",
+                "Cisco Secure Client",
                 "pavucontrol",
                 "Solaar",
             },
