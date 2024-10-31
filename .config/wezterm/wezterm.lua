@@ -76,6 +76,15 @@ for i = 1, 5 do
   })
 end
 
+for i = 1, 8 do
+  -- CTRL+ALT + number to move to that position
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'CTRL|ALT',
+    action = wezterm.action.MoveTab(i - 1),
+  })
+end
+
 config.window_frame = {
   border_left_width = '0.1cell',
   border_right_width = '0.1cell',
@@ -88,7 +97,7 @@ config.window_frame = {
 }
 
 -- config.window_decorations = "RESIZE"
-config.font_size = 18
+config.font_size = 25
 
 config.automatically_reload_config = true
 config.check_for_updates = true
@@ -98,7 +107,7 @@ config.pane_focus_follows_mouse = true
 config.default_prog = { '/usr/bin/zsh', '-l' }
 config.hide_mouse_cursor_when_typing = true
 -- config.xcursor_theme = "Breeze-Light"
-config.xcursor_size = 24
+-- config.xcursor_size = 24
 
 wezterm.on('update-right-status', function(window, pane)
   window:set_right_status(window:active_workspace())

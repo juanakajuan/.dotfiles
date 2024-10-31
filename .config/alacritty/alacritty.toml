@@ -1,12 +1,16 @@
 [font]
-size = 18
+size = 30
 
 [font.normal]
-family = "JetbrainsMonoNL Nerd Font"
+family = "JetbrainsMono Nerd Font"
 style = "Regular"
 
 [window]
 padding = { x = 15, y = 2 }
+
+[window.dimensions]
+columns = 60
+lines = 20
 
 [colors.bright]
 black = "0x928374"
@@ -29,5 +33,5 @@ white = "0xa89984"
 yellow = "0xd79921"
 
 [colors.primary]
-background = "#1c1b1b"
+background = "#100f0f"
 foreground = "0xebdbb2"

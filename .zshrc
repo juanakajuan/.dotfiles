@@ -38,14 +38,16 @@ export SUDO_EDITOR="nvim"
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
-source $(brew --prefix 2>/dev/null)/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 neofetch
 
 bindkey -e
-# bindkey -s "^f" "tmux-sessionizer.sh\n"
+bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
