@@ -85,19 +85,19 @@ for i = 1, 8 do
   })
 end
 
-config.window_frame = {
-  border_left_width = '0.1cell',
-  border_right_width = '0.1cell',
-  border_bottom_height = '0.05cell',
-  border_top_height = '0.05cell',
-  border_left_color = '#fc3838',
-  border_right_color = '#fc3838',
-  border_bottom_color = '#fc3838',
-  border_top_color = '#fc3838',
-}
+-- config.window_frame = {
+--   border_left_width = '0.1cell',
+--   border_right_width = '0.1cell',
+--   border_bottom_height = '0.05cell',
+--   border_top_height = '0.05cell',
+--   border_left_color = '#fc3838',
+--   border_right_color = '#fc3838',
+--   border_bottom_color = '#fc3838',
+--   border_top_color = '#fc3838',
+-- }
 
 -- config.window_decorations = "RESIZE"
-config.font_size = 25
+config.font_size = 20
 
 config.automatically_reload_config = true
 config.check_for_updates = true
