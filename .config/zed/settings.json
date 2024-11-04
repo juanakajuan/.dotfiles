@@ -21,7 +21,7 @@
   "vim": {
     "toggle_relative_line_numbers": true
   },
-  "ui_font_size": 20,
+  "ui_font_size": 18,
   "buffer_font_size": 22,
   "theme": {
     "mode": "system",
@@ -29,5 +29,13 @@
     "dark": "Gruvbox Dark Hard"
   },
   "use_autoclose": false,
-  "vertical_scroll_margin": 8
+  "vertical_scroll_margin": 8,
+  "languages": {
+    "TypeScript": {
+      "tab_size": 4
+    },
+    "TSX": {
+      "tab_size": 4
+    }
+  }
 }
