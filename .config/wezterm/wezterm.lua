@@ -28,7 +28,7 @@ config.use_fancy_tab_bar = false
 config.leader = { key = 's', mods = 'CTRL', timeout_milliseconds = 2000, }
 
 config.keys = {
-  { key = "f", mods = "CTRL",   action = wezterm.action_callback(sessionizer.toggle) },
+  { key = "f", mods = "CTRL",        action = wezterm.action_callback(sessionizer.toggle) },
 
   -- Prompt for a name to use for a new workspace and switch to it.
   {
@@ -55,17 +55,20 @@ config.keys = {
       end),
     },
   },
-  { key = 'l', mods = 'LEADER', action = wezterm.action.ShowLauncherArgs { flags = 'WORKSPACES' } },
-  { key = 'n', mods = 'ALT',    action = act.SwitchWorkspaceRelative(1) },
-  { key = 'p', mods = 'ALT',    action = act.SwitchWorkspaceRelative(-1) },
-  {
-    key = "x",
-    mods = "LEADER",
-    action = wezterm.action_callback(function(window, pane)
-      local workspace = window:active_workspace()
-      func.kill_workspace(window, pane, workspace)
-    end),
-  },
+  { key = 'L', mods = 'LEADER',      action = act.ShowLauncherArgs { flags = 'WORKSPACES' } },
+  { key = 'c', mods = 'LEADER',      action = act.SpawnTab 'CurrentPaneDomain' },
+  { key = 'x', mods = 'LEADER',      action = act.CloseCurrentTab { confirm = true } },
+  { key = 'l', mods = 'LEADER', action = wezterm.action.ActivateLastTab, },
+  { key = 'n', mods = 'ALT',         action = act.SwitchWorkspaceRelative(1) },
+  { key = 'p', mods = 'ALT',         action = act.SwitchWorkspaceRelative(-1) },
+  -- {
+  --   key = "x",
+  --   mods = "LEADER",
+  --   action = wezterm.action_callback(function(window, pane)
+  --     local workspace = window:active_workspace()
+  --     func.kill_workspace(window, pane, workspace)
+  --   end),
+  -- },
 }
 
 for i = 1, 5 do

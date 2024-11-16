@@ -1,6 +1,5 @@
 vim.opt.swapfile = false
 
-vim.opt.colorcolumn = "80"
 vim.opt.wrap = true
 
 vim.opt.shiftwidth = 4
@@ -10,8 +9,6 @@ vim.opt.softtabstop = 4
 vim.opt.scrolloff = 8
 
 vim.opt.incsearch = true
-
-vim.wo.relativenumber = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
