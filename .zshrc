@@ -4,7 +4,6 @@ setopt share_history
 
 # Aliases
 alias update="sudo dnf -y upgrade --refresh && flatpak upgrade"
-alias ls="exa"
 alias azlogin="az acr login -n tdsacr2"
 alias sus="systemctl suspend"
 alias qnote="nvim '$(date +%F)'.md"
@@ -44,7 +43,7 @@ autoload -Uz compinit && compinit
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-neofetch
+fastfetch
 
 bindkey -e
 bindkey -s "^f" "tmux-sessionizer.sh\n"

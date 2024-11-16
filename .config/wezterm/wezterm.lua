@@ -12,7 +12,7 @@ wezterm.on('update-right-status', function(window, pane)
 end)
 
 config.audible_bell = "Disabled"
-config.enable_wayland = true
+config.enable_wayland = false
 
 config.font =
     wezterm.font('JetbrainsMono Nerd Font')
