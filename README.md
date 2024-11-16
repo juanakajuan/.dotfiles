@@ -24,11 +24,7 @@ https://github.com/tsoding/boomer
 - stow
 - zsh
 - zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-- xclip
-- wl-clipboard
-- neofetch
-- bibata-cursor-theme
-- ttf-jetbrains-mono-nerd
+- fastfetch / neofetch
 - nodejs
 - npm
 - fd
