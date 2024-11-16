@@ -32,7 +32,6 @@ https://github.com/tsoding/boomer
 - btop
 - vtop
 - zoxide
-- eza
 - starship (curl -sS https://starship.rs/install.sh | sh)
 - neovim
 - tmux
