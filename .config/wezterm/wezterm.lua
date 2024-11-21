@@ -100,7 +100,7 @@ end
 -- }
 
 -- config.window_decorations = "RESIZE"
-config.font_size = 20
+config.font_size = 19
 
 config.automatically_reload_config = true
 config.check_for_updates = true
