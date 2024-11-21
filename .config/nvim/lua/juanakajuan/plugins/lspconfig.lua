@@ -167,13 +167,6 @@ return {
         capabilities =
             require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-        require("flutter-tools").setup {
-            lsp = {
-                on_attach = on_attach,
-                capabilties = capabilities,
-            },
-        }
-
         -- Ensure the servers above are installed
         local mason_lspconfig = require "mason-lspconfig"
 
