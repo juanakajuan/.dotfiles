@@ -17,6 +17,9 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
+### Multimedia (Fedora)
+https://rpmfusion.org/Howto/Multimedia
+
 ### Magnifier for i3
 https://github.com/tsoding/boomer
 
