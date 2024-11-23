@@ -52,7 +52,6 @@ autoload -Uz compinit && compinit
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-fastfetch
 
 bindkey -e
 bindkey -s "^f" "tmux-sessionizer.sh\n"
