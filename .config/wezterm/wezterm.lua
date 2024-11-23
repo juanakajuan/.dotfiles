@@ -1,13 +1,12 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local act = wezterm.action
-local func = require("funcs")
 local sessionizer = require("sessionizer")
 
 -- This will hold the configuration
 local config = wezterm.config_builder()
 
-wezterm.on('update-right-status', function(window, pane)
+wezterm.on('update-right-status', function(window, _)
   window:set_right_status(window:active_workspace())
 end)
 
@@ -117,9 +116,5 @@ config.default_prog = { '/usr/bin/zsh', '-l' }
 config.hide_mouse_cursor_when_typing = true
 -- config.xcursor_theme = "Breeze-Light"
 -- config.xcursor_size = 24
-
-wezterm.on('update-right-status', function(window, pane)
-  window:set_right_status(window:active_workspace())
-end)
 
 return config
