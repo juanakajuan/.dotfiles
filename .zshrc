@@ -5,9 +5,9 @@ setopt share_history
 # Aliases
 alias azlogin='az acr login -n tdsacr2'
 alias qnote='nvim '$(date +%F)'.md'
-alias ls='eza --icons'
-alias ll='eza -l --icons'
-alias la='eza -la --icons'
+alias ls='exa --icons'
+alias ll='exa -l --icons'
+alias la='exa -la --icons'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias du='ncdu'
