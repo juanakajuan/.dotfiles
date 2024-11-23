@@ -40,8 +40,11 @@ https://github.com/tsoding/boomer
 - tmux
 - wezterm
 - discord
-- todoist
 - bat
+- steam
+- ktorrent
+- tidal
+- mullvadvpn
 
 #### i3 / awesome Applications
 - i3
