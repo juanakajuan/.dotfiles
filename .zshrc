@@ -3,9 +3,19 @@ setopt inc_append_history
 setopt share_history
 
 # Aliases
-alias azlogin="az acr login -n tdsacr2"
-alias qnote="nvim '$(date +%F)'.md"
-alias ls='ls --color'
+alias azlogin='az acr login -n tdsacr2'
+alias qnote='nvim '$(date +%F)'.md'
+alias ls='eza --icons'
+alias ll='eza -l --icons'
+alias la='eza -la --icons'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias du='ncdu'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git pull'
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
