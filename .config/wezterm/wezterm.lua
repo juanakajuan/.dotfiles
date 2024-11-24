@@ -21,7 +21,7 @@ config.colors = {
 }
 
 config.font =
-    wezterm.font('IosevkaTermNerdFontMono')
+    wezterm.font('ZedMonoNerdFontMono')
 config.font_size = 21
 
 config.warn_about_missing_glyphs = false
