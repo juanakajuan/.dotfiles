@@ -90,3 +90,8 @@ vim.keymap.set(
     "<CMD>!npx prettier --write %<CR>",
     { desc = "[F]ormat [P]rettier" }
 )
+
+-- Map Alt + number to tab navigation
+for i = 1, 9 do
+  vim.keymap.set('n', '<A-' .. i .. '>', i .. 'gt')
+end
