@@ -29,3 +29,6 @@ sudo -u postgres createdb db_name
 ```bash
 psql
 ```
+
+### On Fedora
+https://docs.fedoraproject.org/en-US/quick-docs/postgresql/
