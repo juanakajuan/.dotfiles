@@ -37,14 +37,13 @@ https://github.com/tsoding/boomer
 - zoxide
 - starship (curl -sS https://starship.rs/install.sh | sh)
 - neovim
-- tmux
 - wezterm
 - discord
 - bat
 - steam
 - ktorrent
-- tidal
 - mullvadvpn
+- webkit2gtk4.0
 
 #### i3 / awesome Applications
 - i3
