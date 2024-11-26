@@ -1,4 +1,4 @@
-### On Arch
+### Arch
 1. Install PostgreSQL from the official repositories:
 ```bash
 sudo pacman -S postgresql
@@ -31,5 +31,5 @@ sudo -u postgres createdb db_name
 psql
 ```
 
-### On Fedora
+### Fedora
 https://docs.fedoraproject.org/en-US/quick-docs/postgresql/
