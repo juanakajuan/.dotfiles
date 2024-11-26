@@ -23,7 +23,7 @@ sudo -u postgres createuser --interactive
 #### When prompted, enter your system username and decide if you want the user to be a superuser.
 5. Create a database for your user:
 ```bash
-sudo -u postgres createdb db_name
+sudo -u postgres createdb user_name
 ```
 
 6. Verify the installation by connecting to the database:
