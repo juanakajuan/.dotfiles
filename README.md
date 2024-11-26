@@ -31,6 +31,7 @@ https://rpmfusion.org/Howto/Multimedia
 - ripgrep
 - btop
 - zoxide
+- tmux
 - starship (curl -sS https://starship.rs/install.sh | sh)
 - neovim
 - wezterm

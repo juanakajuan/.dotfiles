@@ -14,7 +14,7 @@ config.audible_bell = "Disabled"
 config.enable_wayland = false
 
 config.font =
-    wezterm.font('JetbrainsMono Nerd Font')
+    wezterm.font('JetBrainsMono Nerd Font', { weight = 'Medium', italic = false })
 config.color_scheme = "GruvboxDarkHard"
 config.colors = {
   background = "#0f0f0f",
