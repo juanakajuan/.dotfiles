@@ -1,5 +1,10 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
+]
+
 [font]
-size = 20
+size = 22
 
 [font.normal]
 family = "JetbrainsMono Nerd Font"
@@ -12,7 +17,5 @@ padding = { x = 15, y = 2 }
 columns = 60
 lines = 20
 
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"
-]
+[selection]
+save_to_clipboard = true
