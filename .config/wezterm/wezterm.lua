@@ -64,6 +64,12 @@ config.keys = {
   { key = 'p', mods = 'ALT',          action = act.SwitchWorkspaceRelative(-1) },
   { key = '|', mods = 'LEADER|SHIFT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
   { key = '_', mods = 'LEADER|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }, },
+
+  { key = 'h', mods = 'CTRL|SUPER', action = act.ActivatePaneDirection 'Left', },
+  { key = 'l', mods = 'CTRL|SUPER', action = act.ActivatePaneDirection 'Right', },
+  { key = 'k', mods = 'CTRL|SUPER', action = act.ActivatePaneDirection 'Up', },
+  { key = 'j', mods = 'CTRL|SUPER', action = act.ActivatePaneDirection 'Down', },
+
   -- {
   --   key = "x",
   --   mods = "LEADER",
