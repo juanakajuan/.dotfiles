@@ -33,7 +33,6 @@ https://github.com/tsoding/boomer
 - fd
 - ripgrep
 - btop
-- vtop
 - zoxide
 - starship (curl -sS https://starship.rs/install.sh | sh)
 - neovim
