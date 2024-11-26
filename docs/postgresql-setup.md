@@ -1,3 +1,4 @@
+### On Arch
 1. Install PostgreSQL from the official repositories:
 ```bash
 sudo pacman -S postgresql
