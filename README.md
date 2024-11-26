@@ -20,9 +20,6 @@ ssh-add ~/.ssh/id_ed25519
 ### Multimedia (Fedora)
 https://rpmfusion.org/Howto/Multimedia
 
-### Magnifier for i3
-https://github.com/tsoding/boomer
-
 ### Applications to install
 - stow
 - zsh
@@ -43,6 +40,9 @@ https://github.com/tsoding/boomer
 - ktorrent
 - mullvadvpn
 - webkit2gtk4.0
+
+### Magnifier for i3
+https://github.com/tsoding/boomer
 
 #### i3 / awesome Applications
 - i3
