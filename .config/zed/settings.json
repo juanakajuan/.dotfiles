@@ -26,7 +26,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Github Dark Tritanopia"
+    "dark": "Gruvbox Dark Hard"
   },
   "use_autoclose": false,
   "vertical_scroll_margin": 8,
