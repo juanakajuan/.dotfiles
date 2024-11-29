@@ -65,3 +65,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
+
+vim.api.nvim_create_autocmd({"BufEnter", "InsertLeave"}, {
+    pattern = "*",
+    command = "syntax sync fromstart",
+})

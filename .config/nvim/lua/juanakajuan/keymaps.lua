@@ -74,12 +74,6 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<leader>vs",
-    "<CMD>vsplit<CR>",
-    { desc = "Open vertical split" }
-)
-vim.keymap.set(
-    "n",
     "<leader>fh",
     "<CMD>syntax sync fromstart<CR>",
     { desc = "Fix syntax highlighting" }
