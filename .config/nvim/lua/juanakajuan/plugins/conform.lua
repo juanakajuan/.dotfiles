@@ -46,6 +46,7 @@ return { -- Autoformat
                 "prettier",
                 stop_after_first = true,
             },
+            vue = { "prettierd", "prettier", stop_after_first = true },
         },
     },
 }
