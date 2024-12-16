@@ -13,7 +13,7 @@ end)
 config.audible_bell = "Disabled"
 config.enable_wayland = false
 
-config.font = wezterm.font "JetBrainsMono Nerd Font"
+config.font = wezterm.font "BerkeleyMono Nerd Font"
 config.color_scheme = "GruvboxDarkHard"
 config.colors = {
     background = "#0f0f0f",
@@ -24,6 +24,8 @@ config.warn_about_missing_glyphs = false
 
 -- config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
+
+config.tab_bar_at_bottom = true
 
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }
 
