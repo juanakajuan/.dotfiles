@@ -4,7 +4,7 @@ import = [
 ]
 
 [font]
-size = 22
+size = 20
 
 [font.normal]
 family = "BerkeleyMono Nerd Font"

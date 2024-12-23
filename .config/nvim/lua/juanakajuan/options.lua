@@ -12,6 +12,9 @@ vim.opt.scrolloff = 10
 vim.opt.incsearch = true
 vim.opt.inccommand = "split"
 
+-- Global statusline
+vim.opt.laststatus = 3
+
 -- Make line numbers default
 vim.wo.number = true
 

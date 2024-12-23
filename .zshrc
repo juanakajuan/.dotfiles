@@ -16,11 +16,13 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
+alias ts='tmux-sessionizer.sh'
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 export EDITOR=nvim
 
@@ -52,9 +54,6 @@ autoload -Uz compinit && compinit
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
-bindkey -e
-bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 fastfetch
 
