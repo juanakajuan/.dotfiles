@@ -24,6 +24,7 @@ https://rpmfusion.org/Howto/Multimedia
 - stow
 - zsh
 - zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+- zsh-vi-mode (git clone https://github.com/jeffreytse/zsh-vi-mode.git $HOME/.zsh-vi-mode)
 - fastfetch / neofetch
 - nodejs
 - npm
