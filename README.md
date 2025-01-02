@@ -43,6 +43,7 @@ https://rpmfusion.org/Howto/Multimedia
 - ktorrent
 - mullvadvpn
 - webkit2gtk4.0
+- jellyfin
 - Jetbrains Nerd Font (https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip)
 
 ### Magnifier for i3
