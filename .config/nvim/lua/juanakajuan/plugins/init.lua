@@ -3,11 +3,11 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-    "tpope/vim-rhubarb",
+	"tpope/vim-rhubarb",
 
-    -- Detect tabstop and shiftwidth automatically
-    "tpope/vim-sleuth",
+	-- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth",
 
-    -- "gc" to comment visual regions/lines
-    { "numToStr/Comment.nvim", opts = {} },
+	-- "gc" to comment visual regions/lines
+	{ "numToStr/Comment.nvim", opts = {} },
 }

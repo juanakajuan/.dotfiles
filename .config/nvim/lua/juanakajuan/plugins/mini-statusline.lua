@@ -1,4 +1,4 @@
 return {
-    "echasnovski/mini.statusline",
-    opts = {},
+	"echasnovski/mini.statusline",
+	opts = {},
 }

@@ -3,10 +3,10 @@ vim.g.maplocalleader = " "
 
 -- Diagnostic keymaps
 vim.keymap.set(
-    "n",
-    "<leader>q",
-    vim.diagnostic.setloclist,
-    { desc = "Open diagnostic [Q]uickfix list" }
+	"n",
+	"<leader>q",
+	vim.diagnostic.setloclist,
+	{ desc = "Open diagnostic [Q]uickfix list" }
 )
 
 vim.keymap.set("n", "<C-j>", "<CMD>cnext<CR>")
@@ -18,24 +18,24 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Replace the word that I am currently on
 vim.keymap.set(
-    "n",
-    "<leader>rw",
-    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Find and replace on current word" }
+	"n",
+	"<leader>rw",
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ desc = "Find and replace on current word" }
 )
 
 vim.keymap.set(
-    "x",
-    "<leader>p",
-    '"_dP',
-    { desc = "Paste over highlighted text and still have the stuff I pasted" }
+	"x",
+	"<leader>p",
+	'"_dP',
+	{ desc = "Paste over highlighted text and still have the stuff I pasted" }
 )
 
 vim.keymap.set(
-    "n",
-    "<leader>zm",
-    "<CMD>ZenMode<CR>",
-    { desc = "Activate ZenMode" }
+	"n",
+	"<leader>zm",
+	"<CMD>ZenMode<CR>",
+	{ desc = "Activate ZenMode" }
 )
 vim.keymap.set("n", "<leader>cl", "<CMD>ClangdSwitchSourceHeader<CR>")
 
@@ -58,38 +58,38 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set(
-    "n",
-    "k",
-    "v:count == 0 ? 'gk' : 'k'",
-    { expr = true, silent = true }
+	"n",
+	"k",
+	"v:count == 0 ? 'gk' : 'k'",
+	{ expr = true, silent = true }
 )
 vim.keymap.set(
-    "n",
-    "j",
-    "v:count == 0 ? 'gj' : 'j'",
-    { expr = true, silent = true }
+	"n",
+	"j",
+	"v:count == 0 ? 'gj' : 'j'",
+	{ expr = true, silent = true }
 )
 
 vim.keymap.set(
-    "n",
-    "<leader>e",
-    vim.diagnostic.open_float,
-    { desc = "Open floating diagnostic message" }
+	"n",
+	"<leader>e",
+	vim.diagnostic.open_float,
+	{ desc = "Open floating diagnostic message" }
 )
 vim.keymap.set(
-    "n",
-    "<leader>fh",
-    "<CMD>syntax sync fromstart<CR>",
-    { desc = "Fix syntax highlighting" }
+	"n",
+	"<leader>fh",
+	"<CMD>syntax sync fromstart<CR>",
+	{ desc = "Fix syntax highlighting" }
 )
 vim.keymap.set(
-    "n",
-    "<leader>fp",
-    "<CMD>!npx prettier --write %<CR>",
-    { desc = "[F]ormat [P]rettier" }
+	"n",
+	"<leader>fp",
+	"<CMD>!npx prettier --write %<CR>",
+	{ desc = "[F]ormat [P]rettier" }
 )
 
 -- Map Alt + number to tab navigation
 for i = 1, 9 do
-    vim.keymap.set("n", "<A-" .. i .. ">", i .. "gt")
+	vim.keymap.set("n", "<A-" .. i .. ">", i .. "gt")
 end
