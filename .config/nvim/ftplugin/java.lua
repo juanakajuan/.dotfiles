@@ -1,5 +1,5 @@
 local config = {
-    cmd = { vim.fn.expand "~/.local/share/nvim/mason/bin/jdtls" },
+    cmd = { vim.fn.expand "/usr/bin/jdtls" },
     root_dir = vim.fs.dirname(
         vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]
     ),
@@ -10,4 +10,4 @@ local config = {
         end,
     },
 }
--- require("jdtls").start_or_attach(config)
+require("jdtls").start_or_attach(config)

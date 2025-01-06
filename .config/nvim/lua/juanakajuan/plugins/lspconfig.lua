@@ -284,6 +284,7 @@ return {
         }
 
         require("mason-lspconfig").setup {
+            exclude = { "jdtls" },
             handlers = {
                 function(server_name)
                     local server = servers[server_name] or {}
