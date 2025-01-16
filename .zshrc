@@ -16,6 +16,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
+alias dnf='sudo dnf'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh

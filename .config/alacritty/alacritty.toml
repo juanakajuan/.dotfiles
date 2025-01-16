@@ -4,7 +4,7 @@ import = [
 ]
 
 [font]
-size = 20
+size = 18
 
 [font.normal]
 family = "BerkeleyMono Nerd Font"
@@ -19,3 +19,6 @@ lines = 20
 
 [selection]
 save_to_clipboard = true
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }

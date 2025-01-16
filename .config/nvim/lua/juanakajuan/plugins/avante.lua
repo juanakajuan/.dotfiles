@@ -9,7 +9,7 @@ return {
 	opts = {
 		windows = {
 			-- position = "bottom",
-			width = 40,
+			width = 45,
 		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -17,6 +17,7 @@ return {
 	-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
 	dependencies = {
 		"stevearc/dressing.nvim",
+		"folke/which-key.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional,
