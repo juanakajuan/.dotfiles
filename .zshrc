@@ -17,6 +17,7 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git pull'
 alias dnf='sudo dnf'
+alias up='yay ; flatpak update'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -52,6 +53,11 @@ export SUDO_EDITOR="nvim"
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
+# Add Flatpak paths to XDG_DATA_DIRS
+if [ -d "/var/lib/flatpak/exports/share" ] || [ -d "$HOME/.local/share/flatpak/exports/share" ]; then
+    export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/$USER/.local/share/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+fi
+
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
@@ -60,6 +66,7 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 fastfetch
+headsetcontrol -b
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
