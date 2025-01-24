@@ -18,7 +18,7 @@ config.color_scheme = "GruvboxDarkHard"
 config.colors = {
     background = "#0f0f0f",
 }
-config.font_size = 21
+config.font_size = 19
 
 config.warn_about_missing_glyphs = false
 
