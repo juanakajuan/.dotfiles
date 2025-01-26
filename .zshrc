@@ -17,7 +17,6 @@ alias gc='git commit -a'
 alias gp='git push'
 alias gl='git pull'
 alias dnf='sudo dnf'
-alias up='yay ; flatpak update'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
