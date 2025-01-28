@@ -43,3 +43,4 @@ ssh-add ~/.ssh/id_ed25519
 - jellyfin
 - solaar
 - headsetcontrol
+- chatbox
