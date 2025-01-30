@@ -79,7 +79,7 @@ config.keys = {
     {
         key = "l",
         mods = "LEADER",
-        action = wezterm.action.ActivateLastTab,
+        action = act.ActivateLastTab,
     },
     {
         key = "n",
@@ -94,12 +94,12 @@ config.keys = {
     {
         key = "|",
         mods = "LEADER|SHIFT",
-        action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
+        action = act.SplitHorizontal { domain = "CurrentPaneDomain" },
     },
     {
         key = "_",
         mods = "LEADER|SHIFT",
-        action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
+        action = act.SplitVertical { domain = "CurrentPaneDomain" },
     },
 
     {
@@ -146,7 +146,7 @@ for i = 1, 8 do
     table.insert(config.keys, {
         key = tostring(i),
         mods = "CTRL|ALT",
-        action = wezterm.action.MoveTab(i - 1),
+        action = act.MoveTab(i - 1),
     })
 end
 
