@@ -47,6 +47,7 @@ return { -- Autoformat
 				stop_after_first = true,
 			},
 			vue = { "prettierd", "prettier", stop_after_first = true },
+			c = { "clang-format" },
 		},
 	},
 }
