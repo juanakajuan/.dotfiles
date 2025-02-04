@@ -21,7 +21,7 @@ alias up='flatpak update && yay'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
-bindkey -s '^f' 'zellij-sessionizer.sh\n'
+bindkey -s '^f' 'tmux-sessionizer.sh\n'
 
 #Keybinds
 bindkey '^R' history-incremental-search-backward
