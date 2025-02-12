@@ -43,5 +43,5 @@ ssh-add ~/.ssh/id_ed25519
 - solaar
 - headsetcontrol
 - chatbox
-- libreoffice-still
-- hunspell-en-us
+- libreoffice
+- https://github.com/eatsu/kwin-script-virtual-desktops-only-on-primary
