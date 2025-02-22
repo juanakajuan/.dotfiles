@@ -52,6 +52,9 @@ dnf in \
 	winetricks \
 	-y \
 
+flatpak install app/com.github.iwalton3.jellyfin-media-player/x86_64/stable -y
+flatpak install app/app.zen_browser.zen/x86_64/stable -y
+
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
