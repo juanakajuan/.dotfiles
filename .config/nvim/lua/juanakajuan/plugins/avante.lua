@@ -14,6 +14,9 @@ return {
 			temperature = 0,
 			max_tokens = 4096,
 		},
+		behavior = {
+			auto_suggestions = false,
+		},
 		windows = {
 			-- position = "bottom",
 			width = 45,
