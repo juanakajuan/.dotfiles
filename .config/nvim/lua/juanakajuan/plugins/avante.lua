@@ -11,7 +11,7 @@ return {
 		claude = {
 			endpoint = "https://api.anthropic.com",
 			model = "claude-3-7-sonnet-20250219",
-			temperature = 0,
+			temperature = 0.4,
 			max_tokens = 4096,
 		},
 		windows = {
