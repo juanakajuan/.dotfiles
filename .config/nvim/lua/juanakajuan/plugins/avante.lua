@@ -13,6 +13,7 @@ return {
 			model = "claude-3-7-sonnet-20250219",
 			temperature = 0.4,
 			max_tokens = 4096,
+			disable_tools = true,
 		},
 		behavior = {
 			auto_suggestions = false,
