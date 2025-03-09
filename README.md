@@ -19,3 +19,6 @@ ssh-add ~/.ssh/id_ed25519
 
 ### For KDE
 - https://github.com/eatsu/kwin-script-virtual-desktops-only-on-primary
+
+### For Steam
+steam steam://unlockh264/
