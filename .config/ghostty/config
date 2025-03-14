@@ -1,0 +1,12 @@
+command = /usr/bin/zsh --login --interactive
+shell-integration = zsh
+
+font-family = BerkeleyMono Nerd Font
+font-size = 21
+
+window-padding-x = 10
+window-save-state = always
+maximize = true
+
+theme = GruvboxDarkHard
+background = #111111
