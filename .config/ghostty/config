@@ -1,5 +1,6 @@
 command = /usr/bin/zsh --login --interactive
 shell-integration = zsh
+shell-integration-features = no-cursor
 
 font-family = BerkeleyMono Nerd Font
 font-size = 21
@@ -10,3 +11,7 @@ maximize = true
 
 theme = GruvboxDarkHard
 background = #111111
+
+mouse-hide-while-typing = true
+cursor-color = #fc4f44
+cursor-style-blink = true
