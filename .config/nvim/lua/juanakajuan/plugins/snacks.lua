@@ -11,6 +11,5 @@ return {
 				enabled = false,
 			},
 		},
-		notifier = { enabled = true },
 	},
 }
