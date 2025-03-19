@@ -15,5 +15,3 @@ background = #070707
 mouse-hide-while-typing = true
 cursor-color = #fc4f44
 cursor-style-blink = true
-
-copy-on-select = clipboard
