@@ -223,6 +223,11 @@ return {
 			require("cmp_nvim_lsp").default_capabilities()
 		)
 
+		local mason_registry = require "mason-registry"
+		local vue_language_server = mason_registry
+			.get_package("vue-language-server")
+			:get_install_path() .. "/node_modules/@vue/language-server"
+
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 		--
@@ -237,6 +242,19 @@ return {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
+			volar = {},
+			ts_ls = {
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = vue_language_server,
+							languages = { "vue" },
+						},
+					},
+				},
+				filetypes = { "typescript", "javascript", "vue" },
+			},
 			lua_ls = {
 				settings = {
 					Lua = {
