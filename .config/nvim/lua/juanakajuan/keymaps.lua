@@ -93,3 +93,5 @@ vim.keymap.set(
 for i = 1, 9 do
 	vim.keymap.set("n", "<A-" .. i .. ">", i .. "gt")
 end
+
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")

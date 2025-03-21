@@ -5,6 +5,7 @@ setopt share_history
 # Aliases
 alias azlogin='az acr login -n tdsacr2'
 alias qnote='nvim '$(date +%F)'.md'
+alias cd='z'
 alias ls='exa --icons'
 alias ll='exa -l --icons'
 alias la='exa -la --icons'
