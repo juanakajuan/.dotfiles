@@ -1,17 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Diagnostic keymaps
-vim.keymap.set(
-	"n",
-	"<leader>q",
-	vim.diagnostic.setloclist,
-	{ desc = "Open diagnostic [Q]uickfix list" }
-)
-
-vim.keymap.set("n", "<C-j>", "<CMD>cnext<CR>")
-vim.keymap.set("n", "<C-k>", "<CMD>cprev<CR>")
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -31,21 +20,9 @@ vim.keymap.set(
 	{ desc = "Paste over highlighted text and still have the stuff I pasted" }
 )
 
-vim.keymap.set(
-	"n",
-	"<leader>zm",
-	"<CMD>ZenMode<CR>",
-	{ desc = "Activate ZenMode" }
-)
-vim.keymap.set("n", "<leader>cl", "<CMD>ClangdSwitchSourceHeader<CR>")
-
 -- Page jump up and down while keeping cursor in the middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
--- Go to beginning and end
-vim.keymap.set("i", "<C-b>", "<ESC>^i")
-vim.keymap.set("i", "<C-e>", "<End>")
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
@@ -82,12 +59,6 @@ vim.keymap.set(
 	"<CMD>syntax sync fromstart<CR>",
 	{ desc = "Fix syntax highlighting" }
 )
-vim.keymap.set(
-	"n",
-	"<leader>fp",
-	"<CMD>!npx prettier --write %<CR>",
-	{ desc = "[F]ormat [P]rettier" }
-)
 
 -- Map Alt + number to tab navigation
 for i = 1, 9 do
@@ -95,3 +66,6 @@ for i = 1, 9 do
 end
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
+vim.keymap.set("n", "<F7>", function()
+	vim.opt.spell = not vim.opt.spell:get()
+end, { noremap = true, silent = true, desc = "Toggle Spell Check" })

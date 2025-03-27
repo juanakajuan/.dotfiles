@@ -62,6 +62,4 @@ vim.opt.completeopt = "menuone,noselect"
 
 vim.opt.termguicolors = true
 
--- Turn on spell checker
-vim.opt.spell = true
 vim.opt.spelllang = "en"

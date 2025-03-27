@@ -4,19 +4,15 @@ return {
 	cmd = "Trouble",
 	keys = {
 		{
-			"<leader>tt",
-			"<CMD>Trouble diagnostics toggle focus=true<CR>",
+			"<leader>xx",
+			"<cmd>Trouble diagnostics toggle focus=true<cr>",
 			desc = "Diagnostics (Trouble)",
 		},
 		{
-			"<leader>tw",
-			"<CMD>Trouble diagnostics toggle focus=true filter.buf=0<CR>",
+			"<leader>xX",
+			"<cmd>Trouble diagnostics toggle focus=true filter.buf=0<cr>",
+
 			desc = "Buffer Diagnostics (Trouble)",
-		},
-		{
-			"<leader>to",
-			"<CMD>Trouble todo toggle focus=true filter.buf=0<CR>",
-			desc = "TODO Comments (Trouble)",
 		},
 	},
 }

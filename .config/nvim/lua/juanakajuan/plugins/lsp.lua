@@ -45,54 +45,62 @@ return {
 				{ clear = true }
 			),
 			callback = function(event)
-				local map = function(keys, func, desc, mode)
-					mode = mode or "n"
-					vim.keymap.set(
-						mode,
-						keys,
-						func,
-						{ buffer = event.buf, desc = "LSP: " .. desc }
-					)
-				end
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, {
+					noremap = true,
+					buffer = true,
+					desc = "[G]oto [D]efinition",
+				})
+				vim.keymap.set("n", "gr", vim.lsp.buf.references, {
+					noremap = true,
+					buffer = true,
+					desc = "[G]oto [R]eferences",
+				})
+				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {
+					noremap = true,
+					buffer = true,
+					desc = "[G]oto [I]mplemenation",
+				})
+				vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, {
+					noremap = true,
+					buffer = true,
+					desc = "Type [D]efinition",
+				})
 
-				map(
-					"gd",
-					require("telescope.builtin").lsp_definitions,
-					"[G]oto [D]efinition"
-				)
-				map(
-					"gr",
-					require("telescope.builtin").lsp_references,
-					"[G]oto [R]eferences"
-				)
-				map(
-					"gI",
-					require("telescope.builtin").lsp_implementations,
-					"[G]oto [I]mplementation"
-				)
-				map(
-					"<leader>D",
-					require("telescope.builtin").lsp_type_definitions,
-					"Type [D]efinition"
-				)
-				map(
-					"<leader>ds",
-					require("telescope.builtin").lsp_document_symbols,
-					"[D]ocument [S]ymbols"
-				)
-				map(
+				vim.keymap.set("n", "<leader>ds", vim.lsp.buf.document_symbol, {
+					noremap = true,
+					buffer = true,
+					desc = "[D]ocument [S]ymbols",
+				})
+				vim.keymap.set(
+					"n",
 					"<leader>ws",
-					require("telescope.builtin").lsp_dynamic_workspace_symbols,
-					"[W]orkspace [S]ymbols"
+					vim.lsp.buf.workspace_symbol,
+					{
+						noremap = true,
+						buffer = true,
+						desc = "[W]orkspace [S]ymbols",
+					}
 				)
-				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
-				map(
+				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
+					noremap = true,
+					buffer = true,
+					desc = "[R]e[n]ame",
+				})
+				vim.keymap.set(
+					{ "n", "x" },
 					"<leader>ca",
 					vim.lsp.buf.code_action,
-					"[C]ode [A]ction",
-					{ "n", "x" }
+					{
+						noremap = true,
+						buffer = true,
+						desc = "[C]ode [A]ction",
+					}
 				)
-				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {
+					noremap = true,
+					buffer = true,
+					desc = "[G]oto [D]eclaration",
+				})
 
 				local client = vim.lsp.get_client_by_id(event.data.client_id)
 				if
@@ -143,13 +151,17 @@ return {
 						vim.lsp.protocol.Methods.textDocument_inlayHint
 					)
 				then
-					map("<leader>th", function()
+					vim.keymap.set("n", "<leader>th", function()
 						vim.lsp.inlay_hint.enable(
 							not vim.lsp.inlay_hint.is_enabled {
 								bufnr = event.buf,
 							}
 						)
-					end, "[T]oggle Inlay [H]ints")
+					end, {
+						noremap = true,
+						buffer = true,
+						desc = "[T]oggle Inlay [H]ints",
+					})
 				end
 			end,
 		})
