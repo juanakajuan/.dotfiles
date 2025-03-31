@@ -21,7 +21,8 @@ return { -- Autoformat
 			-- Disable "format_on_save lsp_fallback" for languages that don't
 			-- have a well standardized coding style. You can add additional
 			-- languages here or re-enable it for the disabled ones.
-			local disable_filetypes = { c = true, cpp = true, csharp = true }
+			local disable_filetypes =
+				{ c = true, cpp = true, csharp = true, sql = true }
 			local lsp_format_opt
 			if disable_filetypes[vim.bo[bufnr].filetype] then
 				lsp_format_opt = "never"
