@@ -14,7 +14,7 @@ return {
 		picker = {
 			enabled = true,
 			layout = {
-				preset = "ivy_split",
+				preset = "ivy",
 			},
 		},
 	},

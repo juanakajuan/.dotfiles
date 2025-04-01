@@ -9,6 +9,7 @@ yay -S \
 	npm \
 	pnpm \
 	fd \
+	flatpak \
 	ripgrep \
 	btop \
 	zoxide \
