@@ -1,9 +1,13 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	dependencies = {
+		"Kaiser-Yang/blink-cmp-avante",
+		{ "L3MON4D3/LuaSnip", version = "v2.*" },
+	},
 	version = "1.*",
 
 	opts = {
+		snippets = { preset = "luasnip" },
 		keymap = { preset = "default" },
 		appearance = {
 			nerd_font_variant = "mono",
@@ -51,16 +55,33 @@ return {
 							end,
 						},
 					},
+					columns = {
+						{ "kind_icon", "label", "label_description", gap = 1 },
+						{ "kind" },
+					},
 				},
 			},
+			ghost_text = { enabled = true },
 		},
 		sources = {
-			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			default = {
+				"avante",
+				"lazydev",
+				"lsp",
+				"path",
+				"snippets",
+				"buffer",
+			},
 			providers = {
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
 					score_offset = 100,
+				},
+				avante = {
+					module = "blink-cmp-avante",
+					name = "Avante",
+					opts = {},
 				},
 			},
 		},
