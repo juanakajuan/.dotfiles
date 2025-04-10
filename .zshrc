@@ -18,7 +18,7 @@ alias ga='git add'
 alias gc='git commit -a'
 alias gp='git push'
 alias gl='git pull'
-alias up='flatpak update -y; eos-update'
+alias up='flatpak update -y; eos-update --yay'
 alias upa='sudo apt update && sudo apt upgrade'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null

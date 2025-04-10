@@ -10,7 +10,7 @@ window-save-state = always
 maximize = true
 
 theme = GruvboxDarkHard
-background = #070707
+background = #000000
 
 mouse-hide-while-typing = true
 cursor-color = #fc4f44
