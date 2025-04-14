@@ -61,7 +61,7 @@ return {
 					},
 				},
 			},
-			ghost_text = { enabled = true },
+			ghost_text = { enabled = false },
 		},
 		sources = {
 			default = {
