@@ -171,7 +171,36 @@ return {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			volar = {},
+			volar = {
+				cmd = { "pnpm", "vue-language-server", "--stdio" },
+				init_options = {
+					vue = {
+						hybridMode = true,
+					},
+				},
+				settings = {
+					typescript = {
+						inlayHints = {
+							enumMemberValues = {
+								enabled = true,
+							},
+							functionLikeReturnTypes = {
+								enabled = true,
+							},
+							propertyDeclarationTypes = {
+								enabled = true,
+							},
+							parameterTypes = {
+								enabled = true,
+								suppressWhenArgumentMatchesName = true,
+							},
+							variableTypes = {
+								enabled = true,
+							},
+						},
+					},
+				},
+			},
 			ts_ls = {
 				init_options = {
 					plugins = {
@@ -182,7 +211,27 @@ return {
 						},
 					},
 				},
-				filetypes = { "typescript", "javascript", "vue" },
+				filetypes = {
+					"typescript",
+					"javascript",
+					"javascriptreact",
+					"typescriptreact",
+					"vue",
+				},
+				settings = {
+					typescript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+					},
+				},
 			},
 			lua_ls = {
 				settings = {
