@@ -63,8 +63,3 @@ vim.opt.completeopt = "menuone,noselect"
 vim.opt.termguicolors = true
 
 vim.opt.spelllang = "en"
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1d1d1d" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1d1d1d", fg = "NONE" })
