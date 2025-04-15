@@ -7,12 +7,11 @@ return {
 	lazy = false,
 	version = "*",
 	opts = {
-		provider = "claude",
-		claude = {
-			endpoint = "https://api.anthropic.com",
-			model = "claude-3-7-sonnet-20250219",
-			temperature = 0.4,
-			max_tokens = 4096,
+		provider = "gemini",
+		gemini = {
+			model = "gemini-2.5-pro-exp-03-25",
+			temperature = 0,
+			max_tokens = 8192,
 			disable_tools = true,
 		},
 		behavior = {
