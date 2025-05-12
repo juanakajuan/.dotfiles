@@ -171,36 +171,6 @@ return {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			volar = {
-				cmd = { "pnpm", "vue-language-server", "--stdio" },
-				init_options = {
-					vue = {
-						hybridMode = true,
-					},
-				},
-				settings = {
-					typescript = {
-						inlayHints = {
-							enumMemberValues = {
-								enabled = true,
-							},
-							functionLikeReturnTypes = {
-								enabled = true,
-							},
-							propertyDeclarationTypes = {
-								enabled = true,
-							},
-							parameterTypes = {
-								enabled = true,
-								suppressWhenArgumentMatchesName = true,
-							},
-							variableTypes = {
-								enabled = true,
-							},
-						},
-					},
-				},
-			},
 			ts_ls = {
 				init_options = {
 					plugins = {
@@ -233,6 +203,7 @@ return {
 					},
 				},
 			},
+			volar = {},
 			lua_ls = {
 				settings = {
 					Lua = {
