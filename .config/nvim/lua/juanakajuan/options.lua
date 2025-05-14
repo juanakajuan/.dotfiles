@@ -22,14 +22,6 @@ vim.wo.number = true
 -- Enable mouse mode
 vim.opt.mouse = "a"
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
-end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -63,3 +55,24 @@ vim.opt.completeopt = "menuone,noselect"
 vim.opt.termguicolors = true
 
 vim.opt.spelllang = "en"
+
+vim.opt.clipboard = "unnamedplus"
+
+local function paste()
+	return {
+		vim.fn.split(vim.fn.getreg "", "\n"),
+		vim.fn.getregtype "",
+	}
+end
+
+vim.g.clipboard = {
+	name = "OSC 52",
+	copy = {
+		["+"] = require("vim.ui.clipboard.osc52").copy "+",
+		["*"] = require("vim.ui.clipboard.osc52").copy "*",
+	},
+	paste = {
+		["+"] = paste,
+		["*"] = paste,
+	},
+}
