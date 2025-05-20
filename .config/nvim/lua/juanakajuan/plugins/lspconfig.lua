@@ -162,25 +162,12 @@ return {
 			require("blink.cmp").get_lsp_capabilities()
 		)
 
-		local mason_registry = require "mason-registry"
-		local vue_language_server = mason_registry
-			.get_package("vue-language-server")
-			:get_install_path() .. "/node_modules/@vue/language-server"
-
 		local servers = {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			ts_ls = {
-				init_options = {
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = vue_language_server,
-							languages = { "vue" },
-						},
-					},
-				},
+			ts_ls = {},
+			volar = {
 				filetypes = {
 					"typescript",
 					"javascript",
@@ -188,22 +175,12 @@ return {
 					"typescriptreact",
 					"vue",
 				},
-				settings = {
-					typescript = {
-						inlayHints = {
-							includeInlayParameterNameHints = "all",
-							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-							includeInlayFunctionParameterTypeHints = true,
-							includeInlayVariableTypeHints = true,
-							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-							includeInlayPropertyDeclarationTypeHints = true,
-							includeInlayFunctionLikeReturnTypeHints = true,
-							includeInlayEnumMemberValueHints = true,
-						},
+				init_options = {
+					vue = {
+						hybridMode = false,
 					},
 				},
 			},
-			volar = {},
 			lua_ls = {
 				settings = {
 					Lua = {
