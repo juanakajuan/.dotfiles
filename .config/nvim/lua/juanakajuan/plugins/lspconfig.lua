@@ -162,10 +162,8 @@ return {
 			require("blink.cmp").get_lsp_capabilities()
 		)
 
-		local mason_registry = require "mason-registry"
-		local vue_language_server = mason_registry
-			.get_package("vue-language-server")
-			:get_install_path() .. "/node_modules/@vue/language-server"
+		local vue_language_server_path = vim.fn.expand "$MASON/packages"
+			.. "/vue-language-server"
 
 		local servers = {
 			clangd = {},
@@ -176,7 +174,7 @@ return {
 					plugins = {
 						{
 							name = "@vue/typescript-plugin",
-							location = vue_language_server,
+							location = vue_language_server_path,
 							languages = { "vue" },
 						},
 					},
