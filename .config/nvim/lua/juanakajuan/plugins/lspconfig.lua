@@ -162,21 +162,16 @@ return {
 			require("blink.cmp").get_lsp_capabilities()
 		)
 
-		local vue_language_server_path = vim.fn.expand "$MASON/packages"
-			.. "/vue-language-server"
-
 		local servers = {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
 			ts_ls = {
-				init_options = {
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = vue_language_server_path,
-							languages = { "vue" },
-						},
+				plugins = {
+					{
+						name = "@vue/typescript-plugin",
+						location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+						languages = { "javascript", "typescript", "vue" },
 					},
 				},
 				filetypes = {
