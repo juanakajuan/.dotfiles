@@ -69,3 +69,5 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
 vim.keymap.set("n", "<F7>", function()
 	vim.opt.spell = not vim.opt.spell:get()
 end, { noremap = true, silent = true, desc = "Toggle Spell Check" })
+
+vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
