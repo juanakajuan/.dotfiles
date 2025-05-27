@@ -4,15 +4,15 @@ return {
 		{ "<leader>at", "<CMD>AvanteToggle<CR>", desc = "Avante Toggle" },
 	},
 	event = "VeryLazy",
-	lazy = false,
 	version = "*",
 	opts = {
-		provider = "gemini",
-		gemini = {
-			model = "gemini-2.5-pro-preview-05-06",
+		provider = "claude",
+		mode = "agentic",
+		claude = {
+			endpoint = "https://api.anthropic.com",
+			model = "claude-sonnet-4-20250514",
 			temperature = 0,
-			max_tokens = 8192,
-			disable_tools = true,
+			max_tokens = 4096,
 		},
 		behavior = {
 			auto_suggestions = false,
