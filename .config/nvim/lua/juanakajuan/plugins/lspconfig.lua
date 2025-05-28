@@ -178,23 +178,19 @@ return {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			ts_ls = {
-				init_options = {
-					embeddedLanguages = {
-						html = true,
-					},
-					plugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = "/usr/lib/node_modules/@vue/typescript-plugin",
-							languages = { "javascript", "typescript", "vue" },
-						},
-					},
-				},
+			ts_ls = {},
+			volar = {
 				filetypes = {
-					"javascript",
 					"typescript",
+					"javascript",
+					"javascriptreact",
+					"typescriptreact",
 					"vue",
+				},
+				init_options = {
+					vue = {
+						hybridMode = false,
+					},
 				},
 			},
 			lua_ls = {
