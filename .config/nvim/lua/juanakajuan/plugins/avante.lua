@@ -19,7 +19,7 @@ return {
 		},
 		windows = {
 			-- position = "bottom",
-			width = 45,
+			width = 35,
 		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
