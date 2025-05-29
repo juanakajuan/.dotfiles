@@ -105,20 +105,20 @@ end, { desc = "Fix Diagnostics" })
 
 vim.keymap.set({ "v" }, "<leader>as", function()
 	require("avante.api").ask { question = avante_summarize }
-end, { desc = "Summarize Text (ask)" })
+end, { desc = "Summarize Text" })
 
 vim.keymap.set({ "v" }, "<leader>ae", function()
 	require("avante.api").ask { question = avante_explain_code }
-end, { desc = "Explain Code (ask)" })
+end, { desc = "Explain Code" })
 
 vim.keymap.set({ "v" }, "<leader>ad", function()
 	require("avante.api").ask { question = avante_add_docstring }
-end, { desc = "Add Docstring (ask)" })
+end, { desc = "Add Docstring" })
 
 vim.keymap.set({ "v" }, "<leader>ab", function()
 	require("avante.api").ask { question = avante_fix_bugs }
-end, { desc = "Fix Bugs (ask)" })
+end, { desc = "Fix Bugs" })
 
 vim.keymap.set({ "n", "v" }, "<leader>ao", function()
 	require("avante.api").ask { question = avante_optimize_code }
-end, { desc = "Optimize Code (ask)" })
+end, { desc = "Optimize Code" })
