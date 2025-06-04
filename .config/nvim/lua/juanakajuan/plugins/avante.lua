@@ -12,7 +12,8 @@ return {
 			endpoint = "https://api.anthropic.com",
 			model = "claude-sonnet-4-20250514",
 			temperature = 0,
-			max_tokens = 4096,
+			max_tokens = 8192,
+			disable_tools = true,
 		},
 		behavior = {
 			auto_suggestions = false,
