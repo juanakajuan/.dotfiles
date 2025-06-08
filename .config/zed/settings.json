@@ -7,8 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Material Icon Theme",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -31,7 +35,7 @@
   "buffer_font_family": "BerkeleyMono Nerd Font",
   "ui_font_family": "BerkeleyMono Nerd Font",
   "ui_font_size": 22,
-  "buffer_font_size": 24,
+  "buffer_font_size": 26,
   "agent_font_size": 24,
   "theme": {
     "mode": "system",
