@@ -7,16 +7,20 @@ return {
 	version = "*",
 	opts = {
 		provider = "claude",
-		mode = "agentic",
-		claude = {
-			endpoint = "https://api.anthropic.com",
-			model = "claude-sonnet-4-20250514",
-			temperature = 0,
-			max_tokens = 8192,
-			disable_tools = true,
-		},
 		behavior = {
 			auto_suggestions = false,
+			enable_cursor_planning_mode = true,
+		},
+		providers = {
+			claude = {
+				endpoint = "https://api.anthropic.com",
+				model = "claude-sonnet-4-20250514",
+				extra_request_body = {
+					temperature = 0,
+					max_tokens = 32768,
+					disabled_tools = { "python" },
+				},
+			},
 		},
 		windows = {
 			-- position = "bottom",
@@ -31,7 +35,8 @@ return {
 		"folke/which-key.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
-		--- The below dependencies are optional,
+		--- The below dependencies are optional
+		"folke/snacks.nvim",
 		"echasnovski/mini.icons",
 		{
 			-- support for image pasting
