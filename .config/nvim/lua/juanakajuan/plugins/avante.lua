@@ -17,7 +17,7 @@ return {
 				model = "claude-sonnet-4-20250514",
 				extra_request_body = {
 					temperature = 0,
-					max_tokens = 32768,
+					max_tokens = 200000,
 				},
 				disabled_tools = { "python" },
 			},
