@@ -6,21 +6,33 @@ return {
 	event = "VeryLazy",
 	version = "*",
 	opts = {
-		provider = "claude",
+		-- provider = "claude",
+		-- behavior = {
+		-- 	enable_cursor_planning_mode = true,
+		-- },
+		-- providers = {
+		-- 	claude = {
+		-- 		endpoint = "https://api.anthropic.com",
+		-- 		model = "claude-sonnet-4-20250514",
+		-- 		disabled_tools = { "python" },
+		-- 		extra_request_body = {
+		-- 			temperature = 0,
+		-- 			max_tokens = 8192,
+		-- 		},
+		-- 	},
+		-- },
+		provider = "gemini",
 		behavior = {
-			auto_suggestions = false,
 			enable_cursor_planning_mode = true,
 		},
 		providers = {
-			claude = {
-				endpoint = "https://api.anthropic.com",
-				model = "claude-sonnet-4-20250514",
-				extra_request_body = {
-					timeout = 30000,
-					temperature = 0,
-					max_completion_tokens = 8192,
-				},
+			gemini = {
+				model = "gemini-2.5-pro-preview-06-05",
 				disabled_tools = { "python" },
+				extra_request_body = {
+					temperature = 0,
+					max_tokens = 8192,
+				},
 			},
 		},
 		windows = {
