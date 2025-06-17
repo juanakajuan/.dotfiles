@@ -15,13 +15,12 @@ return {
 			claude = {
 				endpoint = "https://api.anthropic.com",
 				model = "claude-sonnet-4-20250514",
-				timeout = 30000,
-				disable_tools = true,
 				extra_request_body = {
+					timeout = 30000,
 					temperature = 0,
-					max_tokens = 4096,
+					max_completion_tokens = 8192,
 				},
-				-- disabled_tools = { "python" },
+				disabled_tools = { "python" },
 			},
 		},
 		windows = {
