@@ -49,7 +49,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		--- The below dependencies are optional
-		"folke/snacks.nvim",
+		"ibhagwan/fzf-lua",
 		"echasnovski/mini.icons",
 		{
 			-- support for image pasting
