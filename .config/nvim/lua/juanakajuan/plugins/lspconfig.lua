@@ -188,7 +188,7 @@ return {
 			clangd = {},
 			pyright = {},
 			rust_analyzer = {},
-			ts_ls = {},
+			vtsls = {},
 			volar = {
 				filetypes = {
 					"typescript",
