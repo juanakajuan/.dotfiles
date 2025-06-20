@@ -90,12 +90,12 @@ local prefill_edit_window = function(request)
 	)
 end
 
-local avante_fix_diagnostics = "fix @diagnostics"
-local avante_summarize = "Summarize the following text"
-local avante_explain_code = "Explain the following code"
-local avante_add_docstring = "Add docstring to the following code"
-local avante_fix_bugs = "Fix the bugs inside the following codes if any"
-local avante_optimize_code = "Optimize the following code"
+local avante_fix_diagnostics = "Fix @diagnostics for only this code."
+local avante_summarize = "Summarize the following text."
+local avante_explain_code = "Explain the following code."
+local avante_add_docstring = "Add docstring to the following code."
+local avante_fix_bugs = "Fix the bugs inside the following codes if any."
+local avante_optimize_code = "Optimize the following code."
 
 vim.keymap.set("v", "<leader>af", function()
 	require("avante.api").ask {

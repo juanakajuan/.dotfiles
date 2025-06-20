@@ -17,5 +17,10 @@ return {
 			"<CMD>FzfLua live_grep<CR>",
 			desc = "[S]earch [G]rep",
 		},
+		{
+			"<leader>sr",
+			"<CMD>FzfLua resume<CR>",
+			desc = "[S]earch [R]esume",
+		},
 	},
 }

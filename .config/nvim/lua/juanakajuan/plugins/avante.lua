@@ -1,33 +1,19 @@
 return {
 	"yetone/avante.nvim",
 	keys = {
-		{ "<leader>at", "<CMD>AvanteToggle<CR>", desc = "Avante Toggle" },
+		{ "<leader>at", "<CMD>AvanteToggle<CR>", desc = "[A]vante [T]oggle" },
 	},
 	event = "VeryLazy",
 	version = "*",
 	opts = {
-		-- provider = "claude",
-		-- behavior = {
-		-- 	enable_cursor_planning_mode = true,
-		-- },
-		-- providers = {
-		-- 	claude = {
-		-- 		endpoint = "https://api.anthropic.com",
-		-- 		model = "claude-sonnet-4-20250514",
-		-- 		disabled_tools = { "python" },
-		-- 		extra_request_body = {
-		-- 			temperature = 0,
-		-- 			max_tokens = 8192,
-		-- 		},
-		-- 	},
-		-- },
-		provider = "gemini",
+		provider = "claude",
 		behavior = {
 			enable_cursor_planning_mode = true,
 		},
 		providers = {
-			gemini = {
-				model = "gemini-2.5-pro-preview-06-05",
+			claude = {
+				endpoint = "https://api.anthropic.com",
+				model = "claude-sonnet-4-20250514",
 				disabled_tools = { "python" },
 				extra_request_body = {
 					temperature = 0,
@@ -35,6 +21,20 @@ return {
 				},
 			},
 		},
+		-- provider = "gemini",
+		-- behavior = {
+		-- 	enable_cursor_planning_mode = true,
+		-- },
+		-- providers = {
+		-- 	gemini = {
+		-- 		model = "gemini-2.5-pro-preview-06-05",
+		-- 		disabled_tools = { "python" },
+		-- 		extra_request_body = {
+		-- 			temperature = 0,
+		-- 			max_tokens = 8192,
+		-- 		},
+		-- 	},
+		-- },
 		windows = {
 			-- position = "bottom",
 			width = 35,
