@@ -3,6 +3,6 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sindrets/diffview.nvim",
-		"ibhagwan/fzf-lua",
+		"folke/snacks.nvim",
 	},
 }
