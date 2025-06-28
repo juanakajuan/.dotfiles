@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing packages..."
-yay -S \
+dnf install \
 	stow \
 	zsh \
 	fastfetch \
@@ -23,11 +23,6 @@ yay -S \
 	webkit2gtk4.1 \
 	solaar \
 	winetricks \
-
-flatpak install app/com.github.iwalton3.jellyfin-media-player/x86_64/stable -y
-flatpak install app/app.zen_browser.zen/x86_64/stable -y
-flatpak install app/org.libreoffice.LibreOffice/x86_64/stable
-flatpak install app/dev.vencord.Vesktop/x86_64/stable
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
