@@ -13,13 +13,12 @@ dnf install \
 	ripgrep \
 	btop \
 	zoxide \
-	eza \
 	tmux \
 	neovim \
-	ghostty \
 	discord \
 	bat \
 	steam \
+	webkit2gtk4.0 \
 	webkit2gtk4.1 \
 	solaar \
 	winetricks \
