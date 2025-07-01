@@ -16,9 +16,9 @@ config.enable_wayland = false
 config.font = wezterm.font "BerkeleyMono Nerd Font"
 config.color_scheme = "GruvboxDarkHard"
 config.colors = {
-    background = "#0f0f0f",
+    background = "#000000",
 }
-config.font_size = 19
+config.font_size = 22
 
 config.warn_about_missing_glyphs = false
 
