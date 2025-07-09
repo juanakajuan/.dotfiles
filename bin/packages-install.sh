@@ -2,9 +2,16 @@
 
 echo "Installing packages..."
 
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 sudo dnf copr enable alternateved/eza
+sudo dnf copr enable wezfurlong/wezterm-nightly
 
 dnf install \
+	bat \
 	stow \
 	zsh \
 	fastfetch \
@@ -20,11 +27,11 @@ dnf install \
 	tmux \
 	neovim \
 	discord \
-	bat \
+	solaar \
 	steam \
 	webkit2gtk4.0 \
 	webkit2gtk4.1 \
-	solaar \
+	wezterm \
 	winetricks \
 
 # Install starship
