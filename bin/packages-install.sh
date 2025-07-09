@@ -1,6 +1,9 @@
 #!/bin/bash
 
 echo "Installing packages..."
+
+sudo dnf copr enable alternateved/eza
+
 dnf install \
 	stow \
 	zsh \
@@ -13,6 +16,7 @@ dnf install \
 	ripgrep \
 	btop \
 	zoxide \
+	eza \
 	tmux \
 	neovim \
 	discord \
