@@ -12,7 +12,7 @@
     "edit_prediction_provider": "zed"
   },
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
