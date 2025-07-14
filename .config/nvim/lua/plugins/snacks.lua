@@ -33,4 +33,13 @@ return {
             },
         },
     },
+    keys = {
+        {
+            "<leader>ff",
+            function()
+                Snacks.picker.smart()
+            end,
+            desc = "Smart Find Files",
+        },
+    },
 }
