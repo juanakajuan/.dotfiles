@@ -79,3 +79,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH=~/.npm-global/bin:$PATH
+
+# opencode
+export PATH=/home/juanix/.opencode/bin:$PATH

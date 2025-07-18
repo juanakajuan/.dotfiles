@@ -1,4 +1,5 @@
 [ActivityManager][Global Shortcuts]
+switch-to-activity-06167a7d-8a86-4626-a209-26db69f064b6=
 switch-to-activity-12cbbf69-2c2c-4c35-be9a-5b675a97ff42=
 switch-to-activity-94f59f65-b67b-4f18-ab47-7487f4580616=
 switch-to-activity-bb188b15-224c-423d-856c-0b69a6d80cdc=
@@ -17,7 +18,7 @@ Switch to Next Keyboard Layout=Meta+Alt+K
 AboutApp=
 AboutKDE=
 Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
 Back=Alt+Left; Back
@@ -25,7 +26,7 @@ BackwardWord=Ctrl+Left
 Begin=Ctrl+Home
 BeginningOfLine=Home
 Clear=
-Close=Ctrl+W; Ctrl+Esc
+Close=Ctrl+Esc; Ctrl+W
 ConfigureNotifications=
 ConfigureToolbars=
 Copy=Ctrl+C; Ctrl+Ins
@@ -62,10 +63,10 @@ New=Ctrl+N
 Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
-OpenContextMenu=Shift+F10; Menu
+OpenContextMenu=Menu; Shift+F10
 OpenMainMenu=F10
 OpenRecent=
-Paste=Shift+Ins; Ctrl+V
+Paste=Ctrl+V; Shift+Ins
 Paste Selection=Ctrl+Shift+Ins
 Preferences=Ctrl+Shift+,
 PrevCompletion=Ctrl+Up
@@ -74,7 +75,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=F5; Refresh
+Reload=Refresh; F5
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -96,7 +97,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl++; Ctrl+=
+ZoomIn=Ctrl+=; Ctrl++
 ZoomOut=Ctrl+-
 
 [brave-browser.desktop][Global Shortcuts]
@@ -148,7 +149,7 @@ decrease_volume_small=Shift+Volume Down
 increase_microphone_volume=Microphone Volume Up
 increase_volume=Volume Up
 increase_volume_small=Shift+Volume Up
-mic_mute=F8; Meta+Volume Mute; Microphone Mute
+mic_mute=Microphone Mute; F8; Meta+Volume Mute
 mute=
 
 [ksmserver][Global Shortcuts]
@@ -172,7 +173,7 @@ Cycle Overview Opposite=
 Decrease Opacity=
 Edit Tiles=Meta+T
 Expose=Ctrl+F9
-ExposeAll=Ctrl+F10; Launch (C)
+ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Grid View=Meta+G
@@ -224,8 +225,8 @@ Switch One Desktop Up=Meta+Ctrl+Up
 Switch One Desktop to the Left=Meta+Ctrl+Left
 Switch One Desktop to the Right=Meta+Ctrl+Right
 Switch Window Down=Meta+Alt+Down
-Switch Window Left=Meta+H; Meta+Alt+Left
-Switch Window Right=Meta+Alt+Right; Meta+L
+Switch Window Left=Meta+Alt+Left; Meta+H
+Switch Window Right=Meta+L; Meta+Alt+Right
 Switch Window Up=Meta+Alt+Up
 Switch to Desktop 1=Meta+1
 Switch to Desktop 10=
@@ -275,7 +276,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Q
+Window Close=Meta+Q; Alt+F4
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -284,7 +285,7 @@ Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=Meta+M; Meta+PgUp
+Window Maximize=Meta+PgUp; Meta+M
 Window Maximize Horizontal=
 Window Maximize Vertical=
 Window Minimize=Meta+PgDown
@@ -352,7 +353,7 @@ Window to Screen 6=
 Window to Screen 7=
 disableInputCapture=Meta+Shift+Esc
 view_actual_size=Meta+0
-view_zoom_in=Meta++; Meta+=
+view_zoom_in=Meta+=; Meta++
 view_zoom_out=Meta+-
 
 [mediacontrol][Global Shortcuts]
@@ -361,7 +362,7 @@ mediavolumeup=
 nextmedia=Media Next
 pausemedia=Media Pause
 playmedia=
-playpausemedia=Volume Mute; Media Play
+playpausemedia=Media Play
 previousmedia=Media Previous
 stopmedia=Media Stop
 
@@ -393,7 +394,7 @@ _launch=
 ActiveWindowScreenShot=Meta+Print
 CurrentMonitorScreenShot=
 FullScreenScreenShot=Shift+Print
-OpenWithoutScreenshot=Print
+OpenWithoutScreenshot=
 RecordRegion=Meta+Shift+R
 RecordScreen=Meta+Alt+R
 RecordWindow=Meta+Ctrl+R
@@ -451,6 +452,7 @@ activate widget 51=
 activate widget 52=
 activate widget 55=
 activate widget 56=
+activate widget 60=
 activate widget 61=
 activate widget 63=
 activate widget 64=

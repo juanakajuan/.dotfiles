@@ -11,7 +11,9 @@ dnf copr enable alternateved/eza -y
 dnf copr enable wezfurlong/wezterm-nightly -y
 dnf copr enable atim/lazygit -y
 
-sudo dnf config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
+dnf swap ffmpeg-free ffmpeg --allowerasing
+dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 
 dnf install \
   bat \
@@ -37,7 +39,8 @@ dnf install \
   wezterm \
   winetricks \
   lazygit \
-  mullvad-vpn
+  mullvad-vpn \
+  vlc
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
