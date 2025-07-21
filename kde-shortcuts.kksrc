@@ -1,6 +1,7 @@
 [ActivityManager][Global Shortcuts]
 switch-to-activity-06167a7d-8a86-4626-a209-26db69f064b6=
 switch-to-activity-12cbbf69-2c2c-4c35-be9a-5b675a97ff42=
+switch-to-activity-92d5662c-4d8a-445a-b9a9-44e812616e50=
 switch-to-activity-94f59f65-b67b-4f18-ab47-7487f4580616=
 switch-to-activity-bb188b15-224c-423d-856c-0b69a6d80cdc=
 switch-to-activity-cbf50d2e-f14a-4302-bdb0-e8dcb2c0dfce=
@@ -31,7 +32,7 @@ ConfigureNotifications=
 ConfigureToolbars=
 Copy=Ctrl+C; Ctrl+Ins
 CreateFolder=Ctrl+Shift+N
-Cut=Ctrl+X; Shift+Del
+Cut=Shift+Del; Ctrl+X
 DeleteFile=Shift+Del
 DeleteWordBack=Ctrl+Backspace
 DeleteWordForward=Ctrl+Del
@@ -63,7 +64,7 @@ New=Ctrl+N
 Next=PgDown
 NextCompletion=Ctrl+Down
 Open=Ctrl+O
-OpenContextMenu=Menu; Shift+F10
+OpenContextMenu=Shift+F10; Menu
 OpenMainMenu=F10
 OpenRecent=
 Paste=Ctrl+V; Shift+Ins
@@ -97,7 +98,7 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
 
 [brave-browser.desktop][Global Shortcuts]
@@ -149,7 +150,7 @@ decrease_volume_small=Shift+Volume Down
 increase_microphone_volume=Microphone Volume Up
 increase_volume=Volume Up
 increase_volume_small=Shift+Volume Up
-mic_mute=Microphone Mute; F8; Meta+Volume Mute
+mic_mute=Meta+Volume Mute; Microphone Mute
 mute=
 
 [ksmserver][Global Shortcuts]
@@ -173,7 +174,7 @@ Cycle Overview Opposite=
 Decrease Opacity=
 Edit Tiles=Meta+T
 Expose=Ctrl+F9
-ExposeAll=Launch (C); Ctrl+F10
+ExposeAll=Ctrl+F10; Launch (C)
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Grid View=Meta+G
@@ -276,7 +277,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Meta+Q; Alt+F4
+Window Close=Alt+F4; Meta+Q
 Window Custom Quick Tile Bottom=
 Window Custom Quick Tile Left=
 Window Custom Quick Tile Right=
@@ -398,14 +399,14 @@ OpenWithoutScreenshot=
 RecordRegion=Meta+Shift+R
 RecordScreen=Meta+Alt+R
 RecordWindow=Meta+Ctrl+R
-RectangularRegionScreenShot=Meta+R
+RectangularRegionScreenShot=
 WindowUnderCursorScreenShot=Meta+Ctrl+Print
 _launch=Meta+Shift+S
 
 [org.kde.touchpadshortcuts.desktop][Global Shortcuts]
 DisableTouchpad=Touchpad Off
 EnableTouchpad=Touchpad On
-ToggleTouchpad=Meta+Ctrl+Zenkaku Hankaku; Touchpad Toggle
+ToggleTouchpad=Touchpad Toggle; Meta+Ctrl+Zenkaku Hankaku
 
 [org.wezfurlong.wezterm.desktop][Global Shortcuts]
 _launch=Meta+Return
