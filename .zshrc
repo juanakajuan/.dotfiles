@@ -6,7 +6,7 @@ setopt share_history
 alias azlogin='az acr login -n tdsacr2'
 alias qnote='nvim '$(date +%F)'.md'
 alias cd='z'
-alias la='eza -la --icons --classify=auto --group-directories-first'
+alias la='eza -lha --icons --classify=auto --group-directories-first'
 alias ls='eza --icons --classify=auto --group-directories-first'
 alias ll='eza -lh --icons --classify=auto --group-directories-first'
 alias lg='lazygit'
