@@ -31,7 +31,8 @@ sudo pacman -S \
     ghostty \
     wl-clipboard \
     timeshift \
-    spotify-launcher
+    spotify-launcher \
+    gamemode
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
