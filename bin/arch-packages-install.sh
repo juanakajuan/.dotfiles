@@ -30,7 +30,8 @@ sudo pacman -S \
     vlc \
     ghostty \
     wl-clipboard \
-    timeshift
+    timeshift \
+    spotify-launcher
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
@@ -39,9 +40,7 @@ curl -sS https://starship.rs/install.sh | sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-player
-flatpak install -y --noninteractive flathub com.github.IsmaelMartinez.teams_for_linux
 flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
 flatpak install -y --noninteractive flathub org.vinegarhq.Sober
 flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
-flatpak install -y --noninteractive flathub com.spotify.Client
 flatpak install -y --noninteractive flathub com.core447.StreamController
