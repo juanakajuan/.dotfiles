@@ -2,7 +2,7 @@
 
 echo "Installing packages..."
 
-pacman -S \
+sudo pacman -S \
     bat \
     stow \
     zsh \
@@ -27,9 +27,10 @@ pacman -S \
     webkitgtk-6.0 \
     winetricks \
     lazygit \
-    mullvad-vpn \
     vlc \
-    ghostty
+    ghostty \
+    wl-clipboard \
+    timeshift
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
@@ -37,10 +38,10 @@ curl -sS https://starship.rs/install.sh | sh
 # Install zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-flatpak install flathub com.github.iwalton3.jellyfin-media-player
-flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
-flatpak install flathub com.vysp3r.ProtonPlus
-flatpak install flathub org.vinegarhq.Sober
-flatpak install flathub org.fedoraproject.MediaWriter
-flatpak install flathub com.spotify.Client
-flatpak install flathub com.core447.StreamController
+flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-player
+flatpak install -y --noninteractive flathub com.github.IsmaelMartinez.teams_for_linux
+flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
+flatpak install -y --noninteractive flathub org.vinegarhq.Sober
+flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
+flatpak install -y --noninteractive flathub com.spotify.Client
+flatpak install -y --noninteractive flathub com.core447.StreamController
