@@ -15,3 +15,4 @@ background = #000000
 mouse-hide-while-typing = true
 cursor-color = #fc4f44
 cursor-style-blink = true
+gtk-tabs-location = bottom
