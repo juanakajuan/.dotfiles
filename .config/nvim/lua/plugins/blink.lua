@@ -1,10 +1,16 @@
 return {
-  "saghen/blink.cmp",
-  opts = {
-    completion = {
-      ghost_text = {
-        enabled = false,
-      },
+    "saghen/blink.cmp",
+    opts = {
+        completion = {
+            accept = {
+                -- experimental auto-brackets support
+                auto_brackets = {
+                    enabled = false,
+                },
+            },
+            ghost_text = {
+                enabled = false,
+            },
+        },
     },
-  },
 }
