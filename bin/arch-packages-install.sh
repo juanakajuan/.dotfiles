@@ -32,7 +32,8 @@ sudo pacman -S \
     wl-clipboard \
     timeshift \
     spotify-launcher \
-    gamemode
+    gamemode \
+    rocm-smi-lib
 
 chsh -s $(which fish)
 
