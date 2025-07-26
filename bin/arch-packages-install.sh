@@ -5,7 +5,7 @@ echo "Installing packages..."
 sudo pacman -S \
     bat \
     stow \
-    zsh \
+    fish \
     fastfetch \
     nodejs \
     npm \
@@ -34,11 +34,13 @@ sudo pacman -S \
     spotify-launcher \
     gamemode
 
+chsh -s $(which fish)
+
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
-# Install zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+# Install zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-player
 flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
