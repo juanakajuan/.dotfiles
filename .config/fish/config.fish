@@ -30,7 +30,7 @@ function upa
 end
 
 # Keybindings
-bind \cf 'tmux-sessionizer.sh\n'
+bind \cf 'tmux-sessionizer.sh'
 
 # Exports
 set -gx EDITOR nvim
