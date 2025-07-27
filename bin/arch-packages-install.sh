@@ -27,7 +27,6 @@ sudo pacman -S \
     webkitgtk-6.0 \
     winetricks \
     lazygit \
-    vlc \
     ghostty \
     wl-clipboard \
     timeshift \
