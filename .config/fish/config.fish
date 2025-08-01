@@ -29,7 +29,7 @@ function upa
 end
 
 # Keybindings
-bind \cf 'tmux-sessionizer.sh'
+bind \cf 'zellij-sessionizer.sh'
 
 # Exports
 set -gx EDITOR nvim
