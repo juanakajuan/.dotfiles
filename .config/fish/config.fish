@@ -2,6 +2,11 @@
 fish_add_path ~/bin
 fish_add_path ~/.opencode/bin
 
+if status is-interactive
+    ...
+    eval (zellij setup --generate-auto-start fish | string collect)
+end
+
 ## Set values
 ## Run fastfetch as welcome message
 function fish_greeting
