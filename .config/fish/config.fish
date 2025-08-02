@@ -1,15 +1,12 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
 # Paths
-fish_add_path ~/.local/bin
 fish_add_path ~/bin
 fish_add_path ~/.opencode/bin
 
 # Aliases
 alias azlogin="az acr login -n tdsacr2"
-alias la="eza -lha --icons --classify=auto --group-directories-first"
-alias ls="eza --icons --classify=auto --group-directories-first"
-alias ll="eza -lh --icons --classify=auto --group-directories-first"
 alias lg="lazygit"
-alias grep="grep --color=auto"
 alias ip="ip --color=auto"
 alias du="ncdu"
 alias gs="git status"
