@@ -46,4 +46,3 @@ flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-p
 flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
 flatpak install -y --noninteractive flathub org.vinegarhq.Sober
 flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
-flatpak install -y --noninteractive flathub com.core447.StreamController
