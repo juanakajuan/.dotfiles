@@ -3,8 +3,6 @@ return {
     opts = {
         bigfile = { enabled = true },
         quickfile = { enabled = true },
-        terminal = { enabled = false },
-        explorer = { enabled = false },
         picker = {
             enabled = true,
             layout = {
@@ -32,5 +30,7 @@ return {
                 },
             },
         },
+        terminal = { enabled = false },
+        explorer = { enabled = false },
     },
 }
