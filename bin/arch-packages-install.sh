@@ -33,7 +33,8 @@ sudo pacman -S \
     spotify-launcher \
     gamemode \
     rocm-smi-lib \
-    zellij
+    zellij \
+    libxml2-legacy
 
 chsh -s $(which fish)
 
