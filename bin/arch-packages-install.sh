@@ -32,7 +32,8 @@ sudo pacman -S \
     timeshift \
     spotify-launcher \
     gamemode \
-    rocm-smi-lib
+    rocm-smi-lib \
+    zellij
 
 chsh -s $(which fish)
 
