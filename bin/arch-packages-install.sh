@@ -34,13 +34,15 @@ sudo pacman -S \
     gamemode \
     rocm-smi-lib \
     zellij \
-    libxml2-legacy \
-    chromium
+    libxml2-legacy
 
 chsh -s $(which fish)
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
+
+# Install brave
+curl -fsS https://dl.brave.com/install.sh | sh
 
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
