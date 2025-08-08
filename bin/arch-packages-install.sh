@@ -34,7 +34,8 @@ sudo pacman -S \
     gamemode \
     rocm-smi-lib \
     zellij \
-    libxml2-legacy
+    libxml2-legacy \
+    cmake
 
 chsh -s $(which fish)
 
