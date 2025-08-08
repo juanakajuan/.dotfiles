@@ -35,7 +35,8 @@ sudo pacman -S \
     rocm-smi-lib \
     zellij \
     libxml2-legacy \
-    cmake
+    cmake \
+    clang
 
 chsh -s $(which fish)
 
