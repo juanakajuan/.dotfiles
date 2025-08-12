@@ -1,6 +1,7 @@
 [ActivityManager][Global Shortcuts]
 switch-to-activity-06167a7d-8a86-4626-a209-26db69f064b6=
 switch-to-activity-12cbbf69-2c2c-4c35-be9a-5b675a97ff42=
+switch-to-activity-21e9f5c7-01b7-41f3-ad5c-ba5a5e51f87c=
 switch-to-activity-92d5662c-4d8a-445a-b9a9-44e812616e50=
 switch-to-activity-94f59f65-b67b-4f18-ab47-7487f4580616=
 switch-to-activity-b9d3eba1-41c1-4823-a290-369dd375cc13=
@@ -12,6 +13,10 @@ switch-to-activity-f1cb7b93-4a78-4aee-bb9b-70cf64ea8bad=
 New=
 _launch=Meta+Return
 
+[Custom Commands][net.local.toggle-audio.sh.desktop]
+Exec=/home/juanix/bin/toggle-audio.sh
+Name=toggle-audio
+
 [KDE Keyboard Layout Switcher][Global Shortcuts]
 Switch to Last-Used Keyboard Layout=Meta+Alt+L
 Switch to Next Keyboard Layout=Meta+Alt+K
@@ -19,7 +24,7 @@ Switch to Next Keyboard Layout=Meta+Alt+K
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
 Activate Previous Tab=Ctrl+[; Ctrl+PgUp
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+B
@@ -57,7 +62,7 @@ Goto=
 GotoLine=Ctrl+G
 GotoPage=
 Help=F1
-Home=Alt+Home; Home Page
+Home=Home Page; Alt+Home
 KeyBindings=Ctrl+Alt+,
 Mail=
 MoveToTrash=Del
@@ -77,7 +82,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=F5; Refresh
+Reload=Refresh; F5
 RenameFile=F2
 Replace=Ctrl+R
 ReportBug=
@@ -99,8 +104,18 @@ Undo=Ctrl+Z
 Up=Alt+Up
 WhatsThis=Shift+F1
 Zoom=
-ZoomIn=Ctrl+=; Ctrl++
+ZoomIn=Ctrl++; Ctrl+=
 ZoomOut=Ctrl+-
+
+[brave-browser][Global Shortcuts]
+82F43023086BECD3F66FE8E0D9A95C38-autofill_card=
+82F43023086BECD3F66FE8E0D9A95C38-autofill_identity=
+82F43023086BECD3F66FE8E0D9A95C38-autofill_login=
+82F43023086BECD3F66FE8E0D9A95C38-generate_password=
+82F43023086BECD3F66FE8E0D9A95C38-lock_vault=
+F863419C3950D82FB45222E4561E134D-addSite=
+F863419C3950D82FB45222E4561E134D-switchEngine=
+F863419C3950D82FB45222E4561E134D-toggle=
 
 [brave-browser.desktop][Global Shortcuts]
 _launch=Meta+N
@@ -157,7 +172,7 @@ decrease_volume_small=Shift+Volume Down
 increase_microphone_volume=Microphone Volume Up
 increase_volume=Volume Up
 increase_volume_small=Shift+Volume Up
-mic_mute=Microphone Mute; Meta+Volume Mute
+mic_mute=Microphone Mute; Meta+Volume Mute; F8
 mute=
 
 [ksmserver][Global Shortcuts]
@@ -181,7 +196,7 @@ Cycle Overview Opposite=
 Decrease Opacity=
 Edit Tiles=Meta+T
 Expose=Ctrl+F9
-ExposeAll=Ctrl+F10; Launch (C)
+ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Grid View=Meta+G
@@ -234,7 +249,7 @@ Switch One Desktop to the Left=Meta+Ctrl+Left
 Switch One Desktop to the Right=Meta+Ctrl+Right
 Switch Window Down=Meta+Alt+Down
 Switch Window Left=Meta+Alt+Left; Meta+H
-Switch Window Right=Meta+Alt+Right; Meta+L
+Switch Window Right=Meta+L; Meta+Alt+Right
 Switch Window Up=Meta+Alt+Up
 Switch to Desktop 1=Meta+1
 Switch to Desktop 10=
@@ -293,7 +308,7 @@ Window Fullscreen=Meta+F
 Window Grow Horizontal=
 Window Grow Vertical=
 Window Lower=
-Window Maximize=Meta+M; Meta+PgUp
+Window Maximize=Meta+PgUp; Meta+M
 Window Maximize Horizontal=
 Window Maximize Vertical=
 Window Minimize=Meta+PgDown
@@ -361,7 +376,7 @@ Window to Screen 6=
 Window to Screen 7=
 disableInputCapture=Meta+Shift+Esc
 view_actual_size=Meta+0
-view_zoom_in=Meta++; Meta+=
+view_zoom_in=Meta+=; Meta++
 view_zoom_out=Meta+-
 
 [mediacontrol][Global Shortcuts]
@@ -370,9 +385,22 @@ mediavolumeup=
 nextmedia=Media Next
 pausemedia=Media Pause
 playmedia=
-playpausemedia=Media Play
+playpausemedia=Volume Mute; Media Play
 previousmedia=Media Previous
 stopmedia=Media Stop
+
+[net.local.toggle-audio.sh.desktop][Global Shortcuts]
+_launch=F4
+
+[org.chromium.Chromium][Global Shortcuts]
+82F43023086BECD3F66FE8E0D9A95C38-autofill_card=
+82F43023086BECD3F66FE8E0D9A95C38-autofill_identity=
+82F43023086BECD3F66FE8E0D9A95C38-autofill_login=
+82F43023086BECD3F66FE8E0D9A95C38-generate_password=
+82F43023086BECD3F66FE8E0D9A95C38-lock_vault=
+F863419C3950D82FB45222E4561E134D-addSite=
+F863419C3950D82FB45222E4561E134D-switchEngine=
+F863419C3950D82FB45222E4561E134D-toggle=
 
 [org.kde.dolphin.desktop][Global Shortcuts]
 _launch=Meta+E
@@ -387,7 +415,7 @@ _launch=
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Meta+D; Search
+_launch=Search
 
 [org.kde.kscreen.desktop][Global Shortcuts]
 ShowOSD=Display
@@ -413,7 +441,7 @@ _launch=Meta+Shift+S
 [org.kde.touchpadshortcuts.desktop][Global Shortcuts]
 DisableTouchpad=Touchpad Off
 EnableTouchpad=Touchpad On
-ToggleTouchpad=Touchpad Toggle; Meta+Ctrl+Zenkaku Hankaku
+ToggleTouchpad=Meta+Ctrl+Zenkaku Hankaku; Touchpad Toggle
 
 [org.wezfurlong.wezterm.desktop][Global Shortcuts]
 _launch=Meta+Return
@@ -434,7 +462,7 @@ Turn Off Screen=
 powerProfile=Battery
 
 [plasmashell][Global Shortcuts]
-activate application launcher=
+activate application launcher=Meta+D
 activate task manager entry 1=
 activate task manager entry 10=
 activate task manager entry 2=
@@ -467,6 +495,7 @@ activate widget 63=
 activate widget 64=
 activate widget 65=
 activate widget 66=
+activate widget 95=
 clear-history=
 clipboard_action=Meta+Ctrl+X
 cycle-panels=Meta+Alt+P
