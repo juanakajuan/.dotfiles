@@ -37,7 +37,7 @@ sudo pacman -S \
     libxml2-legacy \
     cmake \
     clang \
-    yt-dlp
+    vlc
 
 chsh -s $(which fish)
 
