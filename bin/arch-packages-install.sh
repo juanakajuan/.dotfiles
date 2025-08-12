@@ -36,7 +36,8 @@ sudo pacman -S \
     zellij \
     libxml2-legacy \
     cmake \
-    clang
+    clang \
+    yt-dlp
 
 chsh -s $(which fish)
 
