@@ -55,3 +55,5 @@ flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
 flatpak install -y --noninteractive flathub org.vinegarhq.Sober
 flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
 flatpak install -y --noninteractive flathub net.lutris.Lutris
+flatpak install -y --noninteractive flathub org.libreoffice.LibreOffice
+flatpak install -y --noninteractive flathub org.kde.elisa
