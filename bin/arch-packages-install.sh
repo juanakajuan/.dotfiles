@@ -39,6 +39,8 @@ yay -S \
     clang \
     vlc \
     proton-vpn-gtk-app \
+    android-tools \
+    srccpy \
     teams-for-linux-bin \
     localsend-bin
 
