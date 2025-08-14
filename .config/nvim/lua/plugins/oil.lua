@@ -1,22 +1,22 @@
 return {
-  "stevearc/oil.nvim",
-  opts = {
-    columns = {
-      "size",
-      "mtime",
-      "icon",
+    "stevearc/oil.nvim",
+    opts = {
+        columns = {
+            "size",
+            "mtime",
+            "icon",
+        },
+        win_options = {
+            wrap = true,
+        },
+        view_options = {
+            show_hidden = true,
+        },
+        delete_to_trash = true,
+        skip_confirm_for_simple_edits = true,
     },
-    win_options = {
-      wrap = true,
-    },
-    view_options = {
-      show_hidden = true,
-    },
-    delete_to_trash = true,
-    skip_confirm_for_simple_edits = true,
-  },
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
 
-  vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
+    vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
 }
