@@ -2,7 +2,7 @@
 
 echo "Installing packages..."
 
-sudo pacman -S \
+yay -S \
     bat \
     stow \
     fish \
@@ -37,7 +37,10 @@ sudo pacman -S \
     libxml2-legacy \
     cmake \
     clang \
-    yt-dlp
+    vlc \
+    proton-vpn-gtk-app \
+    teams-for-linux-bin \
+    localsend-bin
 
 chsh -s $(which fish)
 
@@ -54,3 +57,6 @@ flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-p
 flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
 flatpak install -y --noninteractive flathub org.vinegarhq.Sober
 flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
+flatpak install -y --noninteractive flathub net.lutris.Lutris
+flatpak install -y --noninteractive flathub org.libreoffice.LibreOffice
+flatpak install -y --noninteractive flathub org.kde.elisa
