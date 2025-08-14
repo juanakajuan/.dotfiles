@@ -2,7 +2,7 @@
 
 echo "Installing packages..."
 
-sudo pacman -S \
+yay -S \
     bat \
     stow \
     fish \
@@ -37,7 +37,10 @@ sudo pacman -S \
     libxml2-legacy \
     cmake \
     clang \
-    vlc
+    vlc \
+    proton-vpn-gtk-app \
+    teams-for-linux-bin \
+    localsend-bin
 
 chsh -s $(which fish)
 
