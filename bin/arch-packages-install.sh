@@ -41,6 +41,7 @@ yay -S \
     proton-vpn-gtk-app \
     android-tools \
     srccpy \
+    feishin-bin \
     teams-for-linux-bin \
     localsend-bin
 
