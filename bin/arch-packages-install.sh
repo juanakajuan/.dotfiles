@@ -38,7 +38,6 @@ yay -S \
     cmake \
     clang \
     vlc \
-    proton-vpn-gtk-app \
     android-tools \
     srccpy \
     feishin-bin \
