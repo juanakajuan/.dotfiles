@@ -43,6 +43,7 @@ yay -S \
     srccpy \
     feishin-bin \
     teams-for-linux-bin \
+    mullvad-vpn-bin \
     localsend-bin
 
 chsh -s $(which fish)
