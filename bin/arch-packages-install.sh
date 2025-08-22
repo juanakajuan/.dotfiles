@@ -2,7 +2,10 @@
 
 echo "Installing packages..."
 
-yay -S \
+paru -S \
+    wget \
+    git \
+    curl \
     bat \
     stow \
     fish \
@@ -15,7 +18,6 @@ yay -S \
     firefox \
     ripgrep \
     btop \
-    zoxide \
     eza \
     tmux \
     neovim \
@@ -39,7 +41,7 @@ yay -S \
     clang \
     vlc \
     android-tools \
-    srccpy \
+    scrcpy \
     feishin-bin \
     teams-for-linux-bin \
     mullvad-vpn-bin \
