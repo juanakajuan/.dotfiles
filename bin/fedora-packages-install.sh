@@ -51,6 +51,7 @@ sudo dnf install \
     perl \
     zoxide \
     cargo \
+    gimp \
     webkit2gtk4.1
 
 # Install starship
