@@ -32,7 +32,6 @@ paru -S \
     ghostty \
     wl-clipboard \
     timeshift \
-    spotify-launcher \
     gamemode \
     rocm-smi-lib \
     zellij \
