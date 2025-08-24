@@ -3,37 +3,34 @@
 echo "Installing packages..."
 
 paru -S \
-    nodejs \
-    npm \
-    pnpm \
-    flatpak \
-    tmux \
-    neovim \
-    discord \
-    solaar \
-    webkit2gtk \
-    webkitgtk-6.0 \
-    lazygit \
-    ghostty \
-    wl-clipboard \
-    gamemode \
-    rocm-smi-lib \
-    zellij \
-    libxml2-legacy \
-    cmake \
-    vlc \
-    android-tools \
-    scrcpy \
-    feishin-bin \
-    teams-for-linux-bin \
-    mullvad-vpn-bin \
-    localsend-bin
+	nodejs \
+	npm \
+	pnpm \
+	flatpak \
+	tmux \
+	neovim \
+	discord \
+	solaar \
+	webkit2gtk \
+	webkitgtk-6.0 \
+	lazygit \
+	ghostty \
+	wl-clipboard \
+	gamemode \
+	rocm-smi-lib \
+	zellij \
+	libxml2-legacy \
+	cmake \
+	vlc \
+	android-tools \
+	scrcpy \
+	feishin-bin \
+	teams-for-linux-bin \
+	mullvad-vpn-bin \
+	localsend-bin
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
-
-# Install brave
-curl -fsS https://dl.brave.com/install.sh | sh
 
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh

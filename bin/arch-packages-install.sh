@@ -51,9 +51,6 @@ chsh -s $(which fish)
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
-# Install brave
-curl -fsS https://dl.brave.com/install.sh | sh
-
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
