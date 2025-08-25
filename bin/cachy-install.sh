@@ -3,31 +3,31 @@
 echo "Installing packages..."
 
 paru -S \
-	nodejs \
-	npm \
-	pnpm \
-	flatpak \
-	tmux \
-	neovim \
-	discord \
-	solaar \
-	webkit2gtk \
-	webkitgtk-6.0 \
-	lazygit \
-	ghostty \
-	wl-clipboard \
-	gamemode \
-	rocm-smi-lib \
-	zellij \
-	libxml2-legacy \
-	cmake \
-	vlc \
-	android-tools \
-	scrcpy \
-	feishin-bin \
-	teams-for-linux-bin \
-	mullvad-vpn-bin \
-	localsend-bin
+    nodejs \
+    npm \
+    pnpm \
+    flatpak \
+    tmux \
+    neovim \
+    discord \
+    solaar \
+    webkit2gtk \
+    webkitgtk-6.0 \
+    lazygit \
+    ghostty \
+    wl-clipboard \
+    gamemode \
+    rocm-smi-lib \
+    zellij \
+    libxml2-legacy \
+    cmake \
+    vlc \
+    android-tools \
+    scrcpy \
+    feishin-bin \
+    teams-for-linux-bin \
+    mullvad-vpn-bin \
+    localsend-bin
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
@@ -42,3 +42,4 @@ flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
 flatpak install -y --noninteractive flathub net.lutris.Lutris
 flatpak install -y --noninteractive flathub org.libreoffice.LibreOffice
 flatpak install -y --noninteractive flathub org.kde.elisa
+flatpak install -y --noninteractive flathub com.github.taiko2k.tauonmb
