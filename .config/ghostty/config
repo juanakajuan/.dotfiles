@@ -3,7 +3,7 @@ shell-integration = fish
 shell-integration-features = no-cursor
 
 font-family = BerkeleyMono Nerd Font
-font-size = 20
+font-size = 21
 
 window-padding-x = 10
 window-save-state = always
