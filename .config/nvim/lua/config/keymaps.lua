@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line Diagn
 
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv") -- Move visual selection down
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv") -- Move visual selection up
+
+-- Paste without overwritting the yank buffer
+vim.keymap.set("x", "<leader>p", [["_dP]])
