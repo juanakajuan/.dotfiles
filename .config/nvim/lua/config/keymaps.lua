@@ -6,8 +6,6 @@
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv") -- Move visual selection down
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv") -- Move visual selection up
 
