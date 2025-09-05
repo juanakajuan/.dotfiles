@@ -24,7 +24,7 @@ paru -S \
     vlc \
     android-tools \
     scrcpy \
-    feishin-bin \
+    git-delta \
     teams-for-linux-bin \
     mullvad-vpn-bin \
     localsend-bin

@@ -70,7 +70,7 @@ function qnote
 end
 
 # Keybindings
-bind \cf "zellij-sessionizer.sh"
+bind \cf "tmux-sessionizer.sh"
 
 # Exports
 set -gx EDITOR nvim
