@@ -13,3 +13,5 @@
 	navigate = true
 [merge]
 	conflictStyle = zdiff3
+[include]
+    path = ~/.config/delta/themes.gitconfig
