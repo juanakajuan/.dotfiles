@@ -1,7 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require "wezterm"
 local act = wezterm.action
-local sessionizer = require "sessionizer"
+-- local sessionizer = require "sessionizer"
 
 -- This will hold the configuration
 local config = wezterm.config_builder()
@@ -30,11 +30,11 @@ config.tab_bar_at_bottom = true
 config.leader = { key = "s", mods = "CTRL", timeout_milliseconds = 2000 }
 
 config.keys = {
-    {
-        key = "f",
-        mods = "CTRL",
-        action = wezterm.action_callback(sessionizer.toggle),
-    },
+    -- {
+    --     key = "f",
+    --     mods = "CTRL",
+    --     action = wezterm.action_callback(sessionizer.toggle),
+    -- },
 
     -- Prompt for a name to use for a new workspace and switch to it.
     {
@@ -168,7 +168,7 @@ config.check_for_updates = true
 
 config.pane_focus_follows_mouse = true
 -- config.window_background_opacity = 0.95
-config.default_prog = { "/usr/bin/zsh", "-l" }
+config.default_prog = { "/usr/bin/fish", "-l" }
 config.hide_mouse_cursor_when_typing = true
 -- config.xcursor_theme = "Breeze-Light"
 -- config.xcursor_size = 24
