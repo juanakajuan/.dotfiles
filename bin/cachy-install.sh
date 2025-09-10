@@ -21,7 +21,6 @@ paru -S \
     zellij \
     libxml2-legacy \
     cmake \
-    vlc \
     android-tools \
     scrcpy \
     git-delta \
@@ -43,3 +42,4 @@ flatpak install -y --noninteractive flathub net.lutris.Lutris
 flatpak install -y --noninteractive flathub org.libreoffice.LibreOffice
 flatpak install -y --noninteractive flathub org.kde.elisa
 flatpak install -y --noninteractive flathub com.github.taiko2k.tauonmb
+flatpak install -y --noninteractive flathub org.videolan.VLC

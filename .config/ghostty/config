@@ -8,6 +8,7 @@ font-size = 21
 window-padding-x = 10
 window-save-state = always
 maximize = true
+confirm-close-surface = false
 
 theme = GruvboxDarkHard
 background = #000000
