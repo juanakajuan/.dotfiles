@@ -34,12 +34,15 @@ curl -sS https://starship.rs/install.sh | sh
 # Install zoxide
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
-flatpak install -y --noninteractive flathub com.github.iwalton3.jellyfin-media-player
-flatpak install -y --noninteractive flathub com.vysp3r.ProtonPlus
-flatpak install -y --noninteractive flathub org.vinegarhq.Sober
-flatpak install -y --noninteractive flathub org.fedoraproject.MediaWriter
-flatpak install -y --noninteractive flathub net.lutris.Lutris
-flatpak install -y --noninteractive flathub org.libreoffice.LibreOffice
-flatpak install -y --noninteractive flathub org.kde.elisa
-flatpak install -y --noninteractive flathub com.github.taiko2k.tauonmb
-flatpak install -y --noninteractive flathub org.videolan.VLC
+flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
+flatpak install -y flathub com.vysp3r.ProtonPlus
+flatpak install -y flathub org.vinegarhq.Sober
+flatpak install -y flathub org.fedoraproject.MediaWriter
+flatpak install -y flathub net.lutris.Lutris
+flatpak install -y flathub org.libreoffice.LibreOffice
+flatpak install -y flathub org.kde.elisa
+flatpak install -y flathub com.github.taiko2k.tauonmb
+flatpak install -y flathub org.videolan.VLC
+flatpak install -y flathub com.obsproject.Studio
+flatpak install -y flathub org.gimp.GIMP
+flatpak install -y flathub org.blender.Blender
