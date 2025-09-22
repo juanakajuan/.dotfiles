@@ -1,5 +1,5 @@
-command = /usr/bin/fish --login --interactive
-shell-integration = fish
+command = /usr/bin/zsh --login --interactive
+shell-integration = zsh
 shell-integration-features = no-cursor
 
 font-family = BerkeleyMono Nerd Font
@@ -10,10 +10,11 @@ window-save-state = always
 maximize = true
 confirm-close-surface = false
 
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 background = #000000
 
 mouse-hide-while-typing = true
 cursor-color = #fc4f44
 cursor-style-blink = true
 gtk-tabs-location = bottom
+copy-on-select = clipboard
