@@ -58,13 +58,6 @@ alias make="make -j`nproc`"
 alias ninja="ninja -j`nproc`"
 alias n="ninja"
 alias c="clear"
-alias rmpkg="sudo pacman -Rsn"
-alias cleanch="sudo pacman -Scc"
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias update="sudo pacman -Syu"
-
-# Cleanup orphaned packages
-alias cleanup="sudo pacman -Rsn $(pacman -Qtdq)"
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -81,11 +74,6 @@ alias lg='lazygit'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias du='ncdu'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit -a'
-alias gp='git push'
-alias gl='git pull'
 alias gq='git add . && git commit -m "changes" && git pull && git push'
 alias upa='sudo apt update && sudo apt upgrade'
 
@@ -100,9 +88,6 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 
 # pkgfile "command not found" handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export FZF_BASE=/usr/share/fzf
 export PATH="/home/juanix/bin:$PATH"
