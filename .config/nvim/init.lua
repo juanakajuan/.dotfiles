@@ -23,9 +23,9 @@ end
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#111111" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#111111", fg = "NONE" })
-vim.api.nvim_set_hl(0, "CursorLine", { bg = "#222222", fg = "NONE" })
-vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "#222222", fg = "NONE" })
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE", fg = "NONE" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "NONE", fg = "NONE" })
