@@ -92,6 +92,7 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 export FZF_BASE=/usr/share/fzf
 export PATH="/home/juanix/bin:$PATH"
 export PATH="/home/juanix/.local/bin:$PATH"
+export PATH="/home/juanix/.opencode/bin:$PATH"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
