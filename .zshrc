@@ -31,7 +31,7 @@ export HISTCONTROL=ignoreboth
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Don't add certain commands to the history file.
+# Don"t add certain commands to the history file.
 
 export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
 
@@ -65,19 +65,25 @@ alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
-alias azlogin='az acr login -n tdsacr2'
-alias cd='z'
-alias la='eza -lha --icons --classify=auto --group-directories-first'
-alias ls='eza --icons --classify=auto --group-directories-first'
-alias ll='eza -lh --icons --classify=auto --group-directories-first'
-alias lg='lazygit'
-alias grep='grep --color=auto'
-alias ip='ip -color=auto'
-alias du='ncdu'
-alias gq='git add . && git commit -m "changes" && git pull && git push'
-alias upa='sudo apt update && sudo apt upgrade'
+alias azlogin="az acr login -n tdsacr2"
+alias cd="z"
+alias la="eza -lha --icons --classify=auto --group-directories-first"
+alias ls="eza --icons --classify=auto --group-directories-first"
+alias ll="eza -lh --icons --classify=auto --group-directories-first"
+alias lg="lazygit"
+alias grep="grep --color=auto"
+alias ip="ip -color=auto"
+alias du="ncdu"
+alias upa="sudo apt update && sudo apt upgrade"
 
-bindkey -s '^f' 'tmux-sessionizer.sh\n'
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit"
+alias gp="git pull"
+alias gP="git push"
+alias gq="git add . && git commit -m "changes" && git pull && git push"
+
+bindkey -s "^f" "tmux-sessionizer.sh\n"
 
 # Fish-like syntax highlighting and autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
