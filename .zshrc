@@ -102,6 +102,7 @@ export FZF_BASE=/usr/share/fzf
 export PATH="/home/juanix/bin:$PATH"
 export PATH="/home/juanix/.local/bin:$PATH"
 export PATH="/home/juanix/.opencode/bin:$PATH"
+export PATH"=$PATH:$(go env GOPATH)/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
