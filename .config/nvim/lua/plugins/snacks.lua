@@ -30,8 +30,6 @@ return {
         --         },
         --     },
         -- },
-        terminal = { enabled = false },
-        explorer = { enabled = true },
     },
     keys = {
         { "<leader>ff", LazyVim.pick("smart"), desc = "Smart Find Files (Root Dir)" },
