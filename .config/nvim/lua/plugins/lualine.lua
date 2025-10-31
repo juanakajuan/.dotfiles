@@ -20,6 +20,9 @@ return {
             sections = {
                 -- lualine_x is the right-center section of the statusline
                 lualine_x = {
+                    function()
+                        return require("session-timer").get_time()
+                    end,
                     "encoding",
                     "fileformat",
                     "filetype",
