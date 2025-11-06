@@ -21,12 +21,9 @@ paru -S \
     zellij \
     libxml2-legacy \
     cmake \
-    android-tools \
-    scrcpy \
     git-delta \
     teams-for-linux-bin \
-    mullvad-vpn-bin \
-    localsend-bin
+    mullvad-vpn-bin
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
