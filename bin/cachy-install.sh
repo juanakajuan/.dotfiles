@@ -28,9 +28,6 @@ paru -S \
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
 
-# Install zoxide
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-
 flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
 flatpak install -y flathub com.vysp3r.ProtonPlus
 flatpak install -y flathub org.vinegarhq.Sober
