@@ -1,4 +1,4 @@
 git:
-  paging:
-    colorArg: always
-    pager: delta --paging=never --line-numbers --features=gruvmax-fang
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never --line-numbers --features=gruvmax-fang
