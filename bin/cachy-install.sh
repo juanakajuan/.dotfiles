@@ -21,18 +21,12 @@ paru -S \
     zellij \
     libxml2-legacy \
     cmake \
-    android-tools \
-    scrcpy \
     git-delta \
     teams-for-linux-bin \
-    mullvad-vpn-bin \
-    localsend-bin
+    mullvad-vpn-bin
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
-
-# Install zoxide
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
 flatpak install -y flathub com.vysp3r.ProtonPlus
