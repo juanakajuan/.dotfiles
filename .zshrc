@@ -108,3 +108,6 @@ eval "$(starship init zsh)"
 
 # opencode
 export PATH=/home/jmireles/.opencode/bin:$PATH
+
+# opencode
+export PATH=/home/juanix/.opencode/bin:$PATH
