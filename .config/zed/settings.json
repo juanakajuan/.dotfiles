@@ -27,7 +27,11 @@
       "function": false
     }
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -40,7 +44,7 @@
     "enabled_in_text_threads": false
   },
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "anthropic",
       "model": "claude-sonnet-4-latest"
@@ -57,9 +61,9 @@
   "buffer_font_size": 26,
   "agent_font_size": 24,
   "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Gruvbox Dark"
   },
   "use_autoclose": false,
   "vertical_scroll_margin": 10,
