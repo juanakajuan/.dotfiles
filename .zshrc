@@ -86,7 +86,7 @@ alias gp="git pull"
 alias gP="git push"
 alias gq="git add . && git commit -m "changes" && git pull && git push"
 
-bindkey -s "^f" "tmux-sessionizer.sh\n"
+bindkey -s "^f" "zellij-sessionizer.sh\n"
 
 # Fish-like syntax highlighting and autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
