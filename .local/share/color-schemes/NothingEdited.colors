@@ -97,6 +97,7 @@ ForegroundVisited=127,140,141
 [General]
 ColorScheme=Nothing
 Name=nothing-edited
+TitlebarIsAccentColored=false
 shadeSortColumn=true
 
 [KDE]
