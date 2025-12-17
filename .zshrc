@@ -111,3 +111,4 @@ export PATH=/home/jmireles/.opencode/bin:$PATH
 
 # opencode
 export PATH=/home/juanix/.opencode/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin
