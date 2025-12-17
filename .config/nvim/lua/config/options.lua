@@ -13,3 +13,5 @@ opt.scrolloff = 8 -- Lines of context
 opt.wrap = true -- Enable word wrap
 opt.tabstop = 4 -- Number of spaces tabs count for
 opt.shiftwidth = 4
+
+opt.clipboard = "unnamedplus"

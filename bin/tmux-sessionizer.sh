@@ -2,7 +2,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/.config/nvim ~/.dotfiles ~/.dotfiles/.config/ ~/Dev ~/Dev/Work ~/Dev/Personal-mindepth 0 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/.config/nvim ~/.dotfiles ~/.dotfiles/.config/ ~/Dev ~/Dev/Work ~/Dev/Personal -mindepth 0 -maxdepth 1 -type d | fzf)
 fi
 if [[ -z $selected ]]; then
     exit 0
