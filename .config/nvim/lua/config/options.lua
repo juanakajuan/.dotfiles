@@ -14,13 +14,14 @@ opt.wrap = true -- Enable word wrap
 opt.tabstop = 4 -- Number of spaces tabs count for
 opt.shiftwidth = 4
 
-vim.o.clipboard = "unnamedplus"
 vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function()
-        -- vim.highlight.on_yank()
-        local copy_to_unnamedplus = require("vim.ui.clipboard.osc52").copy("+")
-        copy_to_unnamedplus(vim.v.event.regcontents)
-        local copy_to_unnamed = require("vim.ui.clipboard.osc52").copy("*")
-        copy_to_unnamed(vim.v.event.regcontents)
+        -- Only copy if the user actually pressed 'y'
+        -- This ignores deletions like 'dd' or 'd'
+        if vim.v.event.operator == "y" then
+            local contents = vim.v.event.regcontents
+            require("vim.ui.clipboard.osc52").copy("+")(contents)
+            require("vim.ui.clipboard.osc52").copy("*")(contents)
+        end
     end,
 })
