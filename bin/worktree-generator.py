@@ -1,5 +1,6 @@
 import re
 import subprocess
+import shutil
 from pathlib import Path
 
 
@@ -38,24 +39,33 @@ def setup_worktree(branch_name):
         print("Failed to create git worktree. Does the branch already exist?")
         return
 
-    # 2. Define the symlinks (Target -> Where the link goes)
-    # Use .expanduser() to handle the '~' in your backend path
-    links = {
-        Path("~/Dev/Work/backend").expanduser(): worktree_path / "backend",
+    # 2. Define the files and folders (Source -> Destination)
+
+    files_to_copy = {
         current_dir / ".env": worktree_path / ".env",
         current_dir / "config.json": worktree_path / "config.json",
         current_dir / "AGENTS.md": worktree_path / "AGENTS.md",
     }
 
-    # 3. Create the symlinks
-    for target, link_location in links.items():
+    backend_source = Path("~/Dev/Work/backend").expanduser()
+    backend_dest = worktree_path / "backend"
+
+    try:
+        backend_dest.symlink_to(backend_source)
+        print("Linked: backend")
+    except FileExistsError:
+        print("backend link already exists.")
+
+    # 3. Copy the files
+    for source, destination in files_to_copy.items():
         try:
-            link_location.symlink_to(target)
-            print(f"Linked: {link_location.name}")
-        except FileExistsError:
-            print(f"{link_location.name} already exists, skipping link.")
+            if source.exists():
+                shutil.copy2(source, destination)
+                print(f"Copied: {source.name}")
+            else:
+                print(f"Warning: Source file {source.name} not found. Skipping.")
         except Exception as e:
-            print(f"Error linking {link_location.name}: {e}")
+            print(f"Error copying {source.name}: {e}")
 
 
 if __name__ == "__main__":
