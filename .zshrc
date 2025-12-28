@@ -109,3 +109,11 @@ export PATH=/home/jmireles/.opencode/bin:$PATH
 # opencode
 export PATH=/home/juanix/.opencode/bin:$PATH
 export PATH=$PATH:$HOME/.local/bin
+
+# pnpm
+export PNPM_HOME="/home/juanix/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

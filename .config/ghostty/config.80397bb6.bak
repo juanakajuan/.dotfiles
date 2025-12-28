@@ -18,4 +18,3 @@ cursor-color = #fc4f44
 cursor-style-blink = true
 gtk-tabs-location = bottom
 copy-on-select = clipboard
-keybind = shift+enter=text:\x1b\r
