@@ -7,6 +7,34 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_buffer_font_size": 18.0,
+  "collaboration_panel": {
+    "default_width": 300.0
+  },
+  "outline_panel": {
+    "default_width": 300.0
+  },
+  "project_panel": {
+    "default_width": 300.0
+  },
+  "ssh_connections": [
+    {
+      "host": "tds",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jmireles"]
+        },
+        {
+          "paths": ["/home/jmireles/Dev/Work/frontend/./"]
+        }
+      ]
+    }
+  ],
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "vertical_scroll_margin": 10.0,
   "base_keymap": "VSCode",
   "agent_ui_font_size": 20.0,
   "vim_mode": true,
@@ -16,5 +44,5 @@
   "icon_theme": "Material Icon Theme",
   "ui_font_size": 20.0,
   "buffer_font_size": 20.0,
-  "theme": "VSCode Dark Modern"
+  "theme": "GitHub Dark Default"
 }
