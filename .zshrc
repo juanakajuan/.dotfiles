@@ -81,6 +81,7 @@ alias ga="git add ."
 alias gc="git commit"
 alias gp="git pull"
 alias gP="git push"
+alias gf="git fetch"
 alias gq="git add . && git commit -m "changes" && git pull && git push"
 
 bindkey -s "^f" "tmux-sessionizer.sh\n"
