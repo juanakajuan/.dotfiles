@@ -24,8 +24,8 @@ end
 require("config.lazy")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1f1f1f" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1a1a1a" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1f1f1f", fg = "NONE" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1a1a1a", fg = "NONE" })
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "NONE", fg = "NONE" })
 vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "NONE", fg = "NONE" })
