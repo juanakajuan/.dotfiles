@@ -3,7 +3,7 @@ shell-integration = zsh
 shell-integration-features = no-cursor
 
 font-family = BerkeleyMono Nerd Font
-font-size = 19
+font-size = 18
 
 window-padding-x = 10
 window-save-state = always
