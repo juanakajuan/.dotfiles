@@ -11,7 +11,7 @@ maximize = true
 confirm-close-surface = false
 
 theme = Gruvbox Dark Hard
-background = #000000
+background = #0d0d0d
 
 mouse-hide-while-typing = true
 cursor-color = #fc4f44
