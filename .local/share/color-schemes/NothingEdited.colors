@@ -101,7 +101,9 @@ TitlebarIsAccentColored=false
 shadeSortColumn=true
 
 [KDE]
+Contrast=2
 contrast=4
+frameContrast=0.15
 
 [WM]
 activeBackground=17,17,17

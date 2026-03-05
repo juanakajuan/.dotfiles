@@ -23,10 +23,19 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/jmireles"]
+          "paths": [
+            "/home/jmireles"
+          ]
         },
         {
-          "paths": ["/home/jmireles/Dev/Work/frontend/./"]
+          "paths": [
+            "/home/jmireles/Dev/Work/frontend/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/jmireles/Dev/frontend"
+          ]
         }
       ]
     }
