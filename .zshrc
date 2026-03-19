@@ -75,6 +75,7 @@ alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias du="ncdu"
 alias upa="sudo apt update && sudo apt upgrade"
+alias oc="opencode"
 
 alias gs="git status"
 alias ga="git add ."
