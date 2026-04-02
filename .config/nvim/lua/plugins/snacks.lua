@@ -4,6 +4,12 @@ return {
         bigfile = { enabled = true },
         quickfile = { enabled = true },
         explorer = { enabled = false },
+        lazygit = {
+            win = {
+                width = 0,
+                height = 0,
+            },
+        },
         picker = {
             enabled = true,
             layout = {
