@@ -4,6 +4,19 @@ return {
         bigfile = { enabled = true },
         quickfile = { enabled = true },
         explorer = { enabled = false },
+        lazygit = {
+            config = {
+                os = {
+                    edit = '[ -z "$NVIM" ] && (nvim -- {{filename}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{filename}})',
+                    editAtLine = '[ -z "$NVIM" ] && (nvim +{{line}} -- {{filename}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{filename}} && nvim --server "$NVIM" --remote-send ":{{line}}<CR>")',
+                    openDirInEditor = '[ -z "$NVIM" ] && (nvim -- {{dir}}) || (nvim --server "$NVIM" --remote-send "q" && nvim --server "$NVIM" --remote {{dir}})',
+                },
+            },
+            win = {
+                width = 0,
+                height = 0,
+            },
+        },
         picker = {
             enabled = true,
             layout = {
