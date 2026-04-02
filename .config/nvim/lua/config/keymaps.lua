@@ -5,6 +5,16 @@
 -- Page jump up and down while keeping cursor in the middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-f>", function()
+  local sessionizer = vim.fn.expand("~/bin/tmux-sessionizer.sh")
+
+  if vim.env.TMUX and vim.env.TMUX ~= "" then
+    vim.fn.jobstart({ "tmux", "display-popup", "-w", "90%", "-h", "90%", "-E", sessionizer }, { detach = true })
+    return
+  end
+
+  vim.cmd("terminal " .. vim.fn.fnameescape(sessionizer))
+end, { desc = "Run tmux sessionizer" })
 
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv") -- Move visual selection down
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv") -- Move visual selection up
