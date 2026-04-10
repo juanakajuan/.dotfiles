@@ -16,6 +16,10 @@ vim.keymap.set("n", "<C-f>", function()
   vim.cmd("terminal " .. vim.fn.fnameescape(sessionizer))
 end, { desc = "Run tmux sessionizer" })
 
+vim.keymap.set("n", "<leader>tr", function()
+  Snacks.terminal.toggle(nil, { win = { position = "right", width = 0.5 } })
+end, { desc = "Terminal right" })
+
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv") -- Move visual selection down
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv") -- Move visual selection up
 
