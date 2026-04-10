@@ -5,6 +5,15 @@
 -- Page jump up and down while keeping cursor in the middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Go to left window" })
+vim.keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]], { desc = "Go to lower window" })
+vim.keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]], { desc = "Go to upper window" })
+vim.keymap.set("t", "<C-l>", [[<C-\><C-n><C-w>l]], { desc = "Go to right window" })
+
 vim.keymap.set("n", "<C-f>", function()
   local sessionizer = vim.fn.expand("~/bin/tmux-sessionizer.sh")
 
@@ -15,6 +24,10 @@ vim.keymap.set("n", "<C-f>", function()
 
   vim.cmd("terminal " .. vim.fn.fnameescape(sessionizer))
 end, { desc = "Run tmux sessionizer" })
+
+vim.keymap.set("n", "<leader>tr", function()
+  Snacks.terminal.toggle(nil, { win = { position = "right", width = 0.5 } })
+end, { desc = "Terminal right" })
 
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv") -- Move visual selection down
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv") -- Move visual selection up
